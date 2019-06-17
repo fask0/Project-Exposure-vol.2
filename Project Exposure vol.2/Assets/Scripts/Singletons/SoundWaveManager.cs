@@ -665,7 +665,7 @@ public class SoundWaveManager : MonoBehaviour
         get { return _listeningToAll; }
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         if (_customImageMaterial != null)
             ResetTexture(_customImageMaterial);

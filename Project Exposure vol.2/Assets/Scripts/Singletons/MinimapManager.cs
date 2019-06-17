@@ -86,7 +86,7 @@ public class MinimapManager : MonoBehaviour
         _zoom = Mathf.Clamp(_zoom, 0.5f, 4);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         _playerMarker.localRotation = Quaternion.identity;
         _playerMarker.localScale = new Vector3(1, 1, 1);
