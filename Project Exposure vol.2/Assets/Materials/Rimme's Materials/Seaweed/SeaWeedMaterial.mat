@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SeaWeedMaterial
+  m_Shader: {fileID: 4800000, guid: 10152fb114a2b66418f3493cf11e8d62, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 27d4bb331abed5d4184ada38d3ecbf51, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 7c420ee99f38c09418cdac9a51cc9dbd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _CurveHeight: 3
+    - _CurveWidth: 1.5
+    - _Cutoff: 0.5
+    - _Glossiness: 0.5
+    - _HighestY: 1
+    - _LeanDistance: 4
+    - _LowestY: 0
+    - _MaxDist: 50
+    - _Metallic: 0
+    - _MinDist: 10
+    - _Offset: 0
+    - _PlayerDetectionRange: 1.5
+    - _Tess: 4
+    - _WobbleCurve: 0.5
+    - _WobbleDistance: 0.5
+    - _WobbleSpeed: 0.5
+    m_Colors:
+    - _Color: {r: 0.84313726, g: 0.90588236, b: 0.7058824, a: 1}
+    - _LeanDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _PlayerPos: {r: 0, g: 0, b: 0, a: 1}
