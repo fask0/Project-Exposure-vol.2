@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using cakeslice;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,14 +13,17 @@ public class OutlineActivator : MonoBehaviour
 
     private bool _showOutline = true;
     private Renderer _renderer;
+    private Outline _outline;
 
     // Start is called before the first frame update
     void Start()
     {
+        _outline = GetComponent<Outline>();
         _renderer = GetComponent<Renderer>();
         _materials = _renderer.materials;
 
         SingleTons.SoundWaveManager.onFishScanEvent += ScanEvent;
+        _outline.enabled = false;
     }
 
     private void ScanEvent(GameObject pGameObject)
@@ -28,6 +32,11 @@ public class OutlineActivator : MonoBehaviour
         {
             _showOutline = false;
             SetOutlineWidth(0.0f);
+
+            if (_outline != null)
+            {
+                _outline.enabled = false;
+            }
         }
     }
 
@@ -38,6 +47,11 @@ public class OutlineActivator : MonoBehaviour
         if (other.tag == "Player")
         {
             SetOutlineWidth(_maxOutlineWidth);
+
+            if (_outline != null)
+            {
+                _outline.enabled = true;
+            }
         }
     }
 
@@ -46,6 +60,11 @@ public class OutlineActivator : MonoBehaviour
         if (other.tag == "Player")
         {
             SetOutlineWidth(0.0f);
+
+            if (_outline != null)
+            {
+                _outline.enabled = false;
+            }
         }
     }
 
@@ -54,6 +73,14 @@ public class OutlineActivator : MonoBehaviour
         foreach (Material mat in _materials)
         {
             mat.SetFloat("_OutlineWidth", _width);
+        }
+
+        if (_outline != null)
+        {
+            if (_width > 0.01f)
+                _outline.enabled = true;
+            else
+                _outline.enabled = false;
         }
     }
 }

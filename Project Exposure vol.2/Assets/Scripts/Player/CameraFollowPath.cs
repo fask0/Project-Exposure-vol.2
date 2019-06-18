@@ -37,6 +37,7 @@ public class CameraFollowPath : MonoBehaviour
 
     public UnityEvent StillEvent;
     public UnityEvent StartEvent;
+    public UnityEvent StartEndEvent;
     public UnityEvent EndEvent;
 
     // Start is called before the first frame update
@@ -44,6 +45,12 @@ public class CameraFollowPath : MonoBehaviour
     {
         _lineRenderer = GetComponent<LineRenderer>();
         _pathPoints = new GameObject[_lineRenderer.positionCount];
+        for (int i = 0; i < _lineRenderer.positionCount; i++)
+        {
+            GameObject obj = new GameObject();
+            obj.transform.position = _lineRenderer.GetPosition(i) + transform.position;
+            _pathPoints[i] = obj;
+        }
 
         _lineRenderer.enabled = false;
         _camera = Camera.main.transform.parent.gameObject;
@@ -64,7 +71,6 @@ public class CameraFollowPath : MonoBehaviour
 
     public void StartPathFollow()
     {
-        CreateFollowPoints();
         _cameraState = CameraState.FollowingPath;
         _pathPoints[_pathPoints.Length - 1].transform.LookAt(_objectToFocusOn.transform);
         for (int i = 0; i < _pathPoints.Length; i++)
@@ -73,24 +79,6 @@ public class CameraFollowPath : MonoBehaviour
         }
 
         StartEvent.Invoke();
-    }
-
-    private void CreateFollowPoints()
-    {
-        for (int i = 0; i < _lineRenderer.positionCount; i++)
-        {
-            GameObject obj = new GameObject();
-            obj.transform.position = _lineRenderer.GetPosition(i) + transform.position;
-            _pathPoints[i] = obj;
-        }
-    }
-
-    private void CleanUpFollowPoints()
-    {
-        for (int i = 0; i < _pathPoints.Length; i++)
-        {
-            Destroy(_pathPoints[i]);
-        }
     }
 
     private void StartStill()
@@ -106,13 +94,14 @@ public class CameraFollowPath : MonoBehaviour
     {
         _cameraState = CameraState.BacktrackingPath;
         _pathPointIndex--;
+
+        StartEndEvent.Invoke();
     }
 
     private void Stop()
     {
         _cameraState = CameraState.None;
         _cameraBehaviour.SetToOriginalTarget();
-        CleanUpFollowPoints();
         EndEvent.Invoke();
     }
 

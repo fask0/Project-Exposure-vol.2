@@ -137,18 +137,18 @@ public class SoundWaveManager : MonoBehaviour
     private void InitPlayerSoundWave()
     {
         //Left
-        _playerSoundWaveLeft = Camera.main.transform.GetChild(0).GetChild(3).gameObject;
+        _playerSoundWaveLeft = Camera.main.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
         _playerLeftImageMaterial = _playerSoundWaveLeft.transform.GetChild(2).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_playerLeftImageMaterial);
         _playerOutputDataLeft = new float[SpectrumSize];
         //Right
-        _playerSoundWaveRight = Camera.main.transform.GetChild(0).GetChild(4).gameObject;
+        _playerSoundWaveRight = Camera.main.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
         _playerRightImageMaterial = _playerSoundWaveRight.transform.GetChild(2).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_playerRightImageMaterial);
         _playerOutputDataRight = new float[SpectrumSize];
 
         //Collected
-        GameObject collected = Camera.main.transform.GetChild(0).GetChild(6).gameObject;
+        GameObject collected = Camera.main.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
         //0
         _collected0 = collected.transform.GetChild(0).gameObject;
         _collectedImageMaterial0 = _collected0.transform.GetChild(0).GetChild(1).GetComponent<Image>().material;
@@ -308,7 +308,7 @@ public class SoundWaveManager : MonoBehaviour
 
     private void InitTargetSoundWave()
     {
-        _targetSoundWave = Camera.main.transform.GetChild(0).GetChild(5).gameObject;
+        _targetSoundWave = Camera.main.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
         _targetImageMaterial = _targetSoundWave.transform.GetChild(1).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_targetImageMaterial);
         _targetAudioSource = transform.parent.GetChild(5).GetComponent<AudioSource>();
