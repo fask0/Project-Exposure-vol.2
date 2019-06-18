@@ -7,6 +7,7 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] private float _clampAngle = 80.0f;
     [SerializeField] private float _inputSensitivity = 10.0f;
     [SerializeField] private float _menuFollowSpeed = 6.0f;
+    [SerializeField] private Vector3 _positionOffset = Vector3.zero;
 
     private float _rotX = 0.0f;
     private float _rotY = 0.0f;
@@ -127,7 +128,7 @@ public class CameraBehaviour : MonoBehaviour
             transform.position += _dummyGO.transform.forward * _currentFollowSpeed * Time.deltaTime;
         }
         else
-            transform.position = Vector3.Slerp(transform.position, _target.transform.position, _currentFollowSpeed * Time.deltaTime);
+            transform.position = Vector3.Slerp(transform.position, _target.transform.position + transform.right * _positionOffset.x + transform.up * _positionOffset.y + transform.forward * _positionOffset.z, _currentFollowSpeed * Time.deltaTime);
     }
 
     public void SetTemporaryTarget(GameObject gameObject, bool isFollowPath = false, float followSpeedMultiplier = 1.0f, float turnSpeed = 4.0f, float posTurnSpeed = 4.0f, GameObject endTarget = null)
