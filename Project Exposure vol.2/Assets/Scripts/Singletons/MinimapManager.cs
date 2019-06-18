@@ -33,10 +33,10 @@ public class MinimapManager : MonoBehaviour
 
         _texWidth = _undiscoverdMap.width;
         _texHeight = _undiscoverdMap.height;
-        _minimapSize = Camera.main.transform.GetChild(0).GetChild(10).GetComponent<RectTransform>().sizeDelta;
+        _minimapSize = Camera.main.transform.GetChild(0).GetChild(7).GetComponent<RectTransform>().sizeDelta;
 
-        _undiscoveredTransform = Camera.main.transform.GetChild(0).GetChild(10).GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        _undiscoveredMaterial = Camera.main.transform.GetChild(0).GetChild(10).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().material;
+        _undiscoveredTransform = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        _undiscoveredMaterial = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().material;
         _undiscoveredCopyTex = new Texture2D(_texWidth, _texHeight, TextureFormat.RGBA32, false);
         _undiscoveredCopyTex.SetPixels(_undiscoverdMap.GetPixels());
         _undiscoveredCopyTex.Apply();
@@ -48,12 +48,12 @@ public class MinimapManager : MonoBehaviour
         _undiscoveredMaterial.SetFloat("_Radius", Radius);
         _undiscoveredMaterial.SetFloat("_RadiusSquared", Radius * Radius);
 
-        _discoveredTransform = Camera.main.transform.GetChild(0).GetChild(10).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        _discoveredMaterial = Camera.main.transform.GetChild(0).GetChild(10).GetChild(0).GetChild(0).GetComponent<Image>().material;
+        _discoveredTransform = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        _discoveredMaterial = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetComponent<Image>().material;
         _discoveredMaterial.mainTexture = _discoveredMap;
 
         _player = SingleTons.GameController.Player.transform;
-        _playerMarker = Camera.main.transform.GetChild(0).GetChild(10).GetChild(0).GetChild(1).GetComponent<RectTransform>();
+        _playerMarker = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(1).GetComponent<RectTransform>();
     }
 
     void Update()
@@ -84,13 +84,5 @@ public class MinimapManager : MonoBehaviour
     {
         _zoom -= 0.25f;
         _zoom = Mathf.Clamp(_zoom, 0.5f, 4);
-    }
-
-    private void OnDestroy()
-    {
-        _playerMarker.localRotation = Quaternion.identity;
-        _playerMarker.localScale = new Vector3(1, 1, 1);
-        _discoveredTransform.localPosition = new Vector2(0, 0);
-        _discoveredTransform.localScale = new Vector3(1, 1, 1);
     }
 }

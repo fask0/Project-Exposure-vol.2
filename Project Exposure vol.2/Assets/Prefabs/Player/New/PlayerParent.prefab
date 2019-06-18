@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objToActivate: {fileID: 755395483695120241}
-  _activateAfterSeconds: 10
+  _activateAfterSeconds: 180
 --- !u!1 &1355416568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6672504287587328761}
   - component: {fileID: 4971573622197820573}
+  - component: {fileID: 595625372}
   m_Layer: 0
   m_Name: Backpack
   m_TagString: Untagged
@@ -1721,6 +1722,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.2663763, y: 0.23045003, z: 0}
     m_Extent: {x: 0.25665912, y: 0.25969654, z: 0.14999843}
   m_DirtyAABB: 0
+--- !u!114 &595625372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559879501536847831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 1
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &4657293360023307870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,8 +2659,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6866508809869407501}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: 1.3371779e-32, y: -0.70710695, z: 4.4724762e-31, w: -0.7071066}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 705663704}
@@ -3545,6 +3562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4374788310928106494}
   - component: {fileID: 8852561828989325038}
+  - component: {fileID: 1715556396}
   m_Layer: 0
   m_Name: Bofy
   m_TagString: Untagged
@@ -3694,6 +3712,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.1315175, y: -0.1913909, z: -0.010895461}
     m_Extent: {x: 0.877679, y: 0.6294259, z: 0.69740665}
   m_DirtyAABB: 0
+--- !u!114 &1715556396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8700099979719961147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 1
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &8818462407299341899
 GameObject:
   m_ObjectHideFlags: 0
