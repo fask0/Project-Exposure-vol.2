@@ -25,7 +25,10 @@ public class FishBoundsInput : MonoBehaviour
         float speed;
         length = Mathf.Max(renderer.bounds.size.x, renderer.bounds.size.z, renderer.bounds.size.y);
         rand = SingleTons.GameController.GetRandomRange(0, 1);
-        speed = transform.parent.GetComponent<FishBehaviour>().GetMinSpeed();
+        if (transform.parent.GetComponent<FishBehaviour>() != null)
+            speed = transform.parent.GetComponent<FishBehaviour>().GetMinSpeed();
+        else
+            speed = GetComponent<FishBehaviour>().GetMinSpeed();
         foreach (Material material in renderer.materials)
         {
             material.SetFloat("_FishLength", (length / 2) / transform.localScale.x);

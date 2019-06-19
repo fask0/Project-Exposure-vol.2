@@ -336,19 +336,26 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 11.036784, y: 0, z: 25.021389}
-  - {x: 14.759535, y: 0, z: 6.218231}
-  - {x: 12.46316, y: 0, z: -6.5781717}
-  - {x: -5.597891, y: 0, z: -8.99479}
-  - {x: -61.806274, y: 11.176056, z: 9.6242285}
-  - {x: -101.10504, y: 11.176056, z: 36.775505}
-  - {x: -81.19881, y: 18.248016, z: 99.08477}
-  - {x: -25.027145, y: 26.806091, z: 117.57733}
-  - {x: -7.556427, y: 18.248016, z: 158.65411}
-  - {x: 11.120529, y: 18.248016, z: 157.05927}
-  - {x: 28.553879, y: 19.825226, z: 151.98477}
-  - {x: 38.810593, y: 23.512299, z: 120.40927}
-  - {x: 45.075882, y: 23.512299, z: 94.52124}
+  - {x: 23.52348, y: 5.3090496, z: 42.232586}
+  - {x: 19.186491, y: 0, z: 12.431625}
+  - {x: 5.304407, y: 2.2656307, z: -4.4239206}
+  - {x: -16.635214, y: 3.349043, z: -0.67280674}
+  - {x: -36.300613, y: 7.237871, z: 3.4186554}
+  - {x: -64.735825, y: 18.52635, z: 14.8763275}
+  - {x: -85.358574, y: 16.539412, z: 32.19986}
+  - {x: -91.69849, y: 17.286444, z: 51.732574}
+  - {x: -83.235794, y: 16.349813, z: 77.67462}
+  - {x: -62.363304, y: 22.84733, z: 105.62645}
+  - {x: -38.576897, y: 29.913382, z: 123.67157}
+  - {x: -13.07457, y: 37.579613, z: 125.29074}
+  - {x: 14.17247, y: 37.283615, z: 147.47495}
+  - {x: 42.79605, y: 38.82679, z: 169.83694}
+  - {x: 55.97679, y: 39.417824, z: 176.69254}
+  - {x: 72.15958, y: 40.318047, z: 167.9161}
+  - {x: 64.40834, y: 36.501694, z: 150.17758}
+  - {x: 50.537033, y: 29.391684, z: 140.18097}
+  - {x: 34.33693, y: 18.681585, z: 113.98627}
+  - {x: 25.394394, y: 12.2105465, z: 77.74217}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -727,6 +734,9 @@ GameObject:
   - component: {fileID: 1314696961}
   - component: {fileID: 1314696959}
   - component: {fileID: 5302713074613104491}
+  - component: {fileID: 491561876}
+  - component: {fileID: 491561879}
+  - component: {fileID: 491561878}
   m_Layer: 10
   m_Name: SwordFish
   m_TagString: Collectable
@@ -742,7 +752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5618051084321674923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.276, y: 7.1931024, z: -1.405}
+  m_LocalPosition: {x: 4.3, y: 7.1931024, z: 29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5618051085181277823}
@@ -784,9 +794,9 @@ MonoBehaviour:
   _threatFleeRange: 5
   _threatLevel: 0
   _drawRange: 0
-  _minSpeed: 4
-  _maxSpeed: 5
-  _turningSpeed: 4
+  _minSpeed: 6
+  _maxSpeed: 7
+  _turningSpeed: 2
   _speedUpRate: 10
   _dummy: {fileID: 5618051085181277816}
   _creaturesToAvoid: 
@@ -933,6 +943,128 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &491561876
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618051084321674923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -2077201589901326080, guid: 3647a62f6403b644483a9e80f600e5c0, type: 3}
+--- !u!82 &491561879
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618051084321674923}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d182d86f26fa74f41b337fc501b577b2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &491561878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618051084321674923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3604a93a4681a9743858e57504e74b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5618051085181277816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,8 +1231,9 @@ GameObject:
   - component: {fileID: 7993908516223229134}
   - component: {fileID: 7993908516223229136}
   - component: {fileID: 7993908516223229135}
+  - component: {fileID: 819758122}
   m_Layer: 0
-  m_Name: Sailfish_Lowpoly
+  m_Name: SwordFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,6 +1367,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 15
   m_Center: {x: 0.00298208, y: 0.3371683, z: 1.024074}
+--- !u!114 &819758122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993908516223229133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &8464646499713834195
 GameObject:
   m_ObjectHideFlags: 0
