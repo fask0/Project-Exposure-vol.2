@@ -69,8 +69,8 @@ public class ScoreManager : MonoBehaviour
         {
             if (Camera.main.transform.GetChild(0).GetChild(i).name == "ResolutionScreen")
             {
-                _dailyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(0).GetChild(1).GetChild(0).gameObject;
-                _yearlyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(0).GetChild(1).GetChild(1).gameObject;
+                _dailyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(1).GetChild(1).GetChild(0).gameObject;
+                _yearlyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(1).GetChild(1).GetChild(1).gameObject;
                 Camera.main.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
                 break;
             }

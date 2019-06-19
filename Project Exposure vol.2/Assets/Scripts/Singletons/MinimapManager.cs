@@ -36,27 +36,27 @@ public class MinimapManager : MonoBehaviour
 
         _texWidth = _undiscoverdMap.width;
         _texHeight = _undiscoverdMap.height;
-        _minimapSize = Camera.main.transform.GetChild(0).GetChild(7).GetComponent<RectTransform>().sizeDelta;
+        _minimapSize = Camera.main.transform.GetChild(0).GetChild(6).GetComponent<RectTransform>().sizeDelta;
 
-        _undiscoveredTransform = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        _undiscoveredMaterial = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().material;
+        _undiscoveredTransform = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        _undiscoveredMaterial = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().material;
         _undiscoveredCopyTex = new Texture2D(_texWidth, _texHeight, TextureFormat.RGBA32, false);
         _undiscoveredCopyTex.SetPixels(_undiscoverdMap.GetPixels());
         _undiscoveredCopyTex.Apply();
 
-        _renderTex = new RenderTexture(_texWidth, _texHeight, 0, RenderTextureFormat.ARGB32);
+        _renderTex = new RenderTexture(_texWidth, _texHeight, 32, RenderTextureFormat.ARGB32);
         _undiscoveredMaterial.SetTexture("_MainTex", _undiscoveredCopyTex);
         _undiscoveredMaterial.SetFloat("_MainTexWidth", _texWidth);
         _undiscoveredMaterial.SetFloat("_MainTexHeight", _texHeight);
         _undiscoveredMaterial.SetFloat("_Radius", _radius);
         _undiscoveredMaterial.SetFloat("_RadiusSquared", _radius * _radius);
 
-        _discoveredTransform = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        _discoveredMaterial = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetComponent<Image>().material;
+        _discoveredTransform = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        _discoveredMaterial = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetComponent<Image>().material;
         _discoveredMaterial.mainTexture = _discoveredMap;
 
         _player = SingleTons.GameController.Player.transform;
-        _playerMarker = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(1).GetComponent<RectTransform>();
+        _playerMarker = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(1).GetComponent<RectTransform>();
     }
 
     void Update()

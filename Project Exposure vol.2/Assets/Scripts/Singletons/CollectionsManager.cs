@@ -36,7 +36,7 @@ public class CollectionsManager : MonoBehaviour
         GetAudioCourcesInScene("");
 
         //Save MainMenu Elements
-        GameObject codexMainMenu = Camera.main.transform.GetChild(0).GetChild(4).GetChild(1).gameObject;
+        GameObject codexMainMenu = Camera.main.transform.GetChild(0).GetChild(4).GetChild(0).gameObject;
         //All Fish Elements in the container to a List<GameObject>
         MeshFilter[] fish = codexMainMenu.transform.GetChild(0).GetComponentsInChildren<MeshFilter>();
         for (int i = 0; i < fish.Length; i++)
@@ -49,7 +49,7 @@ public class CollectionsManager : MonoBehaviour
         _undiscoveredSpeciesTexture = fish[0].gameObject.GetComponent<MeshRenderer>().material.mainTexture;
 
         //Save SubMenu Elements
-        GameObject codexSubMenu = Camera.main.transform.GetChild(0).GetChild(4).GetChild(2).gameObject;
+        GameObject codexSubMenu = Camera.main.transform.GetChild(0).GetChild(4).GetChild(1).gameObject;
         //Main Model
         _codexSubFishModel = codexSubMenu.transform.GetChild(1).gameObject;
         _codexSubFishModel.GetComponent<MeshFilter>().sharedMesh = _undiscoveredSpeciesMesh;
