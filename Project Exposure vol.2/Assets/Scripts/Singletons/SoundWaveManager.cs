@@ -16,7 +16,10 @@ public class SoundWaveManager : MonoBehaviour
     public delegate void OnFishScan(GameObject pGameObject);
     public event OnFishScan onFishScanEvent;
 
+    public Dictionary<GameObject, UnityEvent> scanStartEvents = new Dictionary<GameObject, UnityEvent>();
     public Dictionary<GameObject, UnityEvent> scanEvents = new Dictionary<GameObject, UnityEvent>();
+    public Dictionary<GameObject, UnityEvent> scanCancelEvents = new Dictionary<GameObject, UnityEvent>();
+    private bool isScanning = false;
 
     ///Fields
     //Spectrogram
@@ -127,6 +130,8 @@ public class SoundWaveManager : MonoBehaviour
         UpdatePlayerSoundWave();
         UpdateTargetSoundWave();
         UpdateCustomSoundWave();
+
+        CallScanEvents();
     }
 
     private void OnNewSceneLoad(string pName)
@@ -672,5 +677,33 @@ public class SoundWaveManager : MonoBehaviour
         ResetTexture(_playerLeftImageMaterial);
         ResetTexture(_playerRightImageMaterial);
         ResetTexture(_targetImageMaterial);
+    }
+
+    private void CallScanEvents()
+    {
+        if (_scanTimeLeft < _scanDuration && !isScanning)
+        {
+            //Start
+            isScanning = true;
+            foreach (KeyValuePair<GameObject, UnityEvent> unityEvent in scanStartEvents)
+            {
+                if (unityEvent.Key == _currentScan)
+                {
+                    unityEvent.Value.Invoke();
+                }
+            }
+        }
+        else if (_scanTimeLeft >= _scanDuration && isScanning)
+        {
+            //Cancel
+            isScanning = false;
+            foreach (KeyValuePair<GameObject, UnityEvent> unityEvent in scanCancelEvents)
+            {
+                if (unityEvent.Key == _currentScan)
+                {
+                    unityEvent.Value.Invoke();
+                }
+            }
+        }
     }
 }

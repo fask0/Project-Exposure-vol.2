@@ -60,4 +60,14 @@ public class FishBehaviour : FishBehaviourParent
     {
         return _currentSpeed;
     }
+
+    public void SetMinSpeed(float val)
+    {
+        _minSpeed = val;
+    }
+
+    public void SetMaxSpeed(float val)
+    {
+        _maxSpeed = val;
+    }
 }

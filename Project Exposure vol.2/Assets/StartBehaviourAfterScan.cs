@@ -10,12 +10,16 @@ public class StartBehaviourAfterScan : MonoBehaviour
     [SerializeField]
     private bool _startBehaviour = true;
     [SerializeField]
+    private UnityEvent onScanEvent;
+    [SerializeField]
     private UnityEvent afterScanEvent;
+    [SerializeField]
+    private UnityEvent onCancelScanEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(_startBehaviour)
+        if (_startBehaviour)
             fishBehaviour = GetComponent<FishBehaviour>();
         if (fishBehaviour != null)
         {
@@ -23,6 +27,8 @@ public class StartBehaviourAfterScan : MonoBehaviour
         }
 
         SingleTons.SoundWaveManager.scanEvents.Add(gameObject, afterScanEvent);
+        SingleTons.SoundWaveManager.scanStartEvents.Add(gameObject, onScanEvent);
+        SingleTons.SoundWaveManager.scanCancelEvents.Add(gameObject, onCancelScanEvent);
     }
 
     private void OnDisable()

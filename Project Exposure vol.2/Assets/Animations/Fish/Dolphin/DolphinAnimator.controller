@@ -50,7 +50,7 @@ AnimatorState:
   m_Motion: {fileID: 1628252986623654205, guid: 22074d46627406345997d4f04ff14c90,
     type: 3}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: _SpeedMultiplier
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
@@ -80,7 +80,7 @@ AnimatorState:
   m_Motion: {fileID: 2491408788252016262, guid: 22074d46627406345997d4f04ff14c90,
     type: 3}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: _SpeedMultiplier
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
@@ -189,13 +189,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: _TurnLeft
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -259,7 +259,7 @@ AnimatorState:
   m_Motion: {fileID: -4049585584969071195, guid: 22074d46627406345997d4f04ff14c90,
     type: 3}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: _SpeedMultiplier
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
@@ -367,7 +367,7 @@ AnimatorState:
   m_Motion: {fileID: 1827226128182048838, guid: 22074d46627406345997d4f04ff14c90,
     type: 3}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: _SpeedMultiplier
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
