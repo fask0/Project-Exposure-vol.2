@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d5266307e12b83c4185f8f158a5260ab
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Arkhip
+  fontNames:
+  - Arkhip
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 19629a3d7ccbc9641aec92b25ada5cb1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
