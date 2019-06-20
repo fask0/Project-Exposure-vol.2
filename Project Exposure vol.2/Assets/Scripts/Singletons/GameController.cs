@@ -25,9 +25,7 @@ public class GameController : MonoBehaviour
             Load("Level0A");
             Load("Level0B");
             Load("Level0C");
-            Load("Level0D");
-            Load("Level0E");
-            Load("Level0F Last");
+            Load("Level0D Last");
             Load("Level0Transition");
         }
         else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu")
@@ -96,7 +94,8 @@ public class GameController : MonoBehaviour
         StartCoroutine("UnloadMainMenu");
         Load("Level0A");
         Load("Level0B");
-        Load("Level0C Last");
+        Load("Level0C");
+        Load("Level0D Last");
         Load("Level0Transition");
     }
 

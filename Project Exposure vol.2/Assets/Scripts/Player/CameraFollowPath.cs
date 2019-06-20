@@ -49,6 +49,7 @@ public class CameraFollowPath : MonoBehaviour
         {
             GameObject obj = new GameObject();
             obj.transform.position = _lineRenderer.GetPosition(i) + transform.position;
+            obj.transform.parent = transform.parent;
             _pathPoints[i] = obj;
         }
 

@@ -158,7 +158,7 @@ public class FishPathBehaviour : FishBehaviour
 
         //Get new target
         _currentTarget = _pathPositions[_index] + transform.parent.position;
-        if (_animator != null)
+        if (_animator != null && _animator.parameterCount != 0)
         {
             if (Vector3.Dot(transform.right, _pathPositions[_index] - transform.localPosition) > 0)
                 _animator.SetTrigger("_TurnRight");
