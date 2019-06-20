@@ -76,19 +76,19 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MainTexHeight: 1024
+    - _MainTexHeight: 4096
     - _MainTexSize: 0
-    - _MainTexWidth: 1024
+    - _MainTexWidth: 4096
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PixelX: 0
     - _PixelY: 0
-    - _PlayerPositionX: -437.3299
-    - _PlayerPositionY: 403.37408
-    - _Radius: 100
-    - _RadiusSquared: 10000
+    - _PlayerPositionX: 981.5893
+    - _PlayerPositionY: 1017.06793
+    - _Radius: 50
+    - _RadiusSquared: 2500
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

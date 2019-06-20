@@ -5,8 +5,11 @@ public class MinimapManager : MonoBehaviour
 {
     private const int TerrainWidth = 250;
     private const int TerrainLength = 500;
-    private const int Radius = 100;
+    private const int Radius = 600;
 
+    [SerializeField] private int _radius;
+    [SerializeField] private Vector2 _offsetXZ;
+    [SerializeField] private Vector2 _terrainSize;
     [SerializeField] private Texture2D _undiscoverdMap;
     [SerializeField] private Texture2D _discoveredMap;
 
@@ -25,7 +28,7 @@ public class MinimapManager : MonoBehaviour
     private Transform _player;
     private RectTransform _playerMarker;
 
-    private float _zoom = 0.5f;
+    private float _zoom = 1.0f;
 
     void Start()
     {
@@ -33,37 +36,36 @@ public class MinimapManager : MonoBehaviour
 
         _texWidth = _undiscoverdMap.width;
         _texHeight = _undiscoverdMap.height;
-        _minimapSize = Camera.main.transform.GetChild(0).GetChild(7).GetComponent<RectTransform>().sizeDelta;
+        _minimapSize = Camera.main.transform.GetChild(0).GetChild(6).GetComponent<RectTransform>().sizeDelta;
 
-        _undiscoveredTransform = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        _undiscoveredMaterial = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().material;
+        _undiscoveredTransform = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        _undiscoveredMaterial = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().material;
         _undiscoveredCopyTex = new Texture2D(_texWidth, _texHeight, TextureFormat.RGBA32, false);
         _undiscoveredCopyTex.SetPixels(_undiscoverdMap.GetPixels());
         _undiscoveredCopyTex.Apply();
 
-        _renderTex = new RenderTexture(_texHeight, _texHeight, 0, RenderTextureFormat.ARGB32);
+        _renderTex = new RenderTexture(_texWidth, _texHeight, 32, RenderTextureFormat.ARGB32);
         _undiscoveredMaterial.SetTexture("_MainTex", _undiscoveredCopyTex);
         _undiscoveredMaterial.SetFloat("_MainTexWidth", _texWidth);
         _undiscoveredMaterial.SetFloat("_MainTexHeight", _texHeight);
-        _undiscoveredMaterial.SetFloat("_Radius", Radius);
-        _undiscoveredMaterial.SetFloat("_RadiusSquared", Radius * Radius);
+        _undiscoveredMaterial.SetFloat("_Radius", _radius);
+        _undiscoveredMaterial.SetFloat("_RadiusSquared", _radius * _radius);
 
-        _discoveredTransform = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        _discoveredMaterial = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(0).GetComponent<Image>().material;
+        _discoveredTransform = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        _discoveredMaterial = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(0).GetComponent<Image>().material;
         _discoveredMaterial.mainTexture = _discoveredMap;
 
         _player = SingleTons.GameController.Player.transform;
-        _playerMarker = Camera.main.transform.GetChild(0).GetChild(7).GetChild(0).GetChild(1).GetComponent<RectTransform>();
+        _playerMarker = Camera.main.transform.GetChild(0).GetChild(6).GetChild(0).GetChild(1).GetComponent<RectTransform>();
     }
 
     void Update()
     {
         _playerMarker.localRotation = Quaternion.Euler(0, 0, -Camera.main.transform.eulerAngles.y);
-        _playerMarker.localScale = new Vector3(_zoom, _zoom, 1);
 
-        float relativeToWorldX = (_player.position.x / TerrainWidth) * _texWidth;
-        float relativeToWorldZ = (_player.position.z / TerrainLength) * _texHeight;
-        _discoveredTransform.localPosition = new Vector2((-relativeToWorldX - _minimapSize.x) * _zoom, (-relativeToWorldZ - _minimapSize.y) * _zoom);
+        float relativeToWorldX = ((_player.position.x + _offsetXZ.x) / _terrainSize.x) * _texWidth;
+        float relativeToWorldZ = ((_player.position.z + _offsetXZ.y) / _terrainSize.y) * _texHeight;
+        _discoveredTransform.localPosition = new Vector2((-relativeToWorldX * _zoom - _minimapSize.x * 0.5f), (-relativeToWorldZ * _zoom - _minimapSize.y * 0.5f));
         _discoveredTransform.localScale = new Vector3(_zoom, _zoom, 1);
 
         _undiscoveredMaterial.SetFloat("_PlayerPositionX", relativeToWorldX);
