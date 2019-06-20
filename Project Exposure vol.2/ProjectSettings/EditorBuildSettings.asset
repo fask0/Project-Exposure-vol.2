@@ -6,45 +6,111 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/MainMenu.unity
-    guid: 58d31913872c8a745a3547bc463dfb87
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/MainMenu.unity
+    guid: 080d89a65f9df704cb5410e60a1639be
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/DemoMainScene.unity
-    guid: 18e9a21131a6b16469517d9625f3e281
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/MainGameScene.unity
+    guid: f9c2054b75962c9408bef90d0d490a6f
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level0A.unity
-    guid: bdaa50aba7302744497247fab8da55c3
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level0/Level0A.unity
+    guid: b22c7787d8dc6054f800787dfdcf3043
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level0B.unity
-    guid: 113b67ebf23c25e4f9ebc0010bda8eb4
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level0/Level0B.unity
+    guid: 96f29db9fe5d8d542894f1bb87831fc5
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level0C Last.unity
-    guid: d536fb19da76a774b90793c8594c9f65
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level0/Level0C.unity
+    guid: b2ff2634c5d183f439c9228cb53525a5
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level0Transition.unity
-    guid: 2d40167bc6ade2a4ea4450ad3124f2fa
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level0/Level0D Last.unity
+    guid: 9681fa43746f2ae478aefed653308677
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1A.unity
-    guid: d3fb57793fb072545b691c5b7736ca4a
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level0Transition.unity
+    guid: 24a99fc984c652047965082b9bbbda4c
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1B.unity
-    guid: 699f2ad2c4c070b4f9b1d68ed41e7241
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1A.unity
+    guid: 00730faf3270688469941aba56624380
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1C.unity
-    guid: 84a2e5d0a4199ed40bfe74580d33b91f
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1B.unity
+    guid: 74dc6cac0ed782d44aa8d79a2584402b
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1D.unity
-    guid: 7217b5d3d1c825e4da580518551c1611
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1C.unity
+    guid: 95230dcb985bdcb49b65cf5b4d87165b
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1E.unity
-    guid: 725e29e17a104d143abb7a41c3b1dab5
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1D.unity
+    guid: e6690da38058efa43808a0aa2997677a
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1F.unity
-    guid: dc69da660388d814a8bd35e7064448df
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1E.unity
+    guid: fd7138dab88a3e64390a5d2a633e1498
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1G.unity
-    guid: 49bf7c2ab8b911c48917a982b448c643
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1F.unity
+    guid: 8bd4ae8abe2ca9b4995b783abe5f1a42
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/PlaytestDemo/Level1H Last.unity
-    guid: d15494cddb54a524eb30041f8ef700a5
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1G.unity
+    guid: c0ddd7f4639cd574aa6a6f029d5d1d09
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1H.unity
+    guid: 8f0e51221af066f4a9fcce5e86480dfb
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1I.unity
+    guid: 931e2b098daebff449f2acf1eb6a7d62
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1J.unity
+    guid: 70d22ab875976044eb88066dc1bf8996
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1K.unity
+    guid: 672983947fe840d4890467814e4c0d26
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1L.unity
+    guid: 37525bb34c3d9e34c831ffca568eb132
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1M.unity
+    guid: 20ec2b7085285984bb4c8f628c2e3c25
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1N.unity
+    guid: c75f29f45d6341249b30fa83ae796028
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1O.unity
+    guid: 8bb8424afdf92874aaa1b474e7cbf80c
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1P.unity
+    guid: 04aa156bde477fd4ea917d229204f78c
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1Q.unity
+    guid: 6d6e140deede74b428e8fbd41b11e77c
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1R.unity
+    guid: 90169ea570e690540bb7e3e0d3012f04
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1S.unity
+    guid: 415fcc8aba7beaa4291ee8125712bbe8
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1T.unity
+    guid: 11b318aba6af8ba4ebf27ccb0e347906
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1U.unity
+    guid: 3549ee917f5915d47ba7709fa197713c
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1V Last.unity
+    guid: b7fa39ecfbe0bef4285f466a2c75905f
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1Transition.unity
+    guid: c136162950991f14ba23b3fb5c81d26d
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2A.unity
+    guid: a93af7afa27106842bf2f7b8e2c70adb
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2B.unity
+    guid: baf0a2ecc14be0c41a24c3398912e542
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2C.unity
+    guid: c98100a7f298eed42a5ece78c6eb9c3d
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2D.unity
+    guid: 454d23eead7931b4490387626894a7d0
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2E.unity
+    guid: cac3ac3840c29d24abf313a6e949bafc
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2F Last.unity
+    guid: 3f6a4fec32d5eee4aa73815f1fe3ed36
   m_configObjects: {}

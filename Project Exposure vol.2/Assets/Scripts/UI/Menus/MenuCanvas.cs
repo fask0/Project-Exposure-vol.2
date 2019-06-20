@@ -82,7 +82,7 @@ public class MenuCanvas : MonoBehaviour
     public void StartGame()
     {
         Destroy(Camera.main.transform.parent.gameObject);
-        SceneManager.LoadScene("DemoMainScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MainGameScene", LoadSceneMode.Additive);
     }
 
     private bool AnyMenusActive()

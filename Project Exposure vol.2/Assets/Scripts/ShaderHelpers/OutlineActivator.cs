@@ -26,6 +26,11 @@ public class OutlineActivator : MonoBehaviour
         _outline.enabled = false;
     }
 
+    private void OnDisable()
+    {
+        SingleTons.SoundWaveManager.onFishScanEvent -= ScanEvent;
+    }
+
     private void ScanEvent(GameObject pGameObject)
     {
         if (pGameObject.name == gameObject.name)
