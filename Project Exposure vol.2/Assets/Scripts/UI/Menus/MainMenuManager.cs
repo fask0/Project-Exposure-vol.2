@@ -48,8 +48,8 @@ public class MainMenuManager : MonoBehaviour
         _dailyFileName = "REDive " + _dateToday;
         _yearlyFileName = "REDive " + DateTime.Today.Year;
 
-        _dailyScoreContainer = transform.GetChild(2).GetChild(1).GetChild(1).GetChild(2).GetChild(0).gameObject;
-        _yearlyScoreContainer = transform.GetChild(2).GetChild(1).GetChild(0).GetChild(2).GetChild(0).gameObject;
+        _dailyScoreContainer = transform.GetChild(0).GetChild(1).GetChild(1).GetChild(2).GetChild(0).gameObject;
+        _yearlyScoreContainer = transform.GetChild(0).GetChild(1).GetChild(0).GetChild(2).GetChild(0).gameObject;
 
         GetDaily();
         GetYearly();
@@ -96,6 +96,12 @@ public class MainMenuManager : MonoBehaviour
     public void GetDaily()
     {
         _dailyHighscores = GetScoresToday(true);
+
+        if (_dailyHighscores.Count == 0)
+        {
+            _dailyScoreContainer.transform.GetChild(0).gameObject.SetActive(false);
+            return;
+        }
 
         _dailyScoreContainer.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
         _dailyScoreContainer.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[0].name;
@@ -157,6 +163,12 @@ public class MainMenuManager : MonoBehaviour
     public void GetYearly()
     {
         _yearlyHighscores = GetScoresYearly(true);
+
+        if (_yearlyHighscores.Count == 0)
+        {
+            _yearlyScoreContainer.transform.GetChild(0).gameObject.SetActive(false);
+            return;
+        }
 
         _yearlyScoreContainer.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
         _yearlyScoreContainer.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[0].name;

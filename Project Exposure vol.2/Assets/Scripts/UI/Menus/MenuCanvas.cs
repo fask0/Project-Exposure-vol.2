@@ -39,7 +39,7 @@ public class MenuCanvas : MonoBehaviour
         {
             _lastInput = DateTime.Now;
         }
-        if (DateTime.Now > _lastInput.AddSeconds(30))
+        if (DateTime.Now > _lastInput.AddSeconds(20))
         {
             EnableMenuScreen(_menuScreens[0]);
         }
