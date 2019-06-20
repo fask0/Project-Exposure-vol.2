@@ -2,7 +2,7 @@
 
 public class ArtifactDummy : MonoBehaviour
 {
-    ArtifactDummy _peer;
+    private ArtifactDummy _peer;
     private PlayerRadar _radar;
     private int _maxArtifactIndex;
     private int _minArtifactIndex;
@@ -13,10 +13,16 @@ public class ArtifactDummy : MonoBehaviour
     {
         ArtifactDummy[] dummies = transform.parent.GetComponentsInChildren<ArtifactDummy>();
         for (int i = 0; i < dummies.Length; i++)
-            if (dummies[i].gameObject != gameObject)
-                _peer = dummies[i];
-        CheckClosest(_peer.gameObject);
+        {
+            if (dummies[i].gameObject == gameObject) continue;
 
+            if (gameObject.name.Substring(0, 5) == dummies[i].gameObject.name.Substring(0, 5))
+            {
+                _peer = dummies[i];
+                break;
+            }
+        }
+        CheckClosest(_peer.gameObject);
         _radar = SingleTons.GameController.Player.GetComponentInChildren<PlayerRadar>();
         Transform[] children = transform.parent.GetComponentsInChildren<Transform>();
         _minArtifactIndex = 999;
