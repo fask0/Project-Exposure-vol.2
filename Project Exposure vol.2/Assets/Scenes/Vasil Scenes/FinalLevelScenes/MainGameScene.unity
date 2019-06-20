@@ -212,40 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3b6ad8dce6071449a9cc2b0bfcaa5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!84 &207715690
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1980
-  m_Height: 1080
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &254944755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9005964039962789386, guid: 82fa99ab50908484aa4dcf73bb20bfe6,
@@ -343,7 +309,7 @@ RenderTexture:
     m_WrapW: 1
   m_Dimension: 2
   m_VolumeDepth: 1
---- !u!84 &551840553
+--- !u!84 &546769849
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -476,6 +442,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b128bcb62d65e40bbee24d614f049f, type: 3}
+--- !u!84 &769617719
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1980
+  m_Height: 1080
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &868454571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 551840553}
+      objectReference: {fileID: 546769849}
     - target: {fileID: 7896817309533665125, guid: affac2cc647d8f643a97a595120677d1,
         type: 3}
       propertyPath: m_Color.r
@@ -1341,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 7896817307670980934, guid: affac2cc647d8f643a97a595120677d1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.002898309
+      value: -0.0020072449
       objectReference: {fileID: 0}
     - target: {fileID: 4669106290895982272, guid: affac2cc647d8f643a97a595120677d1,
         type: 3}
@@ -1788,6 +1788,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6816942694131575831, guid: 82fa99ab50908484aa4dcf73bb20bfe6,
+        type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6816942694131575832, guid: 82fa99ab50908484aa4dcf73bb20bfe6, type: 3}
     - {fileID: 254944762, guid: 82fa99ab50908484aa4dcf73bb20bfe6, type: 3}
@@ -1960,7 +1965,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b3a0744e0cac58044a2bff75d8f6ecae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 633a3e5473356ae4c81c6bd10de6b3bc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1968,7 +1973,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2259,6 +2264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -42.819
+      objectReference: {fileID: 0}
+    - target: {fileID: 531873511099635194, guid: bfb343f3f36941443b8727cbf991a878,
+        type: 3}
+      propertyPath: Priority
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb343f3f36941443b8727cbf991a878, type: 3}

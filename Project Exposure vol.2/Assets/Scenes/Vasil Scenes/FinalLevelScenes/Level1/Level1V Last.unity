@@ -15801,5 +15801,9 @@ PrefabInstance:
       propertyPath: _turningSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1314696960, guid: 2d93f247f7f072d4986a228d7f30a394, type: 3}
+      propertyPath: Priority
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d93f247f7f072d4986a228d7f30a394, type: 3}
