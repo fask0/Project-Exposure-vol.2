@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 427287493}
   - component: {fileID: 427287494}
   m_Layer: 0
-  m_Name: Level0C
+  m_Name: Level0A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadScenes:
-  - Level0C
+  - Level0A
   _unloadScenes:
   - Level1K
   - Level1L
@@ -1539,6 +1539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1O
+  - Level1Transition
   _unloadScenes: []
 --- !u!1 &1697045036
 GameObject:
@@ -1669,7 +1670,7 @@ GameObject:
   - component: {fileID: 1977459819}
   - component: {fileID: 1977459820}
   m_Layer: 0
-  m_Name: Level0A
+  m_Name: Level0C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1715,7 +1716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadScenes:
-  - Level0A
+  - Level0C
   _unloadScenes:
   - Level1A
   - Level1B
@@ -1910,3 +1911,4 @@ MonoBehaviour:
   - Level1T
   - Level1U
   - Level1V Last
+  - Level1Transition
