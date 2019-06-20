@@ -14,19 +14,25 @@ public class PlayerRadar : MonoBehaviour
     private DateTime _activationTime = DateTime.MaxValue;
     private bool _hasBeenActivated = false;
 
+    private GameObject _artifactParent;
+    private ArtifactParent _artifactParentScript;
+
     // Start is called before the first frame update
     void Start()
     {
         _activationTime = DateTime.Now.AddSeconds(_activateAfterSeconds);
         SingleTons.SoundWaveManager.onFishScanEvent += ResetRadar;
         SetTarget(SingleTons.QuestManager.GetCurrentTarget());
+
+        _artifactParent = GameObject.FindGameObjectWithTag("ArtifactParent");
+        _artifactParentScript = _artifactParent.GetComponent<ArtifactParent>();
     }
 
     private void ResetRadar(GameObject pGameObject)
     {
         if (pGameObject.tag.Contains("Target"))
         {
-            _activationTime = DateTime.Now.AddSeconds(_activateAfterSeconds);
+            _activationTime = DateTime.Now.AddSeconds(_artifactParentScript.GetArrowTime(SingleTons.QuestManager.GetCurrentTargetIndex()));
             _objToActivate.SetActive(false);
             _hasBeenActivated = false;
             SetTarget(SingleTons.QuestManager.GetCurrentTarget());
@@ -38,7 +44,7 @@ public class PlayerRadar : MonoBehaviour
     {
         if (SingleTons.QuestManager.GetCurrentTarget() == null)
         {
-            _activationTime = DateTime.Now.AddSeconds(_activateAfterSeconds);
+            _activationTime = DateTime.Now.AddSeconds(_artifactParentScript.GetArrowTime(SingleTons.QuestManager.GetCurrentTargetIndex()));
             _objToActivate.SetActive(false);
             _hasBeenActivated = false;
             return;

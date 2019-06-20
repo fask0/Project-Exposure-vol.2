@@ -485,6 +485,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1261204862}
+  - component: {fileID: 1261204865}
+  - component: {fileID: 1261204864}
+  - component: {fileID: 1261204863}
   m_Layer: 0
   m_Name: Level1A
   m_TagString: Untagged
@@ -509,6 +512,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1261204863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261204861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 090f7362897d1974f8b707cbd8bf95a9, type: 2}
+--- !u!114 &1261204864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261204861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de9551c9dea0a443a12c9ff4e0d6e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: 891e307a949f2df4d86c0a4fa889b892, type: 2}
+  _fogColor: {r: 0.21173012, g: 0.61268127, b: 0.735849, a: 1}
+  _silhouetteColor: {r: 0, g: 0.43153378, b: 0.5660378, a: 0}
+  _depthStart: 30
+  _depthDistance: 100
+  _depthFadeDistance: 0.7
+  _fogBeforeFadeMultiplier: 0.15
+  _fogStrength: 1
+  _singleColor: 0
+--- !u!114 &1261204865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261204861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41a21705fbf63a408cc024960449574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1367548291
 GameObject:
   m_ObjectHideFlags: 0
