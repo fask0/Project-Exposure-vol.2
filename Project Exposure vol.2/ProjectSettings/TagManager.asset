@@ -16,6 +16,7 @@ TagManager:
   - MainCanvas
   - NameInput
   - ArtifactDummy
+  - ArtifactParent
   layers:
   - Default
   - TransparentFX
@@ -34,7 +35,7 @@ TagManager:
   - Wat1
   - Wat2
   - Wat3
-  - 
+  - PlayerTurnArounder
   - 
   - 
   - 

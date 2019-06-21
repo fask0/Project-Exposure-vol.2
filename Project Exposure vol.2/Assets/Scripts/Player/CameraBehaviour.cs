@@ -170,4 +170,14 @@ public class CameraBehaviour : MonoBehaviour
     {
         _isScanningArtifact = false;
     }
+
+    public GameObject GetDummy()
+    {
+        return _dummyGO;
+    }
+
+    public void SetDummyRotation(Quaternion rot)
+    {
+        _dummyRotation = rot;
+    }
 }

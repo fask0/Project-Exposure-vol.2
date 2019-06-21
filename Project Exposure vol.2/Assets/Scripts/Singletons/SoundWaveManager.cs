@@ -11,6 +11,8 @@ public class SoundWaveManager : MonoBehaviour
     [SerializeField] private Color _lowIntensityColor;
     [SerializeField] private int _heightMultiplier = 300;
 
+    [SerializeField] private UnityEvent _afterFishScanEvent;
+
     private const int SpectrumSize = 4096;
 
     public delegate void OnFishScan(GameObject pGameObject);
@@ -481,6 +483,7 @@ public class SoundWaveManager : MonoBehaviour
 
                 if (onFishScanEvent != null)
                     onFishScanEvent(pScannedCreature);
+                _afterFishScanEvent.Invoke();
                 foreach (KeyValuePair<GameObject, UnityEvent> unityEvent in scanEvents)
                 {
                     if (unityEvent.Key == pScannedCreature)
