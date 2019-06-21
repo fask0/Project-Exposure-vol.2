@@ -18,20 +18,6 @@ public class PlayerTurnArounder : MonoBehaviour
         _cameraBehaviour = _camera.transform.parent.GetComponent<CameraBehaviour>();
     }
 
-    // Update is called once per frame
-    //void FixedUpdate()
-    //{
-    //    if (Vector3.Dot(transform.up, (transform.position - _player.transform.position).normalized) > 0)
-    //    {
-    //        _cameraBehaviour.enabled = false;
-    //        _cameraBehaviour.GetDummy().transform.LookAt(_cameraBehaviour.transform.position + transform.up * 10);
-    //        Camera.main.transform.parent.rotation = Quaternion.Slerp(Camera.main.transform.parent.rotation, _cameraBehaviour.GetDummy().transform.rotation, Time.fixedDeltaTime);
-    //    }
-    //    else
-    //    {
-    //        _cameraBehaviour.enabled = true;
-    //    }
-    //}
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")

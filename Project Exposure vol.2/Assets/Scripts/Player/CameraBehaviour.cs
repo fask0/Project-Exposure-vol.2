@@ -180,4 +180,9 @@ public class CameraBehaviour : MonoBehaviour
     {
         _dummyRotation = rot;
     }
+
+    public Quaternion GetDummyRotation()
+    {
+        return _dummyRotation;
+    }
 }
