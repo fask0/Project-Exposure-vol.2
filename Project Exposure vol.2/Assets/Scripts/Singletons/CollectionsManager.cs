@@ -22,8 +22,6 @@ public class CollectionsManager : MonoBehaviour
 
     private GameObject _codexSubFishModel;
     private CodexSubMenuFishModelTilt _codexSubMenuFishModelTilt;
-    private GameObject _codexSubPlayButton;
-    private GameObject _codexSubStopButton;
     private AudioSource _codexSubSoundwave;
     private TextMeshProUGUI _codexSubDescription;
 
@@ -60,10 +58,6 @@ public class CollectionsManager : MonoBehaviour
         //SoundWave
         _codexSubSoundwave = codexSubMenu.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(0).GetComponent<AudioSource>();
         SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
-        //Buttons
-        _codexSubPlayButton = codexSubMenu.transform.GetChild(3).GetChild(1).gameObject;
-        _codexSubStopButton = codexSubMenu.transform.GetChild(3).GetChild(2).gameObject;
-        _codexSubStopButton.SetActive(false);
         //Description
         _codexSubDescription = codexSubMenu.transform.GetChild(2).transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         _codexSubDescription.text = "Unknown creature...";
@@ -348,16 +342,12 @@ public class CollectionsManager : MonoBehaviour
         {
             SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
             SingleTons.SoundWaveManager.StartDrawingCustomSpectrogram(_codexSubSoundwave.gameObject, _codexSubSoundwave);
-            _codexSubPlayButton.SetActive(false);
-            _codexSubStopButton.SetActive(true);
         }
     }
 
     public void StopAudioSample()
     {
         SingleTons.SoundWaveManager.StopDrawingCustomSpectrogram();
-        _codexSubPlayButton.SetActive(true);
-        _codexSubStopButton.SetActive(false);
     }
 
     private void SetScale(GameObject pGameObject, float pMultiplier = 1)

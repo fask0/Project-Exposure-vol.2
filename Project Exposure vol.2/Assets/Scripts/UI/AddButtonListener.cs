@@ -15,7 +15,9 @@ public class AddButtonListener : MonoBehaviour
         MinimapZoomOut,
         RestartButton,
         ShowDailyHighscores,
-        ShowYearlyHighscores
+        ShowYearlyHighscores,
+        Pause,
+        Unpause
     }
 
     [SerializeField] private ButtonState _buttonState;
@@ -58,6 +60,12 @@ public class AddButtonListener : MonoBehaviour
                 break;
             case ButtonState.ShowYearlyHighscores:
                 button.onClick.AddListener(() => { SingleTons.ScoreManager.ShowYearly(); });
+                break;
+            case ButtonState.Pause:
+                button.onClick.AddListener(() => { SingleTons.GameController.PauseGame(); });
+                break;
+            case ButtonState.Unpause:
+                button.onClick.AddListener(() => { SingleTons.GameController.UnpauseGame(); });
                 break;
         }
     }

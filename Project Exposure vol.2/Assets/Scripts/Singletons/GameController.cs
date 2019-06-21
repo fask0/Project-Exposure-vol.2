@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour
 
     public List<Scene> LoadedScenes = new List<Scene>();
 
+    private float _originalTimescale;
+    private float _originalFixedDeltaTime;
+
     //[HideInInspector]
     public GameObject Player;
 
@@ -37,10 +40,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UnityEngine.Random.InitState(DateTime.Now.Millisecond * DateTime.Now.Second * DateTime.Now.Minute * DateTime.Now.Hour);
         int index = 0;
         while (index == 0)
-            index = UnityEngine.Random.RandomRange(-1, 1);
+            index = UnityEngine.Random.Range(-2, 3);
         UnityEngine.Random.InitState(DateTime.Now.Millisecond * DateTime.Now.Second * DateTime.Now.Minute * DateTime.Now.Hour * index);
+
+        _originalTimescale = Time.timeScale;
+        _originalFixedDeltaTime = Time.fixedDeltaTime;
     }
 
     // Update is called once per frame
@@ -82,6 +89,18 @@ public class GameController : MonoBehaviour
             SceneManager.UnloadSceneAsync(pSceneName);
             LoadedScenes.Remove(SceneManager.GetSceneByName(pSceneName));
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0.05f;
+        Time.fixedDeltaTime = Time.timeScale * 0.02f;
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = _originalTimescale;
+        Time.fixedDeltaTime = _originalFixedDeltaTime;
     }
 
     public void ResetGame()
@@ -128,6 +147,12 @@ public class GameController : MonoBehaviour
         }
 
         SingleTons.CollectionsManager.ReduceAllVolume();
+        PauseGame();
+    }
+
+    private void OnDestroy()
+    {
+
     }
 }
 

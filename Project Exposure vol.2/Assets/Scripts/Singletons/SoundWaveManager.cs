@@ -126,7 +126,6 @@ public class SoundWaveManager : MonoBehaviour
     {
         _frameCount++;
 
-        UpdateCollectedSoundWaves();
         UpdatePlayerSoundWave();
         UpdateTargetSoundWave();
         UpdateCustomSoundWave();
@@ -143,15 +142,16 @@ public class SoundWaveManager : MonoBehaviour
     {
         //Left
         _playerSoundWaveLeft = Camera.main.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
-        _playerLeftImageMaterial = _playerSoundWaveLeft.transform.GetChild(2).GetChild(0).GetComponent<Image>().material;
+        _playerLeftImageMaterial = _playerSoundWaveLeft.transform.GetChild(1).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_playerLeftImageMaterial);
         _playerOutputDataLeft = new float[SpectrumSize];
         //Right
         _playerSoundWaveRight = Camera.main.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
-        _playerRightImageMaterial = _playerSoundWaveRight.transform.GetChild(2).GetChild(0).GetComponent<Image>().material;
+        _playerRightImageMaterial = _playerSoundWaveRight.transform.GetChild(1).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_playerRightImageMaterial);
         _playerOutputDataRight = new float[SpectrumSize];
 
+        /*
         //Collected
         GameObject collected = Camera.main.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
         //0
@@ -183,6 +183,7 @@ public class SoundWaveManager : MonoBehaviour
         _collected2Child0 = _collected2.transform.GetChild(0).gameObject;
         _collected2Child0.SetActive(false);
         ResetTexture(_collectedImageMaterial2);
+        */
 
         _individualOutputData = new float[SpectrumSize];
     }
@@ -289,7 +290,6 @@ public class SoundWaveManager : MonoBehaviour
             }
         }
     }
-
 
     private void UpdatePlayerSoundWave()
     {
@@ -401,8 +401,8 @@ public class SoundWaveManager : MonoBehaviour
     /// <returns></returns>
     private Color GetGradient(float pValue, float pIndex)
     {
-        Color color = _highIntensityColor * pValue + _lowIntensityColor * (1 - pValue);
-        color.a = Mathf.Clamp(pValue * 10, 0, 1);
+        Color color = _highIntensityColor * pValue * 2 + _lowIntensityColor * (1 - pValue * 2);
+        color.a = Mathf.Clamp(pValue * 5, 0.0f, 1.0f);
         return color;
     }
 
@@ -435,6 +435,14 @@ public class SoundWaveManager : MonoBehaviour
         tex.Apply();
         pMaterial.mainTexture = tex;
         pMaterial.mainTextureOffset = new Vector2(0, -0.0065f);
+    }
+
+    public void ResetPlayerTextures()
+    {
+        ResetTexture(_playerLeftImageMaterial);
+        _playerLeftColumn = 0;
+        ResetTexture(_playerRightImageMaterial);
+        _playerRightColumn = 0;
     }
 
     public void ScanCreature(GameObject pScannedCreature)
@@ -647,9 +655,6 @@ public class SoundWaveManager : MonoBehaviour
             material.SetFloat("_ScanLines", 0);
             material.SetFloat("_ScanLineWidth", 0);
         }
-        //mat.SetFloat("_IsScanning", 0);
-        //mat.SetFloat("_ScanLines", 0);
-        //mat.SetFloat("_ScanLineWidth", 0);
 
         _scanTimeLeft = _scanDuration;
         _scanProgress.enabled = false;
