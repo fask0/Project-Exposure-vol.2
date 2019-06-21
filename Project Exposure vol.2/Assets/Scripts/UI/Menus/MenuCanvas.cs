@@ -21,6 +21,7 @@ public class MenuCanvas : MonoBehaviour
         //Populate menu list
         for (int i = 0; i < transform.childCount; i++)
         {
+            if (transform.GetChild(i).name == "EventSystem") continue;
             _menuScreens.Add(transform.GetChild(i).gameObject);
         }
 
