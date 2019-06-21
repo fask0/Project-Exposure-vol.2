@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0352076899e2bf40b93d6a108d626e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 200
+  _radius: 100
   _offsetXZ: {x: 540, y: 145}
   _terrainSize: {x: 1866, y: 1958}
   _undiscoverdMap: {fileID: 2800000, guid: d51bb4c9a00845e409fb4f9ec8113521, type: 3}
@@ -286,7 +286,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 0
   MaxDistance: 0.01

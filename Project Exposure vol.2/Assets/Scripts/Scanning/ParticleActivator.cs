@@ -14,6 +14,11 @@ public class ParticleActivator : MonoBehaviour
         SingleTons.SoundWaveManager.onFishScanEvent += ScanEvent;
     }
 
+    private void OnDisable()
+    {
+        SingleTons.SoundWaveManager.onFishScanEvent -= ScanEvent;
+    }
+
     private void ScanEvent(GameObject pGameObject)
     {
         if (pGameObject.name == gameObject.name)

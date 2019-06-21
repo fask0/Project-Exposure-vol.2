@@ -18,13 +18,13 @@ public class KeyboardInput : MonoBehaviour
          "Bas",
          "Skeletor",
          "Keemstar",
-         "LauraOmloop",
-         "BillyHerington",
-         "JoeRogen",
-         "BenShapiro",
+         "Laura Omloop",
+         "Billy Herington",
+         "Joe Rogen",
+         "Ben Shapiro",
          "Pewdiepie",
-         "MrBeast",
-         "JoostPosthuma",
+         "Mr. Beast",
+         "Joost Posthuma",
          "Jeff",
          "José"};
 
@@ -63,5 +63,10 @@ public class KeyboardInput : MonoBehaviour
             yield return new WaitForSeconds(0.001f);
         SingleTons.ScoreManager.SetName(_inputField.text);
         _menuCanvas.DisableAllMenus();
+    }
+
+    private void OnDisable()
+    {
+        _inputField.text = string.Empty;
     }
 }
