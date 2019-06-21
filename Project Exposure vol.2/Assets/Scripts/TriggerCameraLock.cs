@@ -75,8 +75,6 @@ public class TriggerCameraLock : MonoBehaviour
 
     private void LockPlayer()
     {
-        //_cameraBehaviour.SetDummyRotation(_targetTransform.rotation);
-        //_cameraBehaviour.transform.rotation = _targetTransform.rotation;
         _playerLocked = true;
         _hasBeenActivatedBefore = true;
         _startEvent.Invoke();
