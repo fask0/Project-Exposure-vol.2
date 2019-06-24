@@ -53,7 +53,13 @@ public class CameraBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (_isMainMenuScene) return;
+        if (_isMainMenuScene)
+        {
+            if (!_targetIsFollowPath)
+                transform.rotation = Quaternion.Slerp(transform.rotation, _target.transform.rotation, Time.deltaTime * _turnSpeed);
+            return;
+        }
+
         if (_target != _originalTarget)
         {
             _dummyGO.transform.localPosition = new Vector3(0, 0, 0);
@@ -163,5 +169,20 @@ public class CameraBehaviour : MonoBehaviour
     public void StopScanningArtifact()
     {
         _isScanningArtifact = false;
+    }
+
+    public GameObject GetDummy()
+    {
+        return _dummyGO;
+    }
+
+    public void SetDummyRotation(Quaternion rot)
+    {
+        _dummyRotation = rot;
+    }
+
+    public Quaternion GetDummyRotation()
+    {
+        return _dummyRotation;
     }
 }

@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour
 
     public List<Scene> LoadedScenes = new List<Scene>();
 
+    [SerializeField]
+    private bool _shouldLoadLevels = true;
+
     private float _originalTimescale;
     private float _originalFixedDeltaTime;
 
@@ -33,7 +36,8 @@ public class GameController : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu")
         {
-            Initialize();
+            if (_shouldLoadLevels)
+                Initialize();
         }
     }
 
