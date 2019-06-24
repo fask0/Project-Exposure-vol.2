@@ -166,4 +166,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         return _isFollowing;
     }
+
+    public void Swim()
+    {
+        _velocity += _acceleration * Time.deltaTime;
+        _animator.SetBool("IsIdle", false);
+        _animator.SetBool("IsSwimming", true);
+    }
 }
