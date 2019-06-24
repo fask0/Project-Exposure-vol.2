@@ -185,4 +185,9 @@ public class CameraBehaviour : MonoBehaviour
     {
         return _dummyRotation;
     }
+
+    public JoystickBehaviour GetJoystickBehaviour()
+    {
+        return _joystickBehaviour;
+    }
 }
