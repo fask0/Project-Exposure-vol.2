@@ -10,7 +10,6 @@ public class AddButtonListener : MonoBehaviour
         CreatureIcon,
         GoToMenu,
         ExitMenu,
-        SpectrogramToFish,
         MinimapZoomIn,
         MinimapZoomOut,
         RestartButton,
@@ -38,13 +37,11 @@ public class AddButtonListener : MonoBehaviour
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.GotoDescription(gameObject); });
                 break;
             case ButtonState.GoToMenu:
+                button.onClick.AddListener(() => { SingleTons.CollectionsManager.GotoFirstNewDescription(); });
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.ReduceAllVolume(); });
                 break;
             case ButtonState.ExitMenu:
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.IncreaseAllVolume(); });
-                break;
-            case ButtonState.SpectrogramToFish:
-                button.onClick.AddListener(() => { SingleTons.CollectionsManager.GotoDescriptionFromSpectrogram(SingleTons.SoundWaveManager.GetListeningToCollected, gameObject); });
                 break;
             case ButtonState.MinimapZoomIn:
                 button.onClick.AddListener(() => { SingleTons.MinimapManager.ZoomIn(); });

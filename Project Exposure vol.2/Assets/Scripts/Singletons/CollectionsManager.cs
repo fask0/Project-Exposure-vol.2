@@ -6,7 +6,7 @@ using TMPro;
 public class CollectionsManager : MonoBehaviour
 {
     [SerializeField] [Range(0, 1)] private float _defaultAudioVolume = 0.8f;
-    [SerializeField] [Range(0, 50)] private int _defaultAudioDistanace = 8;
+    [SerializeField] [Range(0, 100)] private int _defaultAudioDistanace = 8;
     [SerializeField] private float _subCodexMenuModelScaleMultiplier = 2.5f;
     [SerializeField] private List<FishScriptableObject> _fishScriptableObjects;
 
@@ -24,17 +24,18 @@ public class CollectionsManager : MonoBehaviour
     private CodexSubMenuFishModelTilt _codexSubMenuFishModelTilt;
     private AudioSource _codexSubSoundwave;
     private TextMeshProUGUI _codexSubDescription;
+    private GameObject _toCodexButton;
 
     private float _angleToRotate;
 
     void Start()
     {
         SingleTons.CollectionsManager = this;
-        SingleTons.GameController.onSceneLoadEvent += GetAudioCourcesInScene;
-        GetAudioCourcesInScene("");
+        SingleTons.GameController.onSceneLoadEvent += GetAudioSourcesInScene;
+        GetAudioSourcesInScene("");
 
         //Save MainMenu Elements
-        GameObject codexMainMenu = Camera.main.transform.GetChild(0).GetChild(4).GetChild(0).gameObject;
+        GameObject codexMainMenu = MainCanavasManager.Codex.transform.GetChild(0).gameObject;
         //All Fish Elements in the container to a List<GameObject>
         MeshFilter[] fish = codexMainMenu.transform.GetChild(0).GetComponentsInChildren<MeshFilter>();
         for (int i = 0; i < fish.Length; i++)
@@ -47,7 +48,7 @@ public class CollectionsManager : MonoBehaviour
         _undiscoveredSpeciesTexture = fish[0].gameObject.GetComponent<MeshRenderer>().material.mainTexture;
 
         //Save SubMenu Elements
-        GameObject codexSubMenu = Camera.main.transform.GetChild(0).GetChild(4).GetChild(1).gameObject;
+        GameObject codexSubMenu = MainCanavasManager.Codex.transform.GetChild(1).gameObject;
         //Main Model
         _codexSubFishModel = codexSubMenu.transform.GetChild(1).gameObject;
         _codexSubFishModel.GetComponent<MeshFilter>().sharedMesh = _undiscoveredSpeciesMesh;
@@ -62,8 +63,11 @@ public class CollectionsManager : MonoBehaviour
         _codexSubDescription = codexSubMenu.transform.GetChild(2).transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         _codexSubDescription.text = "Unknown creature...";
 
+
+        _toCodexButton = SingleTons.FindChild(MainCanavasManager.Spectrograms, "tocodexbutton");
+
         //Disable Codex
-        Camera.main.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
+        MainCanavasManager.Codex.SetActive(false);
     }
 
     private void Update()
@@ -81,7 +85,7 @@ public class CollectionsManager : MonoBehaviour
                                                                       Time.deltaTime * 5);
     }
 
-    private void GetAudioCourcesInScene(string pSceneName)
+    private void GetAudioSourcesInScene(string pSceneName)
     {
         //Normalize the sound of all objects that have an AudioSource in the scene
         collectableAudioSources.Clear();
@@ -114,7 +118,7 @@ public class CollectionsManager : MonoBehaviour
     {
         foreach (string key in collectedAudioSources.Keys)
         {
-            if (key == pGameObjectName)
+            if (key.ToLower() == pGameObjectName.ToLower())
                 return true;
         }
 
@@ -151,6 +155,8 @@ public class CollectionsManager : MonoBehaviour
                 {
                     if (_codexMainMenu[j].transform.parent.name.ToLower() == pGameObject.name.ToLower())
                     {
+                        _codexMainMenu[j].transform.parent.GetChild(1).GetComponent<Image>().enabled = true;
+                        _toCodexButton.transform.GetChild(0).GetComponent<Image>().enabled = true;
                         for (int k = 0; k < _fishScriptableObjects.Count; k++)
                         {
                             if (_codexMainMenu[j].transform.parent.name.ToLower() == _fishScriptableObjects[k].name.ToLower())
@@ -208,6 +214,8 @@ public class CollectionsManager : MonoBehaviour
                     _codexSubSoundwave.clip = _fishScriptableObjects[i].AudioClip;
                     _codexSubDescription.text = _fishScriptableObjects[i].DescriptionFile.text;
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
+                    PlayAudioSample();
+                    pGameObject.transform.GetChild(1).GetComponent<Image>().enabled = false;
                 }
                 else
                 {
@@ -218,7 +226,9 @@ public class CollectionsManager : MonoBehaviour
                     _codexSubSoundwave.clip = null;
                     _codexSubDescription.text = "Unknown creature...";
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
+                    StopAudioSample();
                 }
+                CheckIfHasNotifications();
                 return;
             }
         }
@@ -230,6 +240,22 @@ public class CollectionsManager : MonoBehaviour
         _codexSubSoundwave.clip = null;
         _codexSubDescription.text = "Unknown creature...";
         SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
+        StopAudioSample();
+    }
+
+    private void CheckIfHasNotifications()
+    {
+        bool hasNotification = false;
+        for (int i = 0; i < _codexMainMenu.Count; i++)
+        {
+            if (_codexMainMenu[i].transform.parent.GetChild(1).GetComponent<Image>().IsActive())
+            {
+                hasNotification = true;
+                break;
+            }
+        }
+
+        _toCodexButton.transform.GetChild(0).GetComponent<Image>().enabled = hasNotification;
     }
 
     public void GotoDescription(string pFishName)
@@ -237,7 +263,7 @@ public class CollectionsManager : MonoBehaviour
         StopAudioSample();
         for (int i = 0; i < _fishScriptableObjects.Count; i++)
         {
-            if (_fishScriptableObjects[i].Name == pFishName)
+            if (_fishScriptableObjects[i].Name.ToLower() == pFishName.ToLower())
             {
                 if (IsCollected(pFishName))
                 {
@@ -248,6 +274,7 @@ public class CollectionsManager : MonoBehaviour
                     _codexSubSoundwave.clip = _fishScriptableObjects[i].AudioClip;
                     _codexSubDescription.text = _fishScriptableObjects[i].DescriptionFile.text;
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
+                    PlayAudioSample();
                 }
                 else
                 {
@@ -258,7 +285,9 @@ public class CollectionsManager : MonoBehaviour
                     _codexSubSoundwave.clip = null;
                     _codexSubDescription.text = "Unknown creature...";
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
+                    StopAudioSample();
                 }
+                CheckIfHasNotifications();
                 return;
             }
         }
@@ -270,6 +299,19 @@ public class CollectionsManager : MonoBehaviour
         _codexSubSoundwave.clip = null;
         _codexSubDescription.text = "Unknown creature...";
         SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
+        StopAudioSample();
+    }
+
+    public void GotoFirstNewDescription()
+    {
+        for (int i = 0; i < _codexMainMenu.Count; i++)
+        {
+            if (_codexMainMenu[i].transform.parent.GetChild(1).GetComponent<Image>().IsActive())
+            {
+                GotoDescription(_codexMainMenu[i].transform.parent.gameObject);
+                break;
+            }
+        }
     }
 
     public void GotoDescriptionFromSpectrogram(List<GameObject> pSpectrogramAudioList, GameObject pButton)
@@ -323,7 +365,7 @@ public class CollectionsManager : MonoBehaviour
     {
         for (int i = 0; i < _allAudioSources.Count; i++)
             if (_allAudioSources[i] != null)
-                _allAudioSources[i].GetComponent<AudioSource>().volume = _defaultAudioVolume * 0.1f;
+                _allAudioSources[i].GetComponent<AudioSource>().volume = Mathf.Max(0.05f, _defaultAudioVolume * 0.1f);
     }
 
     /// <summary>

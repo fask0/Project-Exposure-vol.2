@@ -165,4 +165,14 @@ public static class SingleTons
     public static CollectionsManager CollectionsManager;
     public static ScoreManager ScoreManager;
     public static MinimapManager MinimapManager;
+    public static MainCanavasManager MainCanavasManager;
+
+    public static GameObject FindChild(GameObject pParent, string pChildName)
+    {
+        for (int i = 0; i < pParent.transform.childCount; i++)
+            if (pParent.transform.GetChild(i).name.ToLower() == pChildName.ToLower())
+                return pParent.transform.GetChild(i).gameObject;
+
+        return null;
+    }
 }
