@@ -63,6 +63,14 @@ public class JoystickBehaviour : MonoBehaviour, IDragHandler, IPointerUpHandler,
         _timeAtZero = 0;
     }
 
+    public void ArtificialOnPointerUp()
+    {
+        _inputVector = Vector3.zero;
+        _button.rectTransform.anchoredPosition = _inputVector;
+        _isPressed = false;
+        _timeAtZero = 0;
+    }
+
     public float Horizontal()
     {
         if (_inputVector.x < 0.15f && _inputVector.x > -0.15f)
