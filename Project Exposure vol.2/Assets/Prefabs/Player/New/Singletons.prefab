@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadedScenes: []
+  _shouldLoadLevels: 1
   Player: {fileID: 0}
 --- !u!1 &918605305
 GameObject:
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radius: 100
   _offsetXZ: {x: 540, y: 145}
-  _terrainSize: {x: 1866, y: 1958}
+  _terrainSize: {x: 1958, y: 1958}
   _undiscoverdMap: {fileID: 2800000, guid: d51bb4c9a00845e409fb4f9ec8113521, type: 3}
   _discoveredMap: {fileID: 2800000, guid: 4e1f9efd7e1c43b4796cb7c7c531489a, type: 3}
 --- !u!1 &2496871396542323264
@@ -229,11 +230,23 @@ MonoBehaviour:
   _defaultAudioDistanace: 40
   _subCodexMenuModelScaleMultiplier: 2.5
   _fishScriptableObjects:
+  - {fileID: 11400000, guid: 698fdd1d59b80e74c8618cabfc078d2c, type: 2}
+  - {fileID: 11400000, guid: 28289215f0d9f2a4f94e60f59ade2c54, type: 2}
+  - {fileID: 11400000, guid: b447d5c2c9dcac946ae074bc6ecf5a24, type: 2}
   - {fileID: 11400000, guid: c66105ec07718f141b98cc20be58111f, type: 2}
   - {fileID: 11400000, guid: a486b23471550b5468b6c1cc9d7ea8b7, type: 2}
+  - {fileID: 11400000, guid: 85078c456f59f7840a1ac847618de3a9, type: 2}
+  - {fileID: 11400000, guid: bcbebc19408740b4c903d4022924f4a8, type: 2}
+  - {fileID: 11400000, guid: f4e744ca1ac0b22429094797b831c451, type: 2}
+  - {fileID: 11400000, guid: b2faa8e8c71525046a31ccc53f284352, type: 2}
+  - {fileID: 11400000, guid: 841fdbdaadba32b40baa54cc03be8e2c, type: 2}
+  - {fileID: 11400000, guid: 5c5e74f7586674f4ba3eebbff982503a, type: 2}
+  - {fileID: 11400000, guid: e16df6548e7bd7b4a8c15f1930d63740, type: 2}
+  - {fileID: 11400000, guid: 5c0914649a8338540be8234313df521f, type: 2}
+  - {fileID: 11400000, guid: ce4a5b5aab4017f4b8cb0130ca997f50, type: 2}
+  - {fileID: 11400000, guid: effa24f4880c5a949823377ea6db3069, type: 2}
   - {fileID: 11400000, guid: 78c5a6451a97d3541a24e2370533ef8f, type: 2}
   - {fileID: 11400000, guid: 142e1c4253b103c4f8a969b98c333be0, type: 2}
-  - {fileID: 11400000, guid: ce4a5b5aab4017f4b8cb0130ca997f50, type: 2}
   collectableAudioSources: []
   _allAudioSources: []
 --- !u!1 &8605413665887928146
@@ -453,6 +466,11 @@ MonoBehaviour:
   _highIntensityColor: {r: 1, g: 0, b: 0, a: 0}
   _lowIntensityColor: {r: 1, g: 0.9622972, b: 0, a: 0}
   _heightMultiplier: 100
+  _afterFishScanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8605413666412022123
 GameObject:
   m_ObjectHideFlags: 0

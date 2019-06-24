@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private bool _shouldLoadLevels = true;
 
+    private float _originalTimescale;
+    private float _originalFixedDeltaTime;
+
     //[HideInInspector]
     public GameObject Player;
 
@@ -41,10 +44,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UnityEngine.Random.InitState(DateTime.Now.Millisecond * DateTime.Now.Second * DateTime.Now.Minute * DateTime.Now.Hour);
         int index = 0;
         while (index == 0)
-            index = UnityEngine.Random.RandomRange(-1, 1);
+            index = UnityEngine.Random.Range(-2, 3);
         UnityEngine.Random.InitState(DateTime.Now.Millisecond * DateTime.Now.Second * DateTime.Now.Minute * DateTime.Now.Hour * index);
+
+        _originalTimescale = Time.timeScale;
+        _originalFixedDeltaTime = Time.fixedDeltaTime;
     }
 
     // Update is called once per frame
@@ -86,6 +93,18 @@ public class GameController : MonoBehaviour
             SceneManager.UnloadSceneAsync(pSceneName);
             LoadedScenes.Remove(SceneManager.GetSceneByName(pSceneName));
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0.05f;
+        Time.fixedDeltaTime = Time.timeScale * 0.02f;
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = _originalTimescale;
+        Time.fixedDeltaTime = _originalFixedDeltaTime;
     }
 
     public void ResetGame()
@@ -132,6 +151,12 @@ public class GameController : MonoBehaviour
         }
 
         SingleTons.CollectionsManager.ReduceAllVolume();
+        PauseGame();
+    }
+
+    private void OnDestroy()
+    {
+
     }
 }
 
@@ -144,4 +169,14 @@ public static class SingleTons
     public static CollectionsManager CollectionsManager;
     public static ScoreManager ScoreManager;
     public static MinimapManager MinimapManager;
+    public static MainCanavasManager MainCanavasManager;
+
+    public static GameObject FindChild(GameObject pParent, string pChildName)
+    {
+        for (int i = 0; i < pParent.transform.childCount; i++)
+            if (pParent.transform.GetChild(i).name.ToLower() == pChildName.ToLower())
+                return pParent.transform.GetChild(i).gameObject;
+
+        return null;
+    }
 }

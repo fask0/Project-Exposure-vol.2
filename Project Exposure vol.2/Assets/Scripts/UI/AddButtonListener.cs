@@ -10,12 +10,13 @@ public class AddButtonListener : MonoBehaviour
         CreatureIcon,
         GoToMenu,
         ExitMenu,
-        SpectrogramToFish,
         MinimapZoomIn,
         MinimapZoomOut,
         RestartButton,
         ShowDailyHighscores,
-        ShowYearlyHighscores
+        ShowYearlyHighscores,
+        Pause,
+        Unpause
     }
 
     [SerializeField] private ButtonState _buttonState;
@@ -36,13 +37,11 @@ public class AddButtonListener : MonoBehaviour
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.GotoDescription(gameObject); });
                 break;
             case ButtonState.GoToMenu:
+                button.onClick.AddListener(() => { SingleTons.CollectionsManager.GotoFirstNewDescription(); });
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.ReduceAllVolume(); });
                 break;
             case ButtonState.ExitMenu:
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.IncreaseAllVolume(); });
-                break;
-            case ButtonState.SpectrogramToFish:
-                button.onClick.AddListener(() => { SingleTons.CollectionsManager.GotoDescriptionFromSpectrogram(SingleTons.SoundWaveManager.GetListeningToCollected, gameObject); });
                 break;
             case ButtonState.MinimapZoomIn:
                 button.onClick.AddListener(() => { SingleTons.MinimapManager.ZoomIn(); });
@@ -58,6 +57,12 @@ public class AddButtonListener : MonoBehaviour
                 break;
             case ButtonState.ShowYearlyHighscores:
                 button.onClick.AddListener(() => { SingleTons.ScoreManager.ShowYearly(); });
+                break;
+            case ButtonState.Pause:
+                button.onClick.AddListener(() => { SingleTons.GameController.PauseGame(); });
+                break;
+            case ButtonState.Unpause:
+                button.onClick.AddListener(() => { SingleTons.GameController.UnpauseGame(); });
                 break;
         }
     }

@@ -69,8 +69,8 @@ public class ScoreManager : MonoBehaviour
         {
             if (Camera.main.transform.GetChild(0).GetChild(i).name == "ResolutionScreen")
             {
-                _dailyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(1).GetChild(1).GetChild(0).gameObject;
-                _yearlyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(1).GetChild(1).GetChild(1).gameObject;
+                _dailyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(1).GetChild(0).GetChild(2).GetChild(0).gameObject;
+                _yearlyScoreContainer = Camera.main.transform.GetChild(0).GetChild(i).GetChild(1).GetChild(1).GetChild(2).GetChild(0).gameObject;
                 Camera.main.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
                 break;
             }
@@ -346,25 +346,25 @@ public class ScoreManager : MonoBehaviour
         _dailyHighscores = GetScoresToday(true);
 
         _dailyScoreContainer.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
-        _dailyScoreContainer.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[0].name;
-        _dailyScoreContainer.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[0].score.ToString();
+        _dailyScoreContainer.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[0].name;
+        _dailyScoreContainer.transform.GetChild(0).GetChild(2).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[0].score.ToString();
         if (_dailyHighscores[0].id == _id && _dailyHighscores[0].name == _name && _dailyHighscores[0].score == _currentScore)
-            _dailyScoreContainer.transform.GetChild(0).GetComponent<Image>().color = _highlightColor;
+            _dailyScoreContainer.transform.GetChild(0).GetChild(3).GetComponent<Image>().color = _highlightColor;
         else
-            _dailyScoreContainer.transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            _dailyScoreContainer.transform.GetChild(0).GetChild(3).GetComponent<Image>().color = new Color(1, 1, 1, 0);
 
         for (int i = 1; i < _dailyHighscores.Count; i++)
         {
             GameObject entry = Instantiate(_dailyScoreContainer.transform.GetChild(0).gameObject, _dailyScoreContainer.transform);
 
             if (_dailyHighscores[i].id == _id && _dailyHighscores[i].name == _name && _dailyHighscores[i].score == _currentScore)
-                entry.GetComponent<Image>().color = _highlightColor;
+                entry.transform.GetChild(3).GetComponent<Image>().color = _highlightColor;
             else
-                entry.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                entry.transform.GetChild(3).GetComponent<Image>().color = new Color(1, 1, 1, 0);
 
             entry.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = (i + 1).ToString();
-            entry.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[i].name;
-            entry.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[i].score.ToString();
+            entry.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[i].name;
+            entry.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = _dailyHighscores[i].score.ToString();
         }
     }
 
@@ -381,25 +381,25 @@ public class ScoreManager : MonoBehaviour
         _yearlyHighscores = GetScoresYearly(true);
 
         _yearlyScoreContainer.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
-        _yearlyScoreContainer.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[0].name;
-        _yearlyScoreContainer.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[0].score.ToString();
+        _yearlyScoreContainer.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[0].name;
+        _yearlyScoreContainer.transform.GetChild(0).GetChild(2).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[0].score.ToString();
         if (_yearlyHighscores[0].id == _id && _yearlyHighscores[0].name == _name && _yearlyHighscores[0].score == _currentScore)
-            _yearlyScoreContainer.transform.GetChild(0).GetComponent<Image>().color = _highlightColor;
+            _yearlyScoreContainer.transform.GetChild(0).GetChild(3).GetComponent<Image>().color = _highlightColor;
         else
-            _yearlyScoreContainer.transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            _yearlyScoreContainer.transform.GetChild(0).GetChild(3).GetComponent<Image>().color = new Color(1, 1, 1, 0);
 
         for (int i = 1; i < _yearlyHighscores.Count; i++)
         {
             GameObject entry = Instantiate(_yearlyScoreContainer.transform.GetChild(0).gameObject, _yearlyScoreContainer.transform);
 
             if (_yearlyHighscores[i].id == _id && _yearlyHighscores[i].name == _name && _yearlyHighscores[i].score == _currentScore)
-                entry.GetComponent<Image>().color = _highlightColor;
+                entry.transform.GetChild(3).GetComponent<Image>().color = _highlightColor;
             else
-                entry.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                entry.transform.GetChild(3).GetComponent<Image>().color = new Color(1, 1, 1, 0);
 
             entry.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = (i + 1).ToString();
-            entry.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[i].name;
-            entry.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[i].score.ToString();
+            entry.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[i].name;
+            entry.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = _yearlyHighscores[i].score.ToString();
         }
     }
 

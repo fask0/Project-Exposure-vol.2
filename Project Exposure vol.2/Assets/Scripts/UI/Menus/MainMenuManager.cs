@@ -53,6 +53,8 @@ public class MainMenuManager : MonoBehaviour
 
         GetDaily();
         GetYearly();
+
+        _yearlyScoreContainer.transform.parent.parent.gameObject.SetActive(false);
     }
 
     public List<FileEntry> GetScoresToday(bool sortBeforeReturn)
@@ -119,7 +121,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void ShowDaily()
     {
-        _dailyScoreContainer.transform.parent.parent.SetAsLastSibling();
+        _dailyScoreContainer.transform.parent.parent.gameObject.SetActive(true);
+        _yearlyScoreContainer.transform.parent.parent.gameObject.SetActive(false);
     }
 
     public List<FileEntry> GetScoresYearly(bool sortBeforeReturn)
@@ -186,7 +189,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void ShowYearly()
     {
-        _yearlyScoreContainer.transform.parent.parent.SetAsLastSibling();
+        _yearlyScoreContainer.transform.parent.parent.gameObject.SetActive(true);
+        _dailyScoreContainer.transform.parent.parent.gameObject.SetActive(false);
     }
 
     private class SortFileEntryDescending : IComparer<FileEntry>
