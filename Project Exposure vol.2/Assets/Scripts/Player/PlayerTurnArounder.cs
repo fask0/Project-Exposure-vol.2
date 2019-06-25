@@ -58,7 +58,6 @@ public class PlayerTurnArounder : MonoBehaviour
         Vector3 rot;
         if (transform.rotation.eulerAngles == Vector3.zero)
         {
-            //_cameraBehaviour.enabled = false;
             _cameraBehaviour.GetDummy().transform.LookAt(_cameraBehaviour.transform.position + (transform.up * 10));
             rot = new Vector3(90, Camera.main.transform.parent.localRotation.eulerAngles.y, Camera.main.transform.parent.localRotation.eulerAngles.z);// _cameraBehaviour.GetDummy().transform.localRotation.eulerAngles;//new Vector3(_cameraBehaviour.GetDummy().transform.rotation.eulerAngles.x * transform.right.x, _cameraBehaviour.GetDummy().transform.rotation.eulerAngles.y * transform.right.y, _cameraBehaviour.GetDummy().transform.rotation.eulerAngles.z * transform.right.z);
             Camera.main.transform.parent.localRotation = Quaternion.Slerp(Camera.main.transform.parent.localRotation, Quaternion.Euler(rot), Time.fixedDeltaTime * 2 * _turnSpeedMultiplier);
@@ -66,7 +65,6 @@ public class PlayerTurnArounder : MonoBehaviour
         }
         else
         {
-            //_cameraBehaviour.enabled = false;
             _cameraBehaviour.GetDummy().transform.LookAt(_cameraBehaviour.transform.position + (transform.up * 10));
             rot = new Vector3(_cameraBehaviour.GetDummy().transform.rotation.eulerAngles.x * transform.right.x, _cameraBehaviour.GetDummy().transform.rotation.eulerAngles.y * transform.right.y, _cameraBehaviour.GetDummy().transform.rotation.eulerAngles.z * transform.right.z);
             Camera.main.transform.parent.rotation = Quaternion.Slerp(Camera.main.transform.parent.rotation, Quaternion.Euler(rot), Time.fixedDeltaTime * 2 * _turnSpeedMultiplier);
@@ -76,7 +74,6 @@ public class PlayerTurnArounder : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //_cameraBehaviour.enabled = true;
         _stopMovingAwayTime = DateTime.Now.AddMilliseconds(_swimAwayTimeInMs);
         _playerHasExited = true;
     }
