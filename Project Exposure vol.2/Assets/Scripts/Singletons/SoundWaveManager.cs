@@ -34,7 +34,6 @@ public class SoundWaveManager : MonoBehaviour
     //Left
     private GameObject _playerSoundWaveLeft;
     private Material _playerLeftImageMaterial;
-
     private float[] _playerOutputDataLeft;
     private int _playerLeftColumn;
     //Right
@@ -42,26 +41,6 @@ public class SoundWaveManager : MonoBehaviour
     private Material _playerRightImageMaterial;
     private int _playerRightColumn;
     private float[] _playerOutputDataRight;
-    //CollectedSoundWave
-    //0
-    private GameObject _collected0;
-    private GameObject _collected0Child0;
-    private GameObject _collected0Child1;
-    private GameObject _collected0Child2;
-    private Material _collectedImageMaterial0;
-    private int _collected0Column;
-    //1
-    private GameObject _collected1;
-    private GameObject _collected1Child0;
-    private GameObject _collected1Child1;
-    private Material _collectedImageMaterial1;
-    private int _collected1Column;
-    //2
-    private GameObject _collected2;
-    private GameObject _collected2Child0;
-    private Material _collectedImageMaterial2;
-    private int _collected2Column;
-    private float[] _individualOutputData;
 
     //TargetSoundWave
     private GameObject _targetSoundWave;
@@ -111,7 +90,7 @@ public class SoundWaveManager : MonoBehaviour
         }
         _exponentialSpectrum = new float[exponentialSize];
 
-        _scanProgress = Camera.main.transform.GetChild(0).GetChild(2).GetComponent<Image>();
+        _scanProgress = MainCanavasManager.Scanprogress.GetComponent<Image>();
         _scanProgress.enabled = false;
         _scanDuration = 3.0f;
         _scanTimeLeft = _scanDuration;
@@ -128,7 +107,6 @@ public class SoundWaveManager : MonoBehaviour
     {
         _frameCount++;
 
-        UpdateCollectedSoundWaves();
         UpdatePlayerSoundWave();
         UpdateTargetSoundWave();
         UpdateCustomSoundWave();
@@ -144,154 +122,16 @@ public class SoundWaveManager : MonoBehaviour
     private void InitPlayerSoundWave()
     {
         //Left
-        _playerSoundWaveLeft = Camera.main.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
-        _playerLeftImageMaterial = _playerSoundWaveLeft.transform.GetChild(2).GetChild(0).GetComponent<Image>().material;
+        _playerSoundWaveLeft = MainCanavasManager.Spectrograms.transform.GetChild(0).gameObject;
+        _playerLeftImageMaterial = _playerSoundWaveLeft.transform.GetChild(1).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_playerLeftImageMaterial);
         _playerOutputDataLeft = new float[SpectrumSize];
         //Right
-        _playerSoundWaveRight = Camera.main.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
-        _playerRightImageMaterial = _playerSoundWaveRight.transform.GetChild(2).GetChild(0).GetComponent<Image>().material;
+        _playerSoundWaveRight = MainCanavasManager.Spectrograms.transform.GetChild(1).gameObject;
+        _playerRightImageMaterial = _playerSoundWaveRight.transform.GetChild(1).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_playerRightImageMaterial);
         _playerOutputDataRight = new float[SpectrumSize];
-
-        //Collected
-        GameObject collected = Camera.main.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
-        //0
-        _collected0 = collected.transform.GetChild(0).gameObject;
-        _collectedImageMaterial0 = _collected0.transform.GetChild(0).GetChild(1).GetComponent<Image>().material;
-        _collected0Child0 = _collected0.transform.GetChild(0).gameObject;
-        _collected0Child0.transform.GetChild(1).GetComponent<Image>().material = _collectedImageMaterial0;
-        _collected0Child0.SetActive(false);
-        _collected0Child1 = _collected0.transform.GetChild(1).gameObject;
-        _collected0Child1.transform.GetChild(1).GetComponent<Image>().material = _collectedImageMaterial0;
-        _collected0Child1.SetActive(false);
-        _collected0Child2 = _collected0.transform.GetChild(2).gameObject;
-        _collected0Child2.transform.GetChild(1).GetComponent<Image>().material = _collectedImageMaterial0;
-        _collected0Child2.SetActive(false);
-        ResetTexture(_collectedImageMaterial0);
-        //1
-        _collected1 = collected.transform.GetChild(1).gameObject;
-        _collectedImageMaterial1 = _collected1.transform.GetChild(0).GetChild(1).GetComponent<Image>().material;
-        _collected1Child0 = _collected1.transform.GetChild(0).gameObject;
-        _collected1Child0.transform.GetChild(1).GetComponent<Image>().material = _collectedImageMaterial1;
-        _collected1Child0.SetActive(false);
-        _collected1Child1 = _collected1.transform.GetChild(1).gameObject;
-        _collected1Child1.transform.GetChild(1).GetComponent<Image>().material = _collectedImageMaterial1;
-        _collected1Child1.SetActive(false);
-        ResetTexture(_collectedImageMaterial1);
-        //2
-        _collected2 = collected.transform.GetChild(2).gameObject;
-        _collectedImageMaterial2 = _collected2.transform.GetChild(0).GetChild(1).GetComponent<Image>().material;
-        _collected2Child0 = _collected2.transform.GetChild(0).gameObject;
-        _collected2Child0.SetActive(false);
-        ResetTexture(_collectedImageMaterial2);
-
-        _individualOutputData = new float[SpectrumSize];
     }
-
-    private void UpdateCollectedSoundWaves()
-    {
-        if (_listeningToCollected.Count == 0)
-        {
-            //0
-            _collected0Child0.SetActive(false);
-            _collected0Child1.SetActive(false);
-            _collected0Child2.SetActive(false);
-            //1
-            _collected1Child0.SetActive(false);
-            _collected1Child1.SetActive(false);
-            //2
-            _collected2Child0.SetActive(false);
-            return;
-        }
-        if (_listeningToCollected.Count == 1)
-        {
-            //0
-            if (!_collected0Child0.activeSelf)
-            {
-                ResetTexture(_collectedImageMaterial0);
-                _collected0Column = _texWidth - 1;
-            }
-            _collected0Child0.SetActive(true);
-            _collected0Child1.SetActive(false);
-            _collected0Child2.SetActive(false);
-            //1
-            _collected1Child0.SetActive(false);
-            _collected1Child1.SetActive(false);
-            //2
-            _collected2Child0.SetActive(false);
-        }
-        else if (_listeningToCollected.Count == 2)
-        {
-            //0
-            _collected0Child0.SetActive(false);
-            _collected0Child1.SetActive(true);
-            _collected0Child2.SetActive(false);
-            //1
-            if (!_collected1Child0.activeSelf)
-            {
-                ResetTexture(_collectedImageMaterial1);
-                _collected1Column = _texWidth - 1;
-            }
-            _collected1Child0.SetActive(true);
-            _collected1Child1.SetActive(false);
-            //2
-            _collected2Child0.SetActive(false);
-        }
-        else if (_listeningToCollected.Count >= 3)
-        {
-            //0
-            _collected0Child0.SetActive(false);
-            _collected0Child1.SetActive(false);
-            _collected0Child2.SetActive(true);
-            //1
-            _collected1Child0.SetActive(false);
-            _collected1Child1.SetActive(true);
-            //2
-            if (!_collected2Child0.activeSelf)
-            {
-                ResetTexture(_collectedImageMaterial2);
-                _collected2Column = _texWidth - 1;
-            }
-            _collected2Child0.SetActive(true);
-        }
-
-        //Update Collected
-        if ((_frameCount + 2) % 3 == 0 || (_frameCount + 3) % 3 == 0)
-        {
-            Array.Clear(_subtractSpecturm, 0, _subtractSpecturm.Length - 1);
-            for (int i = 0; i < _listeningToCollected.Count; i++)
-            {
-                _listeningToCollected[i].GetComponent<AudioSource>().GetSpectrumData(_individualOutputData, 0, FFTWindow.BlackmanHarris);
-
-                if (i == 0)
-                {
-                    //0
-                    DrawSpectrogram(_collectedImageMaterial0, _individualOutputData, _collected0Column);
-                    _collected0Column--;
-                    if (_collected0Column < 0) _collected0Column = _texWidth - 1;
-                }
-                else if (i == 1)
-                {
-                    //1
-                    DrawSpectrogram(_collectedImageMaterial1, _individualOutputData, _collected1Column);
-                    _collected1Column--;
-                    if (_collected1Column < 0) _collected1Column = _texWidth - 1;
-                }
-                else if (i == 2)
-                {
-                    //2
-                    DrawSpectrogram(_collectedImageMaterial2, _individualOutputData, _collected2Column);
-                    _collected2Column--;
-                    if (_collected2Column < 0) _collected2Column = _texWidth - 1;
-                }
-
-                for (int j = 0; j < SpectrumSize; j++)
-                    _subtractSpecturm[j] += _individualOutputData[j];
-            }
-        }
-    }
-
 
     private void UpdatePlayerSoundWave()
     {
@@ -315,7 +155,7 @@ public class SoundWaveManager : MonoBehaviour
 
     private void InitTargetSoundWave()
     {
-        _targetSoundWave = Camera.main.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+        _targetSoundWave = MainCanavasManager.Spectrograms.transform.GetChild(2).gameObject;
         _targetImageMaterial = _targetSoundWave.transform.GetChild(1).GetChild(0).GetComponent<Image>().material;
         ResetTexture(_targetImageMaterial);
         _targetAudioSource = transform.parent.GetChild(5).GetComponent<AudioSource>();
@@ -403,8 +243,8 @@ public class SoundWaveManager : MonoBehaviour
     /// <returns></returns>
     private Color GetGradient(float pValue, float pIndex)
     {
-        Color color = _highIntensityColor * pValue + _lowIntensityColor * (1 - pValue);
-        color.a = Mathf.Clamp(pValue * 10, 0, 1);
+        Color color = _highIntensityColor * pValue * 2 + _lowIntensityColor * (1 - pValue * 2);
+        color.a = Mathf.Clamp(pValue * 5, 0.0f, 1.0f);
         return color;
     }
 
@@ -437,6 +277,14 @@ public class SoundWaveManager : MonoBehaviour
         tex.Apply();
         pMaterial.mainTexture = tex;
         pMaterial.mainTextureOffset = new Vector2(0, -0.0065f);
+    }
+
+    public void ResetPlayerTextures()
+    {
+        ResetTexture(_playerLeftImageMaterial);
+        _playerLeftColumn = 0;
+        ResetTexture(_playerRightImageMaterial);
+        _playerRightColumn = 0;
     }
 
     public void ScanCreature(GameObject pScannedCreature)
@@ -650,9 +498,6 @@ public class SoundWaveManager : MonoBehaviour
             material.SetFloat("_ScanLines", 0);
             material.SetFloat("_ScanLineWidth", 0);
         }
-        //mat.SetFloat("_IsScanning", 0);
-        //mat.SetFloat("_ScanLines", 0);
-        //mat.SetFloat("_ScanLineWidth", 0);
 
         _scanTimeLeft = _scanDuration;
         _scanProgress.enabled = false;

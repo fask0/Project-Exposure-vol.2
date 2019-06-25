@@ -24,10 +24,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _DepthDistance: 160
-    - _DepthStart: 25.8
-    - _FadeDistance: 0.25
-    - _FogBeforeFadeMultiplier: 0.25
+    - _DepthDistance: 100
+    - _DepthStart: 30
+    - _FadeDistance: 0.15
+    - _FogBeforeFadeMultiplier: 0.15
     - _FogStrength: 0.7
     - _NoiseFrequency: 1
     - _NoiseScale: 1
@@ -35,5 +35,5 @@ Material:
     - _PixelOffset: 0.005
     - _SingleColor: 0
     m_Colors:
-    - _FogColor: {r: 0, g: 0.18459585, b: 0.21698111, a: 1}
-    - _SilhouetteColor: {r: 0, g: 0.41509432, b: 0.39516973, a: 1}
+    - _FogColor: {r: 0, g: 0.59877914, b: 0.7830189, a: 1}
+    - _SilhouetteColor: {r: 0, g: 0.60334504, b: 0.7924528, a: 0}

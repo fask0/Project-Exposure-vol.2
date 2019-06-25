@@ -63,6 +63,14 @@ public class JoystickBehaviour : MonoBehaviour, IDragHandler, IPointerUpHandler,
         _timeAtZero = 0;
     }
 
+    private void OnDisable()
+    {
+        _inputVector = Vector3.zero;
+        _button.rectTransform.anchoredPosition = _inputVector;
+        _isPressed = false;
+        _timeAtZero = 0;
+    }
+
     public void ArtificialOnPointerUp()
     {
         _inputVector = Vector3.zero;
