@@ -133,8 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 100
-  _offsetXZ: {x: 540, y: 145}
-  _terrainSize: {x: 1958, y: 1958}
+  _offsetXZ: {x: 0, y: 0}
+  _terrainSize: {x: 950, y: 1500}
+  _targetTextureSize: {x: 2076, y: 3369}
   _undiscoverdMap: {fileID: 2800000, guid: 0949ed6ce13747947bfb6305f5ef0994, type: 3}
   _discoveredMap: {fileID: 2800000, guid: 47805d3b1b848e246958b943acdd3d1c, type: 3}
 --- !u!1 &2496871396542323264
@@ -182,7 +183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxDailyScoreEntries: 500
   _maxYearlyScoreEntries: 50
-  _highlightColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0.39215687}
 --- !u!1 &5164233925056157970
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,13 +230,13 @@ MonoBehaviour:
   _defaultAudioDistanace: 40
   _subCodexMenuModelScaleMultiplier: 2.5
   _fishScriptableObjects:
-  - {fileID: 11400000, guid: 698fdd1d59b80e74c8618cabfc078d2c, type: 2}
-  - {fileID: 11400000, guid: 28289215f0d9f2a4f94e60f59ade2c54, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: b447d5c2c9dcac946ae074bc6ecf5a24, type: 2}
   - {fileID: 11400000, guid: c66105ec07718f141b98cc20be58111f, type: 2}
   - {fileID: 11400000, guid: a486b23471550b5468b6c1cc9d7ea8b7, type: 2}
   - {fileID: 11400000, guid: 85078c456f59f7840a1ac847618de3a9, type: 2}
-  - {fileID: 11400000, guid: bcbebc19408740b4c903d4022924f4a8, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: f4e744ca1ac0b22429094797b831c451, type: 2}
   - {fileID: 11400000, guid: b2faa8e8c71525046a31ccc53f284352, type: 2}
   - {fileID: 11400000, guid: 841fdbdaadba32b40baa54cc03be8e2c, type: 2}
@@ -291,7 +291,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 509f2a4b8c07d5f478c25cd27888e860,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 49e40a2a308023e44a04623994f252ec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 23b427dffdb0cfb4a8b9172bcfa27f17, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
