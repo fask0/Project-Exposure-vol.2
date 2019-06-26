@@ -72,11 +72,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TallSeaweed2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5325731618570001010, guid: 105e7fec891cb424b9dc482e90d2fc48,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
     - target: {fileID: 9201862738672396385, guid: 105e7fec891cb424b9dc482e90d2fc48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -132,11 +127,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8201208063010112957, guid: 105e7fec891cb424b9dc482e90d2fc48,
+    - target: {fileID: 1124228165439668191, guid: 105e7fec891cb424b9dc482e90d2fc48,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d89764e3df441f43a81ed7661193a4c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105e7fec891cb424b9dc482e90d2fc48, type: 3}
 --- !u!4 &7531014092574880817 stripped
@@ -156,11 +151,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallSeaweed2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5325731618570001010, guid: 105e7fec891cb424b9dc482e90d2fc48,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 9201862738672396385, guid: 105e7fec891cb424b9dc482e90d2fc48,
         type: 3}
@@ -217,11 +207,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8201208063010112957, guid: 105e7fec891cb424b9dc482e90d2fc48,
+    - target: {fileID: 1124228165439668191, guid: 105e7fec891cb424b9dc482e90d2fc48,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d89764e3df441f43a81ed7661193a4c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105e7fec891cb424b9dc482e90d2fc48, type: 3}
 --- !u!4 &7221850287361141785 stripped
@@ -241,11 +231,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallSeaweed3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511913645049942802, guid: 2140aab537e87404c91ccf6c15b537be,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2495060902187000065, guid: 2140aab537e87404c91ccf6c15b537be,
         type: 3}
@@ -302,11 +287,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1066799021691835939, guid: 2140aab537e87404c91ccf6c15b537be,
+    - target: {fileID: 14319663701407580, guid: 2140aab537e87404c91ccf6c15b537be,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c81267fb67e5e842b2b22539afbdd7a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2140aab537e87404c91ccf6c15b537be, type: 3}
 --- !u!4 &6533984859619053058 stripped
