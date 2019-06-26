@@ -99,7 +99,7 @@ Material:
     - _WobbleSpeed: 0.137
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.49019608, g: 0.40392157, b: 0.23529412, a: 1}
+    - _Color: {r: 0, g: 0.764151, b: 0.7565095, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LeanDirection: {r: 0.3, g: 1, b: 0, a: 0}
     - _PlayerPos: {r: 0, g: 0, b: 0, a: 1}

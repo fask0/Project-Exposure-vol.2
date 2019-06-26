@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TrippleFinMaterial
-  m_Shader: {fileID: 4800000, guid: 8b67a41373c8f5a4e84de138e2d18f22, type: 3}
+  m_Shader: {fileID: 4800000, guid: 03ba8bc50eff5e64f946bac2fa16ee41, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

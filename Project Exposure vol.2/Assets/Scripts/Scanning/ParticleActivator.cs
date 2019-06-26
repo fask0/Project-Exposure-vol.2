@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ParticleActivator : MonoBehaviour
 {
+    [SerializeField]
+    private int _soundSensitivity = 250;
+
     private ParticleSystem _particleSystem;
     private bool _hasBeenScanned = false;
     private AudioSource _audioSource;
@@ -11,6 +14,7 @@ public class ParticleActivator : MonoBehaviour
     private float[] _samples0 = new float[1024];
     private float[] _samples1 = new float[1024];
     private ParticleSystem.MainModule _main;
+
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +86,7 @@ public class ParticleActivator : MonoBehaviour
             b = Mathf.Max(d, b);
         }
 
-        if (b * 250 > 1)
+        if (b * _soundSensitivity > 1)
         {
             _particleSystem.Stop();
             _particleSystem.Play();
