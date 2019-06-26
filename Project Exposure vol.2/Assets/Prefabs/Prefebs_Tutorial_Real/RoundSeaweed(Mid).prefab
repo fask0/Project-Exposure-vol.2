@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5841470013505702030}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.1720364, y: 0.14475578, z: 5.006165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -71,11 +71,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoundSeaweed3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5847974677124381264, guid: 137704833ae8e0140bd6819ed5abd18b,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 7454429509600446531, guid: 137704833ae8e0140bd6819ed5abd18b,
         type: 3}
@@ -132,11 +127,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1967125593000281887, guid: 137704833ae8e0140bd6819ed5abd18b,
+    - target: {fileID: 4766211598254681691, guid: 137704833ae8e0140bd6819ed5abd18b,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 88cedc573278ab348908bd98361ea237, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137704833ae8e0140bd6819ed5abd18b, type: 3}
 --- !u!4 &5377210011695543187 stripped
@@ -156,11 +151,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoundSeaweed2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3011027403391676211, guid: 687deb2d69bc37b4c9efbe4533b3b010,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2274890247407295776, guid: 687deb2d69bc37b4c9efbe4533b3b010,
         type: 3}
@@ -217,11 +207,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3172368441562910892, guid: 687deb2d69bc37b4c9efbe4533b3b010,
+    - target: {fileID: 6210216905427507249, guid: 687deb2d69bc37b4c9efbe4533b3b010,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 517557f6ee513c449870c1dc5d83adb4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687deb2d69bc37b4c9efbe4533b3b010, type: 3}
 --- !u!4 &2572956457387513233 stripped
@@ -241,11 +231,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoundSeaweed2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3011027403391676211, guid: 687deb2d69bc37b4c9efbe4533b3b010,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2274890247407295776, guid: 687deb2d69bc37b4c9efbe4533b3b010,
         type: 3}
@@ -302,11 +287,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3172368441562910892, guid: 687deb2d69bc37b4c9efbe4533b3b010,
+    - target: {fileID: 6210216905427507249, guid: 687deb2d69bc37b4c9efbe4533b3b010,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 517557f6ee513c449870c1dc5d83adb4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687deb2d69bc37b4c9efbe4533b3b010, type: 3}
 --- !u!4 &6334147960899927947 stripped
