@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ParrotFishMaterial
+  m_Name: HerringMaterial
   m_Shader: {fileID: 4800000, guid: 03ba8bc50eff5e64f946bac2fa16ee41, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: dffebfa532fb11448a39df67009ab6d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 84a9f52cedff7414799e45981a5621ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f112e7595eeecdd4cb1c59b2a7c933d4, type: 3}
+        m_Texture: {fileID: 2800000, guid: e2b80d0385ba77b47b2aab899a34d0f4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -52,15 +52,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicTex:
-        m_Texture: {fileID: 2800000, guid: 15f79ac336615454287ba4b6c7205abf, type: 3}
+        m_Texture: {fileID: 2800000, guid: a0ea4ac8dd00eaf439a32bd0e56f6d67, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 9b1a792bde8477a41a5fd14b863f7e86, type: 3}
+        m_Texture: {fileID: 2800000, guid: 96b7c3d593c167c4a9835b19085fc79c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Occlusion:
-        m_Texture: {fileID: 2800000, guid: e574dba8aab92b34fa18234056726c91, type: 3}
+        m_Texture: {fileID: 2800000, guid: eaf04c019fa3fce46928af37a05bad05, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -80,15 +80,15 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FishLength: 1
+    - _FishLength: 0.17996117
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.7
     - _GlossyReflections: 1
     - _IsScanning: 0
     - _Metallic: 0.2
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0
+    - _Offset: 0.9101412
     - _Parallax: 0.02
     - _ScanLineWidth: 2
     - _ScanLines: 1
@@ -97,12 +97,12 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WobbleCurve: 0.3
-    - _WobbleDistance: 0.06
-    - _WobbleSpeed: 158
+    - _WobbleCurve: 8
+    - _WobbleDistance: 0.04
+    - _WobbleSpeed: 300
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ScanInbetweenColor: {r: 0.12156863, g: 0.16470589, b: 0.94509804, a: 1}
-    - _ScanLineColor: {r: 0.2509804, g: 0.65882355, b: 1, a: 1}
+    - _ScanInbetweenColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ScanLineColor: {r: 1, g: 1, b: 1, a: 1}

@@ -70,7 +70,7 @@
 				o.Albedo = c.rgb;
 
 				// Metallic and smoothness come from slider variables
-				o.Metallic = tex2D(_MetallicTex, IN.uv_MainTex) + _Metallic; //_Metallic;
+				o.Metallic = tex2D(_MetallicTex, IN.uv_MainTex) * _Metallic; //_Metallic;
 				o.Normal = UnpackNormal(tex2Dlod(_NormalMap, float4(IN.uv_MainTex.xy, 0, 0)));
 				o.Occlusion = tex2D(_Occlusion, IN.uv_MainTex);
 				o.Smoothness = _Glossiness;

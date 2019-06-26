@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ParrotFishMaterial
+  m_Name: BlackfinBarracudaMaterial
   m_Shader: {fileID: 4800000, guid: 03ba8bc50eff5e64f946bac2fa16ee41, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: dffebfa532fb11448a39df67009ab6d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9c408901148f5c14a9e58e7927a720b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f112e7595eeecdd4cb1c59b2a7c933d4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 08b8884f8654941499caf709e86a6385, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -52,15 +52,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicTex:
-        m_Texture: {fileID: 2800000, guid: 15f79ac336615454287ba4b6c7205abf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1a7ed7fadf638094390e037815e5c92a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 9b1a792bde8477a41a5fd14b863f7e86, type: 3}
+        m_Texture: {fileID: 2800000, guid: 292a1931eea5dbe48a64f53ab0902ca6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Occlusion:
-        m_Texture: {fileID: 2800000, guid: e574dba8aab92b34fa18234056726c91, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9d197aeb8f16beb48a31e944fa2ee22b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -82,10 +82,10 @@ Material:
     - _DstBlend: 0
     - _FishLength: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _IsScanning: 0
-    - _Metallic: 0.2
+    - _Metallic: 0.1
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
@@ -97,12 +97,12 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WobbleCurve: 0.3
-    - _WobbleDistance: 0.06
-    - _WobbleSpeed: 158
+    - _WobbleCurve: 2
+    - _WobbleDistance: 0.05
+    - _WobbleSpeed: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ScanInbetweenColor: {r: 0.12156863, g: 0.16470589, b: 0.94509804, a: 1}
-    - _ScanLineColor: {r: 0.2509804, g: 0.65882355, b: 1, a: 1}
+    - _ScanInbetweenColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ScanLineColor: {r: 1, g: 1, b: 1, a: 1}
