@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
             Load("Level0D Last");
             Load("Level0Transition");
         }
-        else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "AsyncTransitions")
+        else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Mainscene")
         {
             if (_shouldLoadLevels)
                 Initialize();

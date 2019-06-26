@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/MainMenu.unity
     guid: 080d89a65f9df704cb5410e60a1639be
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/TestScenes/AsyncTransitions.unity
-    guid: 8824258f8b5c2474aa9207af3453dc4d
-  - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/MainGameScene.unity
-    guid: 5f5a52fc06d31794b9f6c42ca7244bf0
+    guid: f9c2054b75962c9408bef90d0d490a6f
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/TestScenes/Mainscene.unity
+    guid: 5d1b18cf28457c64eb39a4ce70bc7a5d
   - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level0/Level0A.unity
     guid: b22c7787d8dc6054f800787dfdcf3043

@@ -21,14 +21,17 @@ public class LightIntensityUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dot = Vector3.Dot(Vector3.up, Camera.main.transform.forward);
-        if (dot > 0)
+        if (Camera.main != null)
         {
-            _auraLight.strength = Mathf.Max(_startIntensity * (1 - dot), _minValue);
-        }
-        else
-        {
-            _auraLight.strength = _startIntensity;
+            float dot = Vector3.Dot(Vector3.up, Camera.main.transform.forward);
+            if (dot > 0)
+            {
+                _auraLight.strength = Mathf.Max(_startIntensity * (1 - dot), _minValue);
+            }
+            else
+            {
+                _auraLight.strength = _startIntensity;
+            }
         }
     }
 }
