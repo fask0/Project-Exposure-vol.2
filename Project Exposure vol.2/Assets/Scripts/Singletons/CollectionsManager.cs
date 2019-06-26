@@ -24,7 +24,11 @@ public class CollectionsManager : MonoBehaviour
     private CodexSubMenuFishModelTilt _codexSubMenuFishModelTilt;
     private AudioSource _codexSubSoundwave;
     private TextMeshProUGUI _codexSubDescription;
+    private TextMeshProUGUI _codexSubFishName;
     private GameObject _toCodexButton;
+
+    private Sprite _selectedBackgound;
+    private Sprite _defaultBackgruond;
 
     private float _angleToRotate;
 
@@ -46,23 +50,26 @@ public class CollectionsManager : MonoBehaviour
         //Save Default Mesh/Texture
         _undiscoveredSpeciesMesh = fish[0].sharedMesh;
         _undiscoveredSpeciesTexture = fish[0].gameObject.GetComponent<MeshRenderer>().material.mainTexture;
+        _selectedBackgound = _codexMainMenu[0].transform.parent.GetComponent<Image>().sprite;
+        _defaultBackgruond = _codexMainMenu[1].transform.parent.GetComponent<Image>().sprite;
 
         //Save SubMenu Elements
         GameObject codexSubMenu = MainCanavasManager.Codex.transform.GetChild(1).gameObject;
         //Main Model
-        _codexSubFishModel = codexSubMenu.transform.GetChild(1).gameObject;
+        _codexSubFishModel = SingleTons.FindChild(codexSubMenu, "fishmodel");
         _codexSubFishModel.GetComponent<MeshFilter>().sharedMesh = _undiscoveredSpeciesMesh;
         _codexSubFishModel.GetComponent<MeshRenderer>().material.mainTexture = _undiscoveredSpeciesTexture;
         SetScale(_codexSubFishModel, _subCodexMenuModelScaleMultiplier * 0.5f);
         //Main Model Overlay
-        _codexSubMenuFishModelTilt = codexSubMenu.transform.GetChild(0).GetComponent<CodexSubMenuFishModelTilt>();
+        _codexSubMenuFishModelTilt = SingleTons.FindChild(codexSubMenu, "tiltrect").GetComponent<CodexSubMenuFishModelTilt>();
         //SoundWave
-        _codexSubSoundwave = codexSubMenu.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(0).GetComponent<AudioSource>();
+        _codexSubSoundwave = SingleTons.FindChild(codexSubMenu, "audiosample").transform.GetChild(0).GetChild(1).GetChild(0).GetComponent<AudioSource>();
         SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
         //Description
-        _codexSubDescription = codexSubMenu.transform.GetChild(2).transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        _codexSubDescription = SingleTons.FindChild(codexSubMenu, "fishdescription").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         _codexSubDescription.text = "Unknown creature...";
-
+        //Name
+        _codexSubFishName = SingleTons.FindChild(codexSubMenu, "fishname").GetComponent<TextMeshProUGUI>();
 
         _toCodexButton = SingleTons.FindChild(MainCanavasManager.Spectrograms, "tocodexbutton");
 
@@ -73,16 +80,17 @@ public class CollectionsManager : MonoBehaviour
     private void Update()
     {
         if (!_codexSubFishModel.activeSelf) return;
+        float step = Time.deltaTime / Time.timeScale;
 
         //Rotate all objects in the container
         for (int i = 0; i < _codexMainMenu.Count; i++)
-            _codexMainMenu[i].transform.localRotation *= Quaternion.Euler(0, Time.deltaTime * 100, 0);
+            _codexMainMenu[i].transform.localRotation *= Quaternion.Euler(0, step * 100, 0);
 
         //Rotate the object in the CodexSubMenu
-        _angleToRotate += Time.deltaTime * 50;
+        _angleToRotate += step * 100;
         _codexSubFishModel.transform.localRotation = Quaternion.Slerp(_codexSubFishModel.transform.localRotation,
                                                                       Quaternion.Euler(30 * _codexSubMenuFishModelTilt.Vertical(), _angleToRotate, 0),
-                                                                      Time.deltaTime * 5);
+                                                                      step * 5);
     }
 
     private void GetAudioSourcesInScene(string pSceneName)
@@ -208,39 +216,72 @@ public class CollectionsManager : MonoBehaviour
                 if (IsCollected(pGameObject.name))
                 {
                     //Discovered Species
+                    //Model
                     _codexSubFishModel.GetComponent<MeshFilter>().sharedMesh = _fishScriptableObjects[i].Mesh;
                     _codexSubFishModel.GetComponent<MeshRenderer>().material.mainTexture = _fishScriptableObjects[i].Texture;
                     SetScale(_codexSubFishModel, _subCodexMenuModelScaleMultiplier);
-                    _codexSubSoundwave.clip = _fishScriptableObjects[i].AudioClip;
+                    //Name and Description
                     _codexSubDescription.text = _fishScriptableObjects[i].DescriptionFile.text;
+                    _codexSubFishName.text = _fishScriptableObjects[i].Name;
+                    //Audio sample
+                    _codexSubSoundwave.clip = _fishScriptableObjects[i].AudioClip;
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
                     PlayAudioSample();
+                    //Notification
                     pGameObject.transform.GetChild(1).GetComponent<Image>().enabled = false;
+                    //Background
+                    for (int j = 0; j < _codexMainMenu.Count; j++)
+                    {
+                        if (_codexMainMenu[j] == pGameObject) continue;
+                        _codexMainMenu[j].transform.parent.GetComponent<Image>().sprite = _defaultBackgruond;
+                    }
+                    pGameObject.GetComponent<Image>().sprite = _selectedBackgound;
                 }
                 else
                 {
                     //Undiscovered Species
+                    //Model
                     _codexSubFishModel.GetComponent<MeshFilter>().sharedMesh = _undiscoveredSpeciesMesh;
                     _codexSubFishModel.GetComponent<MeshRenderer>().material.mainTexture = _undiscoveredSpeciesTexture;
                     SetScale(_codexSubFishModel, _subCodexMenuModelScaleMultiplier * 0.5f);
-                    _codexSubSoundwave.clip = null;
+                    //Name and Description
                     _codexSubDescription.text = "Unknown creature...";
+                    _codexSubFishName.text = "???";
+                    //Audio sample
+                    _codexSubSoundwave.clip = null;
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
                     StopAudioSample();
+                    //Background
+                    for (int j = 0; j < _codexMainMenu.Count; j++)
+                    {
+                        if (_codexMainMenu[j] == pGameObject) continue;
+                        _codexMainMenu[j].transform.parent.GetComponent<Image>().sprite = _defaultBackgruond;
+                    }
+                    pGameObject.GetComponent<Image>().sprite = _selectedBackgound;
                 }
                 CheckIfHasNotifications();
                 return;
             }
         }
-
         //Undiscovered Species
+        //Model
         _codexSubFishModel.GetComponent<MeshFilter>().sharedMesh = _undiscoveredSpeciesMesh;
         _codexSubFishModel.GetComponent<MeshRenderer>().material.mainTexture = _undiscoveredSpeciesTexture;
         SetScale(_codexSubFishModel, _subCodexMenuModelScaleMultiplier * 0.5f);
-        _codexSubSoundwave.clip = null;
+        //Name and Description
         _codexSubDescription.text = "Unknown creature...";
+        _codexSubFishName.text = "???";
+        //Audio sample
+        _codexSubSoundwave.clip = null;
         SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
         StopAudioSample();
+        //Background
+        for (int j = 0; j < _codexMainMenu.Count; j++)
+        {
+            if (_codexMainMenu[j] == pGameObject) continue;
+            _codexMainMenu[j].transform.parent.GetComponent<Image>().sprite = _defaultBackgruond;
+        }
+        pGameObject.GetComponent<Image>().sprite = _selectedBackgound;
     }
 
     private void CheckIfHasNotifications()

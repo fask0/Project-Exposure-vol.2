@@ -176,7 +176,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508761657124394019}
-  m_LocalRotation: {x: -0, y: 0.74629384, z: -0, w: 0.6656167}
+  m_LocalRotation: {x: 0, y: 0.74629563, z: 0, w: 0.6656147}
   m_LocalPosition: {x: 46.3, y: 33.7, z: 43.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 508761658605726705}
   - component: {fileID: 508761658605726707}
   - component: {fileID: 508761658605726704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,6 @@ GameObject:
   - component: {fileID: 508761658491200958}
   - component: {fileID: 508761658491200959}
   - component: {fileID: 5590639989009855297}
-  - component: {fileID: 5590639989009855308}
   - component: {fileID: 5590639990310028241}
   m_Layer: 8
   m_Name: Player
@@ -694,21 +693,6 @@ MonoBehaviour:
   _threatFleeRange: 8
   _threatLevel: 10
   _drawRange: 1
---- !u!114 &5590639989009855308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359889255800621834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddec110bff607c94b8151015ba80605a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maximumOxygen: 100
-  _oxygenDrainRate: 1
-  _surviveTimeWithoutOxygen: 20
 --- !u!95 &5590639990310028241
 Animator:
   serializedVersion: 3
@@ -1635,6 +1619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8152552960293887481}
   - component: {fileID: 3985526686699598057}
+  - component: {fileID: 1333792462}
   m_Layer: 0
   m_Name: Bofy
   m_TagString: Untagged
@@ -1784,6 +1769,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.1315175, y: -0.1913909, z: -0.010895461}
     m_Extent: {x: 0.877679, y: 0.6294259, z: 0.69740665}
   m_DirtyAABB: 0
+--- !u!114 &1333792462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830601364431541308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 1
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &3993957805843555815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,8 +2648,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 2}
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5590639989890837712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,6 +3452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228513201435385086}
   - component: {fileID: 678744664274854554}
+  - component: {fileID: 1644553866}
   m_Layer: 0
   m_Name: Backpack
   m_TagString: Untagged
@@ -3541,6 +3543,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.2663763, y: 0.23045003, z: 0}
     m_Extent: {x: 0.25665912, y: 0.25969654, z: 0.14999843}
   m_DirtyAABB: 0
+--- !u!114 &1644553866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273679091211082192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 1
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &8293597847366071409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,11 +3949,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.31764707
-      objectReference: {fileID: 0}
-    - target: {fileID: 7212815695244563495, guid: 9c86efe066a2e644d9c02b9d87b20bd5,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212815695244563495, guid: 9c86efe066a2e644d9c02b9d87b20bd5,
         type: 3}

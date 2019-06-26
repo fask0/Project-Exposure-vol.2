@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Whale
   DescriptionFile: {fileID: 4900000, guid: 183bae88f5e2e7f4b96c56ad78a69b40, type: 3}
-  AudioClip: {fileID: 8300000, guid: 165f12d5fb0043d4e9894c47293fbe3b, type: 3}
+  AudioClip: {fileID: 8300000, guid: 359ee81c44add1f4da09619ce02d1c38, type: 3}
   Sprite: {fileID: 21300000, guid: 285c4c7382f318d4f8605d5e0e0d83d2, type: 3}
   Mesh: {fileID: 4447979320562087488, guid: b10755a25abd96b48a5371429cefa59d, type: 3}
   Texture: {fileID: 2800000, guid: bf3fca6272bc0d841af640bf36b4bace, type: 3}

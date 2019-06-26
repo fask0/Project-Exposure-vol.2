@@ -46,4 +46,9 @@ public class CodexSubMenuFishModelTilt : MonoBehaviour, IDragHandler, IPointerDo
     {
         return _inputVector.y;
     }
+
+    public float Horizontal()
+    {
+        return _inputVector.x;
+    }
 }
