@@ -122,7 +122,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 95a353f125fed1340a80a93a8a07694e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d452eb780dfaa6b4fa37661e919bfba9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -425,7 +425,7 @@ MonoBehaviour:
   _threatLevel: 1
   _drawRange: 0
   _minSpeed: 1.25
-  _maxSpeed: 2.5
+  _maxSpeed: 6
   _turningSpeed: 1
   _speedUpRate: 10
   _dummy: {fileID: 8747856068781857026}

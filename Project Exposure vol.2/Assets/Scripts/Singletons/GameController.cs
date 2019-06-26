@@ -141,8 +141,7 @@ public class GameController : MonoBehaviour
     private IEnumerator UnloadMainMenu()
     {
         yield return new WaitForSeconds(0.01f);
-        //Unload("MainMenu");
-        Unload("AsyncTransitions");
+        Unload("MainMenu");
     }
 
     private void OnLevelFinishedLoading(Scene pScene, LoadSceneMode pLoadMode)
