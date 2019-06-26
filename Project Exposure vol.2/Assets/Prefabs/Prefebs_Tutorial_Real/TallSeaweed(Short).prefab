@@ -73,11 +73,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TallSeaweed0
       objectReference: {fileID: 0}
-    - target: {fileID: 1700839619760957895, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
     - target: {fileID: 2432437786663836628, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -133,11 +128,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5649582162051295382, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
+    - target: {fileID: 6693997180874837035, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de33f96f7826c35458ca5b7fcba30b17, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2, type: 3}
 --- !u!4 &2319372535389415369 stripped
@@ -157,11 +152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallSeaweed2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5325731618570001010, guid: 105e7fec891cb424b9dc482e90d2fc48,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 9201862738672396385, guid: 105e7fec891cb424b9dc482e90d2fc48,
         type: 3}
@@ -218,11 +208,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8201208063010112957, guid: 105e7fec891cb424b9dc482e90d2fc48,
+    - target: {fileID: 1124228165439668191, guid: 105e7fec891cb424b9dc482e90d2fc48,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d89764e3df441f43a81ed7661193a4c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105e7fec891cb424b9dc482e90d2fc48, type: 3}
 --- !u!4 &2125493770021020343 stripped
@@ -242,11 +232,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallSeaweed0 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1700839619760957895, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2432437786663836628, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
         type: 3}
@@ -303,11 +288,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5649582162051295382, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
+    - target: {fileID: 6693997180874837035, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de33f96f7826c35458ca5b7fcba30b17, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ceb5300de30cb4db8d4af5fe9aaaa2, type: 3}
 --- !u!4 &4785752769997988852 stripped
@@ -327,11 +312,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallSeaweed1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1655205066676279619, guid: ecd9e0ea04c02b5429ff6c8a1ad3e05a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2351760701644368720, guid: ecd9e0ea04c02b5429ff6c8a1ad3e05a,
         type: 3}
@@ -388,11 +368,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5829204557686961085, guid: ecd9e0ea04c02b5429ff6c8a1ad3e05a,
+    - target: {fileID: 2164254090165675575, guid: ecd9e0ea04c02b5429ff6c8a1ad3e05a,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 123
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 821a68c00fd755b4c825ae95fd52589a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd9e0ea04c02b5429ff6c8a1ad3e05a, type: 3}
 --- !u!4 &5974602041518257794 stripped

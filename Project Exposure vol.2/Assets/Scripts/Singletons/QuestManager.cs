@@ -33,7 +33,6 @@ public class QuestManager : MonoBehaviour
         onQuestCompletionEvent += SingleTons.ScoreManager.SaveScoreToday;
         onQuestCompletionEvent += SingleTons.ScoreManager.GetDaily;
         onQuestCompletionEvent += SingleTons.ScoreManager.GetYearly;
-        onQuestCompletionEvent += SingleTons.ScoreManager.ShowDaily;
     }
 
     public void SetTargetAudio(int pTargetIndex)

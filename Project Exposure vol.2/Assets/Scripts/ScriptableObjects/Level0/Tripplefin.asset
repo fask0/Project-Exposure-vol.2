@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb4b35f0eaa42a488de14be2743a62c, type: 3}
+  m_Name: Tripplefin
+  m_EditorClassIdentifier: 
+  Name: Tripplefin
+  DescriptionFile: {fileID: 4900000, guid: a80a8c2b6171a3c45b55d9193b4cb5df, type: 3}
+  AudioClip: {fileID: 8300000, guid: d452eb780dfaa6b4fa37661e919bfba9, type: 3}
+  Sprite: {fileID: 21300000, guid: 285c4c7382f318d4f8605d5e0e0d83d2, type: 3}
+  Mesh: {fileID: -8677485993036714586, guid: 75d9535c99e84f441bce4375088debe4, type: 3}
+  Texture: {fileID: 2800000, guid: 3a08b121f8047c749b9eb5fd46135b8e, type: 3}
