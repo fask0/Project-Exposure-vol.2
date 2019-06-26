@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb4b35f0eaa42a488de14be2743a62c, type: 3}
+  m_Name: Stingray
+  m_EditorClassIdentifier: 
+  Name: Stingray
+  DescriptionFile: {fileID: 4900000, guid: 05f04d339959d7b4682724fb9641756d, type: 3}
+  AudioClip: {fileID: 8300000, guid: dfc1e44871d52784b956cf1aa70d3dfa, type: 3}
+  Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
+  Mesh: {fileID: 5531436973462828509, guid: 67c64a2062d99674197bead2cd02e6f6, type: 3}
+  Texture: {fileID: 2800000, guid: 07fe851b32bc2e640a7eeb3038fe978b, type: 3}
