@@ -20,7 +20,7 @@ public class ParticleActivator : MonoBehaviour
     void Start()
     {
         _particleSystem = GetComponent<ParticleSystem>();
-        _audioSource = transform.parent.parent.GetComponent<AudioSource>();
+        _audioSource = transform.parent.parent.GetComponentInChildren<AudioSource>();
         _main = _particleSystem.main;
         _particleSystem.Stop();
         ResetParticleSystem(_main);
@@ -37,7 +37,7 @@ public class ParticleActivator : MonoBehaviour
         pMain.startLifetime = 2;
         pMain.simulationSpeed = 5;
         ParticleSystem.Burst burst = _particleSystem.emission.GetBurst(0);
-        burst.time = 0.5f;
+        burst.time = 2;
     }
 
     private void OnDisable()
@@ -62,7 +62,7 @@ public class ParticleActivator : MonoBehaviour
 
         if (other.tag == "Player" && other.gameObject.name == "Player")
         {
-            _particleSystem.Play();
+            //_particleSystem.Play();
         }
     }
 
