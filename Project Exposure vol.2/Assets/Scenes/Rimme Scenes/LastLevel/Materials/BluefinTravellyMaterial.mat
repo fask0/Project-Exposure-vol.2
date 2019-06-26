@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlackfinBarracudaMaterial
+  m_Name: BluefinTravellyMaterial
   m_Shader: {fileID: 4800000, guid: 03ba8bc50eff5e64f946bac2fa16ee41, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: 9c408901148f5c14a9e58e7927a720b5, type: 3}
+        m_Texture: {fileID: 2800000, guid: f5922fa7ad549c74ba992ae8312edbe9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 08b8884f8654941499caf709e86a6385, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e506f4b2bcd3eb44aed2efd31d8af6a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -52,15 +52,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicTex:
-        m_Texture: {fileID: 2800000, guid: 1a7ed7fadf638094390e037815e5c92a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3fecf4be31985aa43b8b2e18839ba18c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 292a1931eea5dbe48a64f53ab0902ca6, type: 3}
+        m_Texture: {fileID: 2800000, guid: e47d502280308004d8f6bd785f673401, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Occlusion:
-        m_Texture: {fileID: 2800000, guid: 9d197aeb8f16beb48a31e944fa2ee22b, type: 3}
+        m_Texture: {fileID: 2800000, guid: d02a78f5863a4d24c97e5c809146f4d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -82,10 +82,10 @@ Material:
     - _DstBlend: 0
     - _FishLength: 1
     - _GlossMapScale: 1
-    - _Glossiness: 1
+    - _Glossiness: 0.633
     - _GlossyReflections: 1
     - _IsScanning: 0
-    - _Metallic: 0.1
+    - _Metallic: 0.247
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0.127
@@ -97,8 +97,8 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WobbleCurve: 2
-    - _WobbleDistance: 0.05
+    - _WobbleCurve: 0.5
+    - _WobbleDistance: 0.057
     - _WobbleSpeed: 0
     - _ZWrite: 1
     m_Colors:
