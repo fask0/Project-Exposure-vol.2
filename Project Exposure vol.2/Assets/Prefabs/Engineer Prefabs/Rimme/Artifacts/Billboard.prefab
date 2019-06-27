@@ -250,17 +250,17 @@ PrefabInstance:
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.87
+      value: -1.636
       objectReference: {fileID: 0}
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
@@ -306,6 +306,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Billboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803924, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: -1.5707963
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b45116a7ed38874fbff63705d5bde49, type: 3}

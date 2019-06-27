@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radius: 100
   _offsetXZ: {x: 0, y: 0}
-  _terrainSize: {x: 1958, y: 1500}
+  _terrainSize: {x: 950, y: 1500}
   _targetTextureSize: {x: 2076, y: 3369}
   _undiscoverdMap: {fileID: 2800000, guid: 0949ed6ce13747947bfb6305f5ef0994, type: 3}
   _discoveredMap: {fileID: 2800000, guid: 47805d3b1b848e246958b943acdd3d1c, type: 3}
@@ -466,6 +466,11 @@ MonoBehaviour:
   _lowIntensityColor: {r: 1, g: 0.9622972, b: 0, a: 0}
   _heightMultiplier: 100
   _afterFishScanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _afterArtifactScanEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

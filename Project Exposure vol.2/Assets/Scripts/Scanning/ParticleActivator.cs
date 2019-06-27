@@ -24,7 +24,7 @@ public class ParticleActivator : MonoBehaviour
         _main = _particleSystem.main;
         _particleSystem.Stop();
         ResetParticleSystem(_main);
-
+        gameObject.name = transform.parent.parent.name;
         SingleTons.SoundWaveManager.onFishScanEvent += ScanEvent;
     }
 
@@ -59,7 +59,6 @@ public class ParticleActivator : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (_hasBeenScanned) return;
-
         if (other.tag == "Player" && other.gameObject.name == "Player")
         {
             //_particleSystem.Play();

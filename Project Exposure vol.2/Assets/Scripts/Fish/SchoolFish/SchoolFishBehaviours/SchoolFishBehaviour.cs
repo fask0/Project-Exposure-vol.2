@@ -40,7 +40,7 @@ public class SchoolFishBehaviour : FishBehaviour
             _hasAddedItselfToSchool = true;
         }
 
-        if(_rigidBody != null)
+        if (_rigidBody != null)
             _rigidBody.velocity = Vector3.zero;
 
         if (!_fishTooClose)

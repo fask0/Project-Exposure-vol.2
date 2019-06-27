@@ -126,6 +126,7 @@ public class GameController : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        UnpauseGame();
     }
 
     public void Initialize()
