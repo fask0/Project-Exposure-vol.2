@@ -53,7 +53,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3693617767693058288}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -152,6 +152,9 @@ MonoBehaviour:
   _isAvoiding: 0
   _schoolFishWithLeader: []
   _schoolFishWithLeaderBehaviours: []
+  fishCheckingSubdivision: 10
+  _playerInRangeCheckingDistance: 100
+  _playerRotationMovementCheckingDistance: 2000
 --- !u!1 &4639746501110278810
 GameObject:
   m_ObjectHideFlags: 0
