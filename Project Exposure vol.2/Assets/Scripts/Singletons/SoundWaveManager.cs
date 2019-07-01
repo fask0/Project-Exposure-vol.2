@@ -12,6 +12,7 @@ public class SoundWaveManager : MonoBehaviour
     [SerializeField] private int _heightMultiplier = 300;
 
     [SerializeField] private UnityEvent _afterFishScanEvent;
+    [SerializeField] private UnityEvent _afterArtifactScanEvent;
 
     private const int SpectrumSize = 4096;
 
@@ -451,6 +452,8 @@ public class SoundWaveManager : MonoBehaviour
                     onFishScanEvent(pScannedTarget);
 
                 HideProgress(pScannedTarget);
+
+                _afterArtifactScanEvent.Invoke();
             }
         }
         else

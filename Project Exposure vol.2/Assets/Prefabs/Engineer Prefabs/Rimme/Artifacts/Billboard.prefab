@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 531873511099635204}
   m_Layer: 10
   m_Name: Billboard
-  m_TagString: Target0
+  m_TagString: Target1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dfb9152f5c605474ba7b51cc0fb971f6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 11419e01a3fe90044a8478eb9985f9c0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -102,7 +102,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -191,7 +191,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 4.5
   m_Center: {x: 0, y: 0, z: -0.0000019073486}
 --- !u!65 &531873511099635197
 BoxCollider:
@@ -250,17 +250,17 @@ PrefabInstance:
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.87
+      value: -1.636
       objectReference: {fileID: 0}
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1870660274770200014, guid: 3b45116a7ed38874fbff63705d5bde49,
         type: 3}
@@ -306,6 +306,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Billboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803923, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315091827858803924, guid: 3b45116a7ed38874fbff63705d5bde49,
+        type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: -1.5707963
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b45116a7ed38874fbff63705d5bde49, type: 3}

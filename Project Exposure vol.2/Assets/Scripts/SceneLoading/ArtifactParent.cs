@@ -17,6 +17,8 @@ public class ArtifactParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_radarArrowTime.Count == 0) return;
+
         while (_radarArrowTime.Count < GetComponentsInChildren<AudioSource>().Length)
             _radarArrowTime.Add(120);
         while (_radarArrowTime.Count > GetComponentsInChildren<AudioSource>().Length)
@@ -25,6 +27,7 @@ public class ArtifactParent : MonoBehaviour
 
     public int GetArrowTime(int index)
     {
+        if (_radarArrowTime.Count == 0) return 0;
         return _radarArrowTime[index];
     }
 }

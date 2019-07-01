@@ -41,6 +41,7 @@ public class AddButtonListener : MonoBehaviour
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.ReduceAllVolume(); });
                 break;
             case ButtonState.ExitMenu:
+                button.onClick.AddListener(() => { SingleTons.SoundWaveManager.ResetPlayerTextures(); });
                 button.onClick.AddListener(() => { SingleTons.CollectionsManager.IncreaseAllVolume(); });
                 break;
             case ButtonState.MinimapZoomIn:

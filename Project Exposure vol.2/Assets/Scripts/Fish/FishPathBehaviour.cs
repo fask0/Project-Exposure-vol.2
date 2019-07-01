@@ -48,8 +48,18 @@ public class FishPathBehaviour : FishBehaviour
         //Get starting target
         GetNewTarget();
 
-        _rigidBody = GetComponent<Rigidbody>();
+        if (GetComponent<Rigidbody>() != null)
+            _rigidBody = GetComponent<Rigidbody>();
+        else
+            _rigidBody = GetComponentInChildren<Rigidbody>();
         _animator = GetComponent<Animator>();
+
+        //Add to avoidable fish
+        if (_thisCreatureType != FishManager.AvoidableCreatures.Other)
+        {
+            SingleTons.FishManager.AddAvoidableCreature(_thisCreatureType, this);
+            Debug.Log("Added " + gameObject.name + " to " + _thisCreatureType);
+        }
     }
 
     // Update is called once per frame

@@ -15,8 +15,12 @@ public class SceneTransition : MonoBehaviour
             if (name != "")
                 SingleTons.GameController.Load(name);
 
-        if (_unloadScenes.Count > 0)
-            StartCoroutine("UnloadScenes");
+        foreach (string name in _unloadScenes)
+            if (name != "")
+                SingleTons.GameController.Unload(name);
+
+        //if (_unloadScenes.Count > 0)
+        //    StartCoroutine("UnloadScenes");
     }
 
     private IEnumerator UnloadScenes()

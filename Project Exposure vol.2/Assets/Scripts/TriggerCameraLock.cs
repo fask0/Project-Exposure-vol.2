@@ -13,6 +13,8 @@ public class TriggerCameraLock : MonoBehaviour
     [SerializeField]
     private int _lockTimeInMs = 5000;
     [SerializeField]
+    private int _callStillAfterTimeInMs = 2500;
+    [SerializeField]
     private float _movementSpeedMultiplier = 2;
     [SerializeField]
     private float _rotationSpeedMultiplier = 3;
@@ -21,6 +23,8 @@ public class TriggerCameraLock : MonoBehaviour
     private UnityEvent _startEvent;
     [SerializeField]
     private UnityEvent _stillEvent;
+    [SerializeField]
+    private UnityEvent _stillAfterTimeEvent;
     [SerializeField]
     private UnityEvent _stopEvent;
 
@@ -34,6 +38,8 @@ public class TriggerCameraLock : MonoBehaviour
     private bool _hasBeenActivatedBefore = false;
 
     private DateTime _playerUnlockTime;
+    private DateTime _callStillEventTime;
+    private bool _hasCalledStillEvent = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +48,11 @@ public class TriggerCameraLock : MonoBehaviour
         _playerMovementBehaviour = _player.GetComponent<PlayerMovementBehaviour>();
         _camera = Camera.main.gameObject;
         _cameraBehaviour = _camera.transform.parent.GetComponent<CameraBehaviour>();
+
+        foreach (AudioSource source in GetComponentsInChildren<AudioSource>())
+        {
+            source.Stop();
+        }
     }
 
     private void FixedUpdate()
@@ -60,14 +71,22 @@ public class TriggerCameraLock : MonoBehaviour
                     _playerAtTargetPosition = true;
                     _playerUnlockTime = DateTime.Now.AddMilliseconds(_lockTimeInMs);
                     _stillEvent.Invoke();
+                    _callStillEventTime = DateTime.Now.AddMilliseconds(_callStillAfterTimeInMs);
                 }
             }
             else
             {
+                if (!_hasCalledStillEvent && DateTime.Now > _callStillEventTime)
+                {
+                    _stillAfterTimeEvent.Invoke();
+                    _hasCalledStillEvent = true;
+                }
+
                 if (DateTime.Now > _playerUnlockTime)
                 {
                     //Unlock player
                     UnlockPlayer();
+                    _hasCalledStillEvent = false;
                 }
             }
         }

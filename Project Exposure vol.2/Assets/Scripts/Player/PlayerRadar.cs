@@ -7,8 +7,6 @@ public class PlayerRadar : MonoBehaviour
 {
     [SerializeField]
     private GameObject _objToActivate;
-    [SerializeField]
-    private int _activateAfterSeconds;
 
     private GameObject _target;
     private DateTime _activationTime = DateTime.MaxValue;
@@ -20,12 +18,13 @@ public class PlayerRadar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _activationTime = DateTime.Now.AddSeconds(_activateAfterSeconds);
         SingleTons.SoundWaveManager.onFishScanEvent += ResetRadar;
         SetTarget(SingleTons.QuestManager.GetCurrentTarget());
 
         _artifactParent = GameObject.FindGameObjectWithTag("ArtifactParent");
         _artifactParentScript = _artifactParent.GetComponent<ArtifactParent>();
+
+        _activationTime = DateTime.Now.AddSeconds(_artifactParentScript.GetArrowTime(SingleTons.QuestManager.GetCurrentTargetIndex()));
     }
 
     private void ResetRadar(GameObject pGameObject)

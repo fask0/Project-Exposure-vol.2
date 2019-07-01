@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: c0ddd7f4639cd574aa6a6f029d5d1d09
+  m_OcclusionCullingData: {fileID: 36300000, guid: d4a04e9f6a5f3a344a6e4ffc5f803543,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -18317,12 +18318,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 51edb0fd2334a9643ac37cfdf44e9dc5, type: 2}
-    - target: {fileID: 8653316402067781878, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
+    - target: {fileID: 4119623370391342856, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 4119623370391342856, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
+    - target: {fileID: 8653316402067781878, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -18884,12 +18885,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 831ed645379af04488b590e698e5bdfd, type: 2}
-    - target: {fileID: 8653316402067781878, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
+    - target: {fileID: 4119623370391342856, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 4119623370391342856, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
+    - target: {fileID: 8653316402067781878, guid: 305c2df4ea2cfe94d991eb35a0ab7e0a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295

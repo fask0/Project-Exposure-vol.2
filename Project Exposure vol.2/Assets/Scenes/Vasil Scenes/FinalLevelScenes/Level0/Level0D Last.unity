@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 9681fa43746f2ae478aefed653308677
+  m_OcclusionCullingData: {fileID: 36300000, guid: d4a04e9f6a5f3a344a6e4ffc5f803543,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -536,11 +537,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -595,6 +591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -2037,11 +2038,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2080,7 +2076,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -2096,6 +2092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -2172,11 +2173,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RockGobyRandomFish (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -2321,11 +2317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2380,6 +2371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -2554,11 +2550,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrippleFinRandomFish (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
@@ -3270,6 +3261,11 @@ PrefabInstance:
       propertyPath: _turningSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8692515210759536601, guid: 9c8b1ca53f53a404bafb96b316f542b1,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb3fa980b9dfd8f4581daeadbf7d70ca, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8b1ca53f53a404bafb96b316f542b1, type: 3}
 --- !u!1001 &257536725
@@ -3540,11 +3536,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3599,6 +3590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -3688,11 +3684,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3747,6 +3738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -4368,11 +4364,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4427,6 +4418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -5277,11 +5273,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5336,6 +5327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -6335,11 +6331,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6378,7 +6369,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -6394,6 +6385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -6414,11 +6410,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RockGobyRandomFish (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -6474,6 +6465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -6733,11 +6729,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6792,6 +6783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -8616,11 +8612,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8676,6 +8667,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
 --- !u!1 &948696315 stripped
@@ -8723,11 +8719,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RockGobyRandomFish (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -8783,6 +8774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -8974,11 +8970,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9017,7 +9008,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
@@ -9033,6 +9024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -9541,11 +9537,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9600,6 +9591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -10939,11 +10935,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10999,6 +10990,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
 --- !u!1001 &1193259120
@@ -11012,11 +11008,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrippleFinRandomFish (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
@@ -11072,6 +11063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8382854926837223248, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
@@ -11194,11 +11190,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11253,6 +11244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -11496,11 +11492,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11539,7 +11530,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -11555,6 +11546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -11825,11 +11821,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11868,7 +11859,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
@@ -11884,6 +11875,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -12075,11 +12071,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12134,6 +12125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -12610,11 +12606,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12653,7 +12644,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -12669,6 +12660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -13071,11 +13067,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13114,7 +13105,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -13130,6 +13121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -13769,11 +13765,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13829,6 +13820,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
 --- !u!1 &1561743322 stripped
@@ -13876,11 +13872,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrippleFinRandomFish
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
@@ -13936,6 +13927,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -15080,11 +15076,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrippleFinRandomFish (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15139,6 +15130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050783a3661ba15409070cf6c1fa4b80, type: 3}
@@ -15238,11 +15234,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockGobyRandomFish (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15281,7 +15272,7 @@ PrefabInstance:
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 7ecb50b15ee21cb438fec707daf62831,
         type: 3}
@@ -15297,6 +15288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104726287498326465, guid: 7ecb50b15ee21cb438fec707daf62831,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb50b15ee21cb438fec707daf62831, type: 3}
@@ -15410,6 +15406,11 @@ PrefabInstance:
       propertyPath: _turningSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8692515210759536601, guid: 9c8b1ca53f53a404bafb96b316f542b1,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb3fa980b9dfd8f4581daeadbf7d70ca, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8b1ca53f53a404bafb96b316f542b1, type: 3}
 --- !u!1 &1816231911 stripped
@@ -17964,11 +17965,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrippleFinRandomFish (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104726287498326465, guid: 050783a3661ba15409070cf6c1fa4b80,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8747856068970502608, guid: 050783a3661ba15409070cf6c1fa4b80,
         type: 3}

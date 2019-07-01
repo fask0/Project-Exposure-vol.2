@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
             Load("Level0D Last");
             Load("Level0Transition");
         }
-        else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu")
+        else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Mainscene")
         {
             if (_shouldLoadLevels)
                 Initialize();
@@ -80,8 +80,16 @@ public class GameController : MonoBehaviour
     public void Load(string pSceneName)
     {
         if (!SceneManager.GetSceneByName(pSceneName).isLoaded)
+            StartCoroutine("AsyncLoad", pSceneName);
+    }
+
+    private IEnumerator AsyncLoad(string pSceneName)
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync(pSceneName, LoadSceneMode.Additive);
+
+        while (!async.isDone)
         {
-            SceneManager.LoadScene(pSceneName, LoadSceneMode.Additive);
+            yield return null;
             LoadedScenes.Add(SceneManager.GetSceneByName(pSceneName));
         }
     }
@@ -89,8 +97,16 @@ public class GameController : MonoBehaviour
     public void Unload(string pSceneName)
     {
         if (SceneManager.GetSceneByName(pSceneName).isLoaded)
+            StartCoroutine("AsyncUnload", pSceneName);
+    }
+
+    private IEnumerator AsyncUnload(string pSceneName)
+    {
+        AsyncOperation async = SceneManager.UnloadSceneAsync(pSceneName);
+
+        while (!async.isDone)
         {
-            SceneManager.UnloadSceneAsync(pSceneName);
+            yield return null;
             LoadedScenes.Remove(SceneManager.GetSceneByName(pSceneName));
         }
     }
@@ -110,6 +126,7 @@ public class GameController : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        UnpauseGame();
     }
 
     public void Initialize()

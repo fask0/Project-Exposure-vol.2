@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: b7fa39ecfbe0bef4285f466a2c75905f
+  m_OcclusionCullingData: {fileID: 36300000, guid: d4a04e9f6a5f3a344a6e4ffc5f803543,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -15803,6 +15804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1314696960, guid: 2d93f247f7f072d4986a228d7f30a394, type: 3}
       propertyPath: Priority
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314696960, guid: 2d93f247f7f072d4986a228d7f30a394, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 611a5db11c690884ca58f4f104dbcb8c, type: 3}
+    - target: {fileID: 7993908516223229135, guid: 2d93f247f7f072d4986a228d7f30a394,
+        type: 3}
+      propertyPath: m_Radius
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []

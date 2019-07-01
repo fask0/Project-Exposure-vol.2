@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 3549ee917f5915d47ba7709fa197713c
+  m_OcclusionCullingData: {fileID: 36300000, guid: d4a04e9f6a5f3a344a6e4ffc5f803543,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -2546,7 +2547,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -3289,7 +3290,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -4319,11 +4320,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6363258015284122790, guid: f0154989e15651649b4f5cf63267b7fc,
-        type: 3}
-      propertyPath: Mute
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0154989e15651649b4f5cf63267b7fc, type: 3}
@@ -8261,7 +8257,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -9310,7 +9306,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -9891,7 +9887,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -12778,7 +12774,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -12858,7 +12854,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -14263,7 +14259,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -14948,7 +14944,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -16811,7 +16807,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -17653,7 +17649,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
@@ -19573,7 +19569,7 @@ PrefabInstance:
     - target: {fileID: 7049616854080959899, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_Name
-      value: RegalTanf
+      value: RegalTang
       objectReference: {fileID: 0}
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}

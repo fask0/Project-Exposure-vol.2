@@ -95,22 +95,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1Transition.unity
     guid: c136162950991f14ba23b3fb5c81d26d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2A.unity
     guid: a93af7afa27106842bf2f7b8e2c70adb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2B.unity
     guid: baf0a2ecc14be0c41a24c3398912e542
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2C.unity
     guid: c98100a7f298eed42a5ece78c6eb9c3d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2D.unity
     guid: 454d23eead7931b4490387626894a7d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2E.unity
     guid: cac3ac3840c29d24abf313a6e949bafc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2F Last.unity
     guid: 3f6a4fec32d5eee4aa73815f1fe3ed36
   m_configObjects: {}
