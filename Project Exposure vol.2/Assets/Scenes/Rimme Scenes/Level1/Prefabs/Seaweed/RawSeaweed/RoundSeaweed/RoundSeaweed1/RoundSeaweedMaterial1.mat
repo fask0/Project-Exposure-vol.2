@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _CurveHeight: 7
+    - _CurveHeight: 4
     - _CurveWidth: 0.3
     - _Cutoff: 1
     - _DetailNormalMapScale: 1
@@ -88,7 +88,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset: 0
     - _Parallax: 0.02
-    - _PlayerDetectionRange: 4
+    - _PlayerDetectionRange: 2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

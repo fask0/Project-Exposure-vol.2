@@ -27,7 +27,12 @@ public class ArtifactParent : MonoBehaviour
 
     public int GetArrowTime(int index)
     {
-        if (_radarArrowTime.Count == 0) return 0;
+        if (index >= _radarArrowTime.Count) return int.MaxValue;
         return _radarArrowTime[index];
+    }
+
+    public List<int> GetRadarTimesList()
+    {
+        return _radarArrowTime;
     }
 }

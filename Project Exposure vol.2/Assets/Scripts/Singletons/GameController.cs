@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
 
     //[HideInInspector]
     public GameObject Player;
+    private DateTime _timeIdle;
 
     private void Awake()
     {
@@ -52,12 +53,16 @@ public class GameController : MonoBehaviour
 
         _originalTimescale = Time.timeScale;
         _originalFixedDeltaTime = Time.fixedDeltaTime;
+        _timeIdle = DateTime.Now.AddSeconds(60);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.anyKey)
+            _timeIdle = DateTime.Now.AddSeconds(30);
+
+        if (DateTime.Now >= _timeIdle)
             ResetGame();
     }
 
