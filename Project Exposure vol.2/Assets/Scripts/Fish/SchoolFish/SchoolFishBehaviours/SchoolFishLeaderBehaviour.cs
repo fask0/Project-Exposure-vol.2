@@ -23,7 +23,7 @@ public class SchoolFishLeaderBehaviour : FishBehaviour
     protected float _playerRotationMovementCheckingDistance = 2000;
 
     protected bool _playerInRange = false;
-    protected bool _playerInRangeForRotationAndMovement = true;
+    protected bool _playerInRangeForRotationAndMovement = false;
 
     // Start is called before the first frame update
     void Start()
@@ -96,19 +96,26 @@ public class SchoolFishLeaderBehaviour : FishBehaviour
         }
 
         //Make schoolfish not check shit unnecessarily 2 (even more optimization : - ))
-        if (!_playerInRangeForRotationAndMovement && Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position) < _playerRotationMovementCheckingDistance)
+        float dist = Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position);
+        if (dist < (float)_playerRotationMovementCheckingDistance)
         {
             for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
             {
-                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader2 = true;
+                if (_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(true);
             }
             _playerInRangeForRotationAndMovement = true;
         }
-        else if (_playerInRangeForRotationAndMovement && Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position) > _playerRotationMovementCheckingDistance)
+        else if (dist > (float)_playerRotationMovementCheckingDistance)
         {
             for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
             {
-                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader2 = false;
+                if (!_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(false);
             }
             _playerInRangeForRotationAndMovement = false;
         }

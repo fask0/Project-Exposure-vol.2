@@ -85,22 +85,27 @@ public class SchoolFishPathingLeaderBehaviour : SchoolFishLeaderBehaviour
             _playerInRange = false;
         }
 
-        throw new System.ArgumentException("Leader fish does this check before fishes are added to the school, meaning the first time it gets called it doesnt work");
         //Make schoolfish not check shit unnecessarily 2 (even more optimization : - ))
         float dist = Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position);
-        if (!_playerInRangeForRotationAndMovement && dist < (float)_playerRotationMovementCheckingDistance)
+        if (dist < (float)_playerRotationMovementCheckingDistance)
         {
             for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
             {
-                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader2 = true;
+                if (_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(true);
             }
             _playerInRangeForRotationAndMovement = true;
         }
-        else if (_playerInRangeForRotationAndMovement && dist > (float)_playerRotationMovementCheckingDistance)
+        else if (dist > (float)_playerRotationMovementCheckingDistance)
         {
             for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
             {
-                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader2 = false;
+                if (!_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(false);
             }
             _playerInRangeForRotationAndMovement = false;
         }
