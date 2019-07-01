@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5087635991671032586}
   - component: {fileID: 1560040500352825331}
   - component: {fileID: 980296656066085678}
-  m_Layer: 0
-  m_Name: Fish
+  m_Layer: 12
+  m_Name: BlackfinBarracuda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -120,7 +120,6 @@ MonoBehaviour:
   _alwaysAvoid: 0
   _isAvoiding: 0
   _playerInRangeOfLeader: 1
-  _playerInRangeOfLeader2: 1
 --- !u!1 &8193419389243418943
 GameObject:
   m_ObjectHideFlags: 0
