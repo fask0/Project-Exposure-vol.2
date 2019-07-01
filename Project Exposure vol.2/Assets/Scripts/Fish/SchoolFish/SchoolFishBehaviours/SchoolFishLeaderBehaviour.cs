@@ -15,7 +15,15 @@ public class SchoolFishLeaderBehaviour : FishBehaviour
     public List<SchoolFishBehaviour> _schoolFishWithLeaderBehaviours = new List<SchoolFishBehaviour>();
 
     protected int fishCheckingIndex = 0;
+    [SerializeField]
     protected int fishCheckingSubdivision = 10;
+    [SerializeField]
+    protected float _playerInRangeCheckingDistance = 100;
+    [SerializeField]
+    protected float _playerRotationMovementCheckingDistance = 2000;
+
+    protected bool _playerInRange = false;
+    protected bool _playerInRangeForRotationAndMovement = false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +76,57 @@ public class SchoolFishLeaderBehaviour : FishBehaviour
 
         //Correct schoolfish movement
         CorrectSchoolFishMovement();
+
+        //Make schoolfish not check shit unnecessarily (optimizaiton)
+        if (!_playerInRange && Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position) < _playerInRangeCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader = true;
+            }
+            _playerInRange = true;
+        }
+        else if (_playerInRange && Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position) > _playerInRangeCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader = false;
+            }
+            _playerInRange = false;
+        }
+
+        //Make schoolfish not check shit unnecessarily 2 (even more optimization : - ))
+        float dist = Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position);
+        if (dist < (float)_playerRotationMovementCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                if (_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(true);
+            }
+            _playerInRangeForRotationAndMovement = true;
+        }
+        else if (dist > (float)_playerRotationMovementCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                if (!_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(false);
+            }
+            _playerInRangeForRotationAndMovement = false;
+        }
+    }
+
+    protected bool InPlayerViewFrustum()
+    {
+        if (Vector3.Dot(SingleTons.GameController.Player.transform.forward, transform.position - SingleTons.GameController.Player.transform.position) > 0)
+            return true;
+        else
+            return false;
     }
 
     private void CorrectSchoolFishMovement()
@@ -119,5 +178,11 @@ public class SchoolFishLeaderBehaviour : FishBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(_checkpoint, 2);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, _playerInRangeCheckingDistance);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _playerRotationMovementCheckingDistance);
     }
 }

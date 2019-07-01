@@ -66,6 +66,49 @@ public class SchoolFishPathingLeaderBehaviour : SchoolFishLeaderBehaviour
 
         //Correct schoolfish movement
         CorrectSchoolFishMovement();
+
+        //Make schoolfish not check shit unnecessarily (optimizaiton)
+        if (!_playerInRange && Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position) < _playerInRangeCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader = true;
+            }
+            _playerInRange = true;
+        }
+        else if (_playerInRange && Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position) > _playerInRangeCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                _schoolFishWithLeaderBehaviours[i]._playerInRangeOfLeader = false;
+            }
+            _playerInRange = false;
+        }
+
+        //Make schoolfish not check shit unnecessarily 2 (even more optimization : - ))
+        float dist = Vector3.Distance(transform.position, SingleTons.GameController.Player.transform.position);
+        if (dist < (float)_playerRotationMovementCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                if (_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(true);
+            }
+            _playerInRangeForRotationAndMovement = true;
+        }
+        else if (dist > (float)_playerRotationMovementCheckingDistance)
+        {
+            for (int i = 0; i < _schoolFishWithLeaderBehaviours.Count; i++)
+            {
+                if (!_schoolFishWithLeaderBehaviours[i].GetPlayerInRangeOfLeader2())
+                    break;
+
+                _schoolFishWithLeaderBehaviours[i].SetPlayerInRangeOfLeader2(false);
+            }
+            _playerInRangeForRotationAndMovement = false;
+        }
     }
 
     private void CorrectSchoolFishMovement()
@@ -120,5 +163,11 @@ public class SchoolFishPathingLeaderBehaviour : SchoolFishLeaderBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(_checkpoint, 2);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, _playerInRangeCheckingDistance);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _playerRotationMovementCheckingDistance);
     }
 }
