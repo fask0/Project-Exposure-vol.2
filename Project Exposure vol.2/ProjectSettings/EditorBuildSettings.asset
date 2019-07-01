@@ -95,6 +95,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1Transition.unity
     guid: c136162950991f14ba23b3fb5c81d26d
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2 Backup eli.unity
+    guid: 486a0013fbec4b04c92e8ca372fa3120
   - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2A.unity
     guid: a93af7afa27106842bf2f7b8e2c70adb

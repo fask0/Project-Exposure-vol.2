@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     //[HideInInspector]
     public GameObject Player;
     private DateTime _timeIdle;
+    private bool _shouldUpdate = true;
 
     private void Awake()
     {
@@ -35,10 +36,12 @@ public class GameController : MonoBehaviour
             Load("Level0D Last");
             Load("Level0Transition");
         }
-        else if (SceneManager.GetActiveScene().name == "DemoMainScene" || SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Mainscene")
+        else if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             if (_shouldLoadLevels)
                 Initialize();
+
+            _shouldUpdate = false;
         }
     }
 
@@ -59,6 +62,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!_shouldUpdate) return;
+
         if (Input.anyKey)
             _timeIdle = DateTime.Now.AddSeconds(30);
 

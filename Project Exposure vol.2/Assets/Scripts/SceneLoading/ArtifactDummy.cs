@@ -59,33 +59,44 @@ public class ArtifactDummy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.isTrigger || other.tag != "Player") return;
-        if (_radar.GetTarget() == gameObject)
+        if (_maxArtifactIndex >= SingleTons.QuestManager.GetCurrentTargetIndex() && _minArtifactIndex <= SingleTons.QuestManager.GetCurrentTargetIndex())
         {
-            if (_isCloser)
-                _radar.SetTarget(SingleTons.QuestManager.GetCurrentTarget());
-            else
-                _radar.SetTarget(_peer.gameObject);
+            if (_radar.GetTarget() == gameObject)
+            {
+                if (_isCloser)
+                    _radar.SetTarget(SingleTons.QuestManager.GetCurrentTarget());
+                else
+                    _radar.SetTarget(_peer.gameObject);
 
-            _hasChangedTarget = true;
-        }
-        else if (_radar.GetTarget() != _peer && _peer._isCloser)
-        {
-            _radar.SetTarget(_peer.gameObject);
-            _hasChangedTarget = true;
+                _hasChangedTarget = true;
+            }
+            else if (_radar.GetTarget() != _peer.gameObject)
+            {
+                if (_peer._isCloser)
+                {
+                    _radar.SetTarget(_peer.gameObject);
+                    _hasChangedTarget = true;
+                }
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.isTrigger || other.tag != "Player") return;
-        if (_radar.GetTarget() != gameObject && !_hasChangedTarget)
+        if (_maxArtifactIndex >= SingleTons.QuestManager.GetCurrentTargetIndex() && _minArtifactIndex <= SingleTons.QuestManager.GetCurrentTargetIndex())
         {
-            if (_maxArtifactIndex >= SingleTons.QuestManager.GetCurrentTargetIndex() && _minArtifactIndex <= SingleTons.QuestManager.GetCurrentTargetIndex())
+            if (_radar.GetTarget() != gameObject && _radar.GetTarget() != _peer.gameObject && !_hasChangedTarget)
             {
                 _radar.SetTarget(gameObject);
             }
-        }
 
+            if (_radar.GetTarget() == _peer.gameObject && !_hasChangedTarget)
+            {
+                if (_peer._isCloser)
+                    _radar.SetTarget(gameObject);
+            }
+        }
         _hasChangedTarget = false;
     }
 }
