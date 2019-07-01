@@ -43,7 +43,7 @@ public class PlayerRadar : MonoBehaviour
     {
         if (SingleTons.QuestManager.GetCurrentTarget() == null)
         {
-            _activationTime = DateTime.Now.AddSeconds(_artifactParentScript.GetArrowTime(SingleTons.QuestManager.GetCurrentTargetIndex()));
+            _activationTime = DateTime.MaxValue;
             _objToActivate.SetActive(false);
             _hasBeenActivated = false;
             return;

@@ -80,13 +80,7 @@ public class QuestManager : MonoBehaviour
 
     public GameObject GetCurrentTarget()
     {
-        try
-        {
-            return _allTargetsList[_currentTargetIndex].gameObject;
-        }
-        catch
-        {
-            return null;
-        }
+        if (_currentTargetIndex >= _allTargetsList.Count) return null;
+        return _allTargetsList[_currentTargetIndex].gameObject;
     }
 }
