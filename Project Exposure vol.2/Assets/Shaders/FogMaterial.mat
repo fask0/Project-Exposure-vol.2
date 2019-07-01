@@ -35,5 +35,5 @@ Material:
     - _PixelOffset: 0.005
     - _SingleColor: 0
     m_Colors:
-    - _FogColor: {r: 0, g: 0.2295374, b: 0.9056604, a: 1}
-    - _SilhouetteColor: {r: 0, g: 0.0017302036, b: 0.5, a: 1}
+    - _FogColor: {r: 0, g: 0.3329778, b: 0.38679248, a: 1}
+    - _SilhouetteColor: {r: 0, g: 0.20139922, b: 0.23584908, a: 1}
