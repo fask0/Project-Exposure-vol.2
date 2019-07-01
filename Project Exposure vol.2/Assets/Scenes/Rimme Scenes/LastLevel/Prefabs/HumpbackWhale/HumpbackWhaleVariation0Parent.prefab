@@ -350,7 +350,7 @@ MonoBehaviour:
   _drawRange: 1
   _minSpeed: 4
   _maxSpeed: 6
-  _turningSpeed: 1.5
+  _turningSpeed: 2
   _speedUpRate: 10
   _dummy: {fileID: 8554603486960351926}
   _creaturesToAvoid: 

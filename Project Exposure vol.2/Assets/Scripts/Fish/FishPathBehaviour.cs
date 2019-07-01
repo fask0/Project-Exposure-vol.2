@@ -17,9 +17,13 @@ public class FishPathBehaviour : FishBehaviour
     private FishBehaviourParent _fishThatsTooCloseBehaviour;
     private Animator _animator;
 
+    private float _startTurningSpeed;
+
     // Start is called before the first frame update
     private void Start()
     {
+        _startTurningSpeed = _turningSpeed;
+
         //School the designers rq
         if (transform.parent.GetComponent<LineRenderer>() == null)
         {
@@ -83,6 +87,7 @@ public class FishPathBehaviour : FishBehaviour
         transform.position += (transform.forward * Time.deltaTime * _currentSpeed);
 
         _rigidBody.velocity = Vector3.zero;
+        _turningSpeed += Time.deltaTime * 0.1f;
 
         if (!_fishTooClose)
         {
@@ -165,6 +170,8 @@ public class FishPathBehaviour : FishBehaviour
     {
         //Reset index
         if (_index >= _targetCount) { _index = 0; }
+
+        _turningSpeed = _startTurningSpeed;
 
         //Get new target
         _currentTarget = _pathPositions[_index] + transform.parent.position;
