@@ -222,7 +222,7 @@ public class CollectionsManager : MonoBehaviour
                     SetScale(_codexSubFishModel, _subCodexMenuModelScaleMultiplier);
                     //Name and Description
                     _codexSubDescription.text = _fishScriptableObjects[i].DescriptionFile.text;
-                    _codexSubFishName.text = _fishScriptableObjects[i].Name;
+                    _codexSubFishName.text = _fishScriptableObjects[i].DiscriptionName;
                     //Audio sample
                     _codexSubSoundwave.clip = _fishScriptableObjects[i].AudioClip;
                     SingleTons.SoundWaveManager.ResetTexture(_codexSubSoundwave.gameObject.GetComponent<Image>().material);
