@@ -172,7 +172,7 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 891e307a949f2df4d86c0a4fa889b892, type: 2}
   _fogColor: {r: 0, g: 0.33333334, b: 0.3882353, a: 0}
   _silhouetteColor: {r: 0, g: 0, b: 0, a: 0}
-  _depthStart: 20
+  _depthStart: 40
   _depthDistance: 80
   _depthFadeDistance: 1
   _fogBeforeFadeMultiplier: 0.57
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 090f7362897d1974f8b707cbd8bf95a9, type: 2}
+  profile: {fileID: 11400000, guid: 208c3bc4fd722034d8a190e568a6f36e, type: 2}
 --- !u!84 &482710277
 RenderTexture:
   m_ObjectHideFlags: 0
