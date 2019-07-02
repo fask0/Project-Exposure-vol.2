@@ -34,6 +34,8 @@ public class CameraFollowPath : MonoBehaviour
     private float _cameraLookSpeed = 2.0f;
     [SerializeField]
     private float _cameraPathTurnSpeed = 8.0f;
+    [SerializeField]
+    private float _cameraMoveSpeedMultiplier = 1.0f;
 
     public UnityEvent StillEvent;
     public UnityEvent StartEvent;
@@ -130,7 +132,7 @@ public class CameraFollowPath : MonoBehaviour
         {
             if (Vector3.Distance(_camera.transform.GetChild(0).position, _pathPoints[_pathPointIndex].transform.position) > 3.0f)
             {
-                _cameraBehaviour.SetTemporaryTarget(_pathPoints[_pathPointIndex], true, 3.0f, _cameraLookSpeed, _cameraPathTurnSpeed, _objectToFocusOn);
+                _cameraBehaviour.SetTemporaryTarget(_pathPoints[_pathPointIndex], true, 3.0f * _cameraMoveSpeedMultiplier, _cameraLookSpeed, _cameraPathTurnSpeed, _objectToFocusOn);
             }
             else
             {
@@ -147,7 +149,7 @@ public class CameraFollowPath : MonoBehaviour
         {
             if (Vector3.Distance(_camera.transform.GetChild(0).position, _pathPoints[_pathPointIndex].transform.position) > 3.0f)
             {
-                _cameraBehaviour.SetTemporaryTarget(_pathPoints[_pathPointIndex], true, 3.0f, _cameraLookSpeed, _cameraPathTurnSpeed, _objectToFocusOn);
+                _cameraBehaviour.SetTemporaryTarget(_pathPoints[_pathPointIndex], true, 3.0f * _cameraMoveSpeedMultiplier, _cameraLookSpeed, _cameraPathTurnSpeed, _objectToFocusOn);
             }
             else
             {
