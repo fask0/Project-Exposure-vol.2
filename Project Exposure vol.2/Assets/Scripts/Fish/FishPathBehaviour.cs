@@ -87,7 +87,7 @@ public class FishPathBehaviour : FishBehaviour
         transform.position += (transform.forward * Time.deltaTime * _currentSpeed);
 
         _rigidBody.velocity = Vector3.zero;
-        _turningSpeed += Time.deltaTime * 0.1f;
+        _turningSpeed += Time.deltaTime;
 
         if (!_fishTooClose)
         {
