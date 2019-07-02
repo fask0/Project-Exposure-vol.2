@@ -5,6 +5,9 @@ using TMPro;
 
 public class CollectionsManager : MonoBehaviour
 {
+    public delegate void OnDolphinScan();
+    public event OnDolphinScan onDolphinScanEvent;
+
     [SerializeField] [Range(0, 1)] private float _defaultAudioVolume = 0.8f;
     [SerializeField] [Range(0, 100)] private int _defaultAudioDistanace = 8;
     [SerializeField] private float _subCodexMenuModelScaleMultiplier = 2.5f;
@@ -159,6 +162,9 @@ public class CollectionsManager : MonoBehaviour
             if (collectableAudioSources[i] == pGameObject)
             {
                 collectedAudioSources.Add(pGameObject.name, pGameObject.GetComponent<AudioSource>());
+                if (pGameObject.name == "Dolphin")
+                    if (onDolphinScanEvent != null)
+                        onDolphinScanEvent();
                 isAlreadyCollected = false;
                 Debug.Log(string.Format("New audio sample found: {0}", pGameObject.transform.name.ToUpper()));
 

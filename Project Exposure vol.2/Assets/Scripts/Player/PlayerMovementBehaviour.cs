@@ -104,7 +104,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
                                                                                            Camera.main.transform.parent.transform.rotation.eulerAngles.y + 90 * _joystickBehaviour.Horizontal(),
                                                                                            0), 2 * Time.deltaTime);
 
-                transform.Translate(_direction * _velocity * Time.deltaTime, Space.World);
+                //transform.Translate(_direction * _velocity * Time.deltaTime, Space.World);
+                _rigidbody.velocity = _direction * _velocity * Time.deltaTime;
             }
         }
     }

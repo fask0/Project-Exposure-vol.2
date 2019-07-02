@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadedScenes: []
-  _shouldLoadLevels: 1
+  _shouldLoadLevels: 0
   Player: {fileID: 0}
 --- !u!1 &918605305
 GameObject:
@@ -133,11 +133,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 100
-  _offsetXZ: {x: 0, y: 0}
+  _offsetXZ: {x: 30, y: -35}
   _terrainSize: {x: 950, y: 1500}
-  _targetTextureSize: {x: 2076, y: 3369}
+  _targetTextureSize: {x: 2118, y: 3381}
   _undiscoverdMap: {fileID: 2800000, guid: 0949ed6ce13747947bfb6305f5ef0994, type: 3}
-  _discoveredMap: {fileID: 2800000, guid: 47805d3b1b848e246958b943acdd3d1c, type: 3}
+  _discoveredMap: {fileID: 2800000, guid: 000afcfe419f21e44bda9e4bbf7798a6, type: 3}
 --- !u!1 &2496871396542323264
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,12 +467,34 @@ MonoBehaviour:
   _heightMultiplier: 100
   _afterFishScanEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: StartHighlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _afterArtifactScanEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Blinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8605413666412022123

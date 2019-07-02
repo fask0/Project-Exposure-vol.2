@@ -349,6 +349,7 @@ public class SoundWaveManager : MonoBehaviour
         else if (_currentScan != pScannedCreature) return;
 
         _scanTimeLeft -= Time.deltaTime;
+        _cameraBehaviour.StartScanningArtifact(pScannedCreature);
 
         foreach (Material material in materials)
         {
@@ -375,6 +376,8 @@ public class SoundWaveManager : MonoBehaviour
             foreach (KeyValuePair<GameObject, UnityEvent> unityEvent in scanEvents)
                 if (unityEvent.Key == pScannedCreature)
                     unityEvent.Value.Invoke();
+
+            _cameraBehaviour.StopScanningArtifact();
 
             CallScanEvents();
             HideProgress(pScannedCreature);
@@ -412,7 +415,6 @@ public class SoundWaveManager : MonoBehaviour
 
                         HideProgress(_currentScan);
                         _currentScan = pScannedTarget;
-                        _cameraBehaviour.StartScanningArtifact(pScannedTarget);
 
                         CallScanEvents();
                     }
@@ -447,6 +449,7 @@ public class SoundWaveManager : MonoBehaviour
         int.TryParse(pScannedTarget.tag.Substring(6), out index);
 
         _scanTimeLeft -= Time.deltaTime;
+        _cameraBehaviour.StartScanningArtifact(pScannedTarget);
 
         foreach (Material material in materials)
         {
