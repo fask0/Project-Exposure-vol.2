@@ -82,7 +82,7 @@ Material:
     - _DstBlend: 0
     - _FishLength: 1
     - _GlossMapScale: 1
-    - _Glossiness: 1
+    - _Glossiness: 0.9
     - _GlossyReflections: 1
     - _IsScanning: 0
     - _Metallic: 0.1
