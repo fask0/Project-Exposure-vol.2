@@ -66,54 +66,69 @@ EditorBuildSettings:
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1M.unity
     guid: 20ec2b7085285984bb4c8f628c2e3c25
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1N.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1S.unity
     guid: c75f29f45d6341249b30fa83ae796028
   - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1O.unity
     guid: 8bb8424afdf92874aaa1b474e7cbf80c
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1P.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1T.unity
     guid: 04aa156bde477fd4ea917d229204f78c
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1Q.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1U.unity
     guid: 6d6e140deede74b428e8fbd41b11e77c
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1R.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1V Last.unity
     guid: 90169ea570e690540bb7e3e0d3012f04
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1S.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1N.unity
     guid: 415fcc8aba7beaa4291ee8125712bbe8
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1T.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1P.unity
     guid: 11b318aba6af8ba4ebf27ccb0e347906
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1U.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1Q.unity
     guid: 3549ee917f5915d47ba7709fa197713c
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1V Last.unity
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1/Level1R.unity
     guid: b7fa39ecfbe0bef4285f466a2c75905f
   - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level1Transition.unity
     guid: c136162950991f14ba23b3fb5c81d26d
   - enabled: 1
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2 Backup eli.unity
-    guid: 486a0013fbec4b04c92e8ca372fa3120
-  - enabled: 0
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2A.unity
     guid: a93af7afa27106842bf2f7b8e2c70adb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2B.unity
     guid: baf0a2ecc14be0c41a24c3398912e542
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2C.unity
     guid: c98100a7f298eed42a5ece78c6eb9c3d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2D.unity
     guid: 454d23eead7931b4490387626894a7d0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2E.unity
     guid: cac3ac3840c29d24abf313a6e949bafc
-  - enabled: 0
-    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2F Last.unity
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2F.unity
+    guid: 146224db37c967849a60daf4915077cb
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2G.unity
+    guid: 9e62ffa518a6ead46873d06e5e41459a
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2H.unity
+    guid: a225dc0a07b57a642b7e7b9c1606ae7b
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2I.unity
+    guid: e2c5816f163777b4f8d4179f7a20e50f
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2J.unity
+    guid: 3d2b2c75640a12a468da98b39c0dc5f3
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2K.unity
+    guid: 6a2935723d58ef14cb84fe1437560c78
+  - enabled: 1
+    path: Assets/Scenes/Vasil Scenes/FinalLevelScenes/Level2/Level2L Last.unity
     guid: 3f6a4fec32d5eee4aa73815f1fe3ed36
   m_configObjects: {}

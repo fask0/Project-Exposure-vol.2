@@ -97,6 +97,7 @@ public class CollectionsManager : MonoBehaviour
     {
         //Normalize the sound of all objects that have an AudioSource in the scene
         collectableAudioSources.Clear();
+        _allAudioSources.Clear();
         AudioSource[] gos = FindObjectsOfType<AudioSource>();
         for (int i = 0; i < gos.Length; i++)
         {
@@ -124,9 +125,9 @@ public class CollectionsManager : MonoBehaviour
     /// <returns></returns>
     public bool IsCollected(string pGameObjectName)
     {
-        foreach (KeyValuePair<string, AudioSource> entry in collectedAudioSources)
+        foreach (string key in collectedAudioSources.Keys)
         {
-            if (entry.Key.ToLower() == pGameObjectName.ToLower())
+            if (key.ToLower() == pGameObjectName.ToLower())
             {
                 return true;
             }
