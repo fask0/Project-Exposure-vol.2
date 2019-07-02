@@ -17,6 +17,10 @@ TagManager:
   - NameInput
   - ArtifactDummy
   - ArtifactParent
+  - Target7
+  - Target8
+  - Target9
+  - Target10
   layers:
   - Default
   - TransparentFX
