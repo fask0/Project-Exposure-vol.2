@@ -119,6 +119,10 @@ public class CollectionsManager : MonoBehaviour
                 if (!IsCollected(gos[i].gameObject.name))
                     collectableAudioSources.Add(gos[i].gameObject);
         }
+
+        if (IsCollected("Dolphin"))
+            if (onDolphinScanEvent != null)
+                onDolphinScanEvent();
     }
 
     /// <summary>

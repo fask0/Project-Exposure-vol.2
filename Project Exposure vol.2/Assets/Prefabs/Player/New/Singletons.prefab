@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ade28604ab93d408a9f6bf81154b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAnySceneLoading: 0
   LoadedScenes: []
-  _shouldLoadLevels: 0
+  _shouldLoadLevels: 1
   Player: {fileID: 0}
 --- !u!1 &918605305
 GameObject:
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 100
-  _offsetXZ: {x: 30, y: -35}
+  _offsetXZ: {x: 42, y: -32}
   _terrainSize: {x: 950, y: 1500}
   _targetTextureSize: {x: 2118, y: 3381}
   _undiscoverdMap: {fileID: 2800000, guid: 0949ed6ce13747947bfb6305f5ef0994, type: 3}
