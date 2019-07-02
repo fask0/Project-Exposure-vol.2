@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afb4b35f0eaa42a488de14be2743a62c, type: 3}
-  m_Name: MantaRay
+  m_Name: Mantaray
   m_EditorClassIdentifier: 
-  Name: MantaRay
+  Name: Mantaray
   DescriptionFile: {fileID: 4900000, guid: 906d89b89d705294ea9f18d825570d00, type: 3}
   AudioClip: {fileID: 8300000, guid: 46973f81f0d4635469fe9f97b1fbe22c, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
