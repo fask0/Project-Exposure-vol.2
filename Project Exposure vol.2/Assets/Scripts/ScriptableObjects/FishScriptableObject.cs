@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class FishScriptableObject : ScriptableObject
 {
     [HideInInspector] public string Name;
+    public string DiscriptionName;
     public TextAsset DescriptionFile;
     public AudioClip AudioClip;
     public Sprite Sprite;
