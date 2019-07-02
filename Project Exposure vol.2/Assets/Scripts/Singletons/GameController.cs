@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public delegate void OnAllSceneLoad(string SceneName);
     public event OnAllSceneLoad onAllSceneLoadEvent;
 
+    public bool isAnySceneLoading = false;
     public List<Scene> LoadedScenes = new List<Scene>();
 
     [SerializeField]
@@ -96,9 +97,14 @@ public class GameController : MonoBehaviour
     private IEnumerator AsyncLoad(string pSceneName)
     {
         AsyncOperation async = SceneManager.LoadSceneAsync(pSceneName, LoadSceneMode.Additive);
+        Rigidbody rb = null;
+        if (Player != null)
+            rb = Player.GetComponent<Rigidbody>();
 
         while (!async.isDone)
         {
+            if (rb != null)
+                rb.velocity *= 0.25f;
             yield return null;
             LoadedScenes.Add(SceneManager.GetSceneByName(pSceneName));
         }

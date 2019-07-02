@@ -44,7 +44,73 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     void Update()
     {
-        _rigidbody.velocity = Vector3.zero;
+        //if (_isStunned)
+        //{
+        //    if (DateTime.Now >= _stopStunTime)
+        //    {
+        //        _isStunned = false;
+        //    }
+        //}
+        //else
+        //{
+        //    if (_isFollowing)
+        //    {
+        //        _timeToGoInFollowPosition += Time.deltaTime;
+        //        transform.position = Vector3.Slerp(transform.position, _followPoint.position, Time.deltaTime * 2);
+        //        transform.rotation = Quaternion.Slerp(transform.rotation, _followPoint.rotation, Time.deltaTime * 2);
+        //        _animator.SetBool("IsIdle", false);
+        //        _animator.SetBool("IsSwimming", true);
+
+        //        if (_timeToGoInFollowPosition > 0.5f)
+        //            _inFollowPosition = true;
+
+        //        if (_joystickBehaviour.IsPressed())
+        //            StopFollowingGameObject(_followTarget);
+        //    }
+        //    else
+        //    {
+        //        //Rotation and movement
+        //        if (_joystickBehaviour.IsPressed())
+        //        {
+        //            if (_joystickBehaviour.GetTimeAtZero() >= 0.5f || _joystickBehaviour.Vertical() != 0)
+        //            {
+        //                _velocity += _acceleration * Time.deltaTime;
+        //                _animator.SetBool("IsIdle", false);
+        //                _animator.SetBool("IsSwimming", true);
+        //            }
+        //            else
+        //            {
+        //                _velocity -= _waterResistance * Time.deltaTime;
+
+        //                if (_velocity < 2)
+        //                {
+        //                    _animator.SetBool("IsIdle", true);
+        //                    _animator.SetBool("IsSwimming", false);
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            _velocity -= _waterResistance * Time.deltaTime;
+        //            _rigidbody.velocity = Vector3.zero;
+        //            _animator.SetBool("IsIdle", true);
+        //            _animator.SetBool("IsSwimming", false);
+        //        }
+
+        //        _direction = Camera.main.transform.forward;
+        //        _velocity = Mathf.Clamp(_velocity, 0, _maxSpeed);
+        //        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(90 * ((_velocity / _maxSpeed) - _joystickBehaviour.Vertical()),
+        //                                                                                   Camera.main.transform.parent.transform.rotation.eulerAngles.y + 90 * _joystickBehaviour.Horizontal(),
+        //                                                                                   0), 2 * Time.deltaTime);
+
+        //        //transform.Translate(_direction * _velocity * Time.deltaTime, Space.World);
+        //        _rigidbody.velocity = _direction * _velocity * Time.deltaTime;
+        //    }
+        //}
+    }
+
+    private void FixedUpdate()
+    {
         if (_isStunned)
         {
             if (DateTime.Now >= _stopStunTime)
@@ -56,9 +122,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
         {
             if (_isFollowing)
             {
-                _timeToGoInFollowPosition += Time.deltaTime;
-                transform.position = Vector3.Slerp(transform.position, _followPoint.position, Time.deltaTime * 2);
-                transform.rotation = Quaternion.Slerp(transform.rotation, _followPoint.rotation, Time.deltaTime * 2);
+                _timeToGoInFollowPosition += Time.fixedDeltaTime;
+                transform.position = Vector3.Slerp(transform.position, _followPoint.position, Time.fixedDeltaTime * 2);
+                transform.rotation = Quaternion.Slerp(transform.rotation, _followPoint.rotation, Time.fixedDeltaTime * 2);
                 _animator.SetBool("IsIdle", false);
                 _animator.SetBool("IsSwimming", true);
 
@@ -75,13 +141,13 @@ public class PlayerMovementBehaviour : MonoBehaviour
                 {
                     if (_joystickBehaviour.GetTimeAtZero() >= 0.5f || _joystickBehaviour.Vertical() != 0)
                     {
-                        _velocity += _acceleration * Time.deltaTime;
+                        _velocity += _acceleration * Time.fixedDeltaTime;
                         _animator.SetBool("IsIdle", false);
                         _animator.SetBool("IsSwimming", true);
                     }
                     else
                     {
-                        _velocity -= _waterResistance * Time.deltaTime;
+                        _velocity -= _waterResistance * Time.fixedDeltaTime;
 
                         if (_velocity < 2)
                         {
@@ -92,7 +158,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    _velocity -= _waterResistance * Time.deltaTime;
+                    _velocity -= _waterResistance * Time.fixedDeltaTime;
                     _rigidbody.velocity = Vector3.zero;
                     _animator.SetBool("IsIdle", true);
                     _animator.SetBool("IsSwimming", false);
@@ -102,10 +168,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
                 _velocity = Mathf.Clamp(_velocity, 0, _maxSpeed);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(90 * ((_velocity / _maxSpeed) - _joystickBehaviour.Vertical()),
                                                                                            Camera.main.transform.parent.transform.rotation.eulerAngles.y + 90 * _joystickBehaviour.Horizontal(),
-                                                                                           0), 2 * Time.deltaTime);
+                                                                                           0), 2 * Time.fixedDeltaTime);
 
                 //transform.Translate(_direction * _velocity * Time.deltaTime, Space.World);
-                _rigidbody.velocity = _direction * _velocity * Time.deltaTime;
+                _rigidbody.velocity = _direction * _velocity * Time.fixedDeltaTime;
             }
         }
     }
