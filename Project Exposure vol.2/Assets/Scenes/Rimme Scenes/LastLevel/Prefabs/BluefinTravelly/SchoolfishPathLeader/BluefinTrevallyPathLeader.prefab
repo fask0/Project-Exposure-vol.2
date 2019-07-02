@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3901111851915594102}
   - component: {fileID: 5329692985542030007}
   - component: {fileID: 3369422930983934683}
-  m_Layer: 12
-  m_Name: polySurface1
+  m_Layer: 0
+  m_Name: BluefinTrevally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

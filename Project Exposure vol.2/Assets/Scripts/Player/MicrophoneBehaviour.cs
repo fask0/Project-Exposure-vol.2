@@ -52,9 +52,6 @@ public class MicrophoneBehaviour : MonoBehaviour
 
         other.GetComponent<AudioSource>().maxDistance = SingleTons.CollectionsManager.GetMaxDistance;
 
-        if (other.tag == "Collectable")
-            _soundWaveManager.HideProgress(other.transform.gameObject);
-
         SingleTons.SoundWaveManager.GetListeningToAll.Remove(other.transform.gameObject);
 
         for (int i = 0; i < SingleTons.SoundWaveManager.GetListeningToCollected.Count; i++)

@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5387153904726025026}
   - component: {fileID: 7162613303609841468}
   - component: {fileID: 8687148417272169233}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BluefinTrevally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,4 +150,3 @@ MonoBehaviour:
   _alwaysAvoid: 0
   _isAvoiding: 0
   _playerInRangeOfLeader: 1
-  _playerInRangeOfLeader2: 1

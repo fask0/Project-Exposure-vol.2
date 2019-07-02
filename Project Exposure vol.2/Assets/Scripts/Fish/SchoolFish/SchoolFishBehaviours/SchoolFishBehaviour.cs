@@ -13,10 +13,8 @@ public class SchoolFishBehaviour : FishBehaviour
     private GameObject _fishThatsTooClose;
     private FishBehaviourParent _fishThatsTooCloseBehaviour;
 
-    [HideInInspector]
-    public bool _playerInRangeOfLeader = true;
-    [HideInInspector]
-    public bool _playerInRangeOfLeader2 = true;
+    public bool _playerInRangeOfLeader = false;
+    private bool _playerInRangeOfLeader2 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -163,5 +161,15 @@ public class SchoolFishBehaviour : FishBehaviour
         _fishThatsTooCloseBehaviour = _fishBehaviour;
         _fishThatsTooClose = _fishBehaviour.gameObject;
         _fishTooClose = true;
+    }
+
+    public void SetPlayerInRangeOfLeader2(bool val)
+    {
+        _playerInRangeOfLeader2 = val;
+    }
+
+    public bool GetPlayerInRangeOfLeader2()
+    {
+        return _playerInRangeOfLeader2;
     }
 }

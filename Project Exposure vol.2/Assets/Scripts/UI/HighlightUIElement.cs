@@ -111,9 +111,12 @@ public class HighlightUIElement : MonoBehaviour
             newScale = Vector3.Lerp(_rectTransform.localScale, Vector3.one, Time.deltaTime * _scaleSpeed);
         }
         _rectTransform.localScale = newScale;
-        foreach (RectTransform rect in _otherObjectsToScale)
+        if (_otherObjectsToScale.Count > 0)
         {
-            rect.localScale = newScale;
+            foreach (RectTransform rect in _otherObjectsToScale)
+            {
+                rect.localScale = newScale;
+            }
         }
     }
 }

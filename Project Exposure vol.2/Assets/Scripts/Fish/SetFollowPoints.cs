@@ -11,7 +11,10 @@ public class SetFollowPoints : MonoBehaviour
     {
         _followPoints = GetComponentsInChildren<FollowPointIdentifier>();
         _followPointTransforms = new Transform[_followPoints.Length];
-        _colliderBounds = GetComponent<MeshCollider>().bounds.extents;
+        if (GetComponent<MeshCollider>() != null)
+            _colliderBounds = GetComponent<MeshCollider>().bounds.extents;
+        else
+            _colliderBounds = new Vector3(4, 3.32f, 9.01f);
         _playerColliderBounds = SingleTons.GameController.Player.GetComponent<CapsuleCollider>().bounds.extents;
 
         Vector2 radius = Vector2.zero;
