@@ -8,9 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 20ec2b7085285984bb4c8f628c2e3c25
-  m_OcclusionCullingData: {fileID: 36300000, guid: d4a04e9f6a5f3a344a6e4ffc5f803543,
-    type: 2}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -134,11 +133,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 758982154}
     m_Modifications:
-    - target: {fileID: 159794731062948365, guid: eb4223f8821a3b348954fa7337c2c663,
-        type: 3}
-      propertyPath: m_Name
-      value: RoundSeaweed0 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3777655523238379550, guid: eb4223f8821a3b348954fa7337c2c663,
         type: 3}
       propertyPath: m_RootOrder
@@ -158,6 +152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.403
+      objectReference: {fileID: 0}
+    - target: {fileID: 159794731062948365, guid: eb4223f8821a3b348954fa7337c2c663,
+        type: 3}
+      propertyPath: m_Name
+      value: RoundSeaweed0 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb4223f8821a3b348954fa7337c2c663, type: 3}
@@ -629,25 +628,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba01092c4f8d1564099f2de1e1c76aa4, type: 3}
---- !u!1001 &100829867
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 406300976}
-    m_Modifications:
-    - target: {fileID: 1380418214705030139, guid: 4bb14a29fdbaadf4b9cc462e3fc625c7,
-        type: 3}
-      propertyPath: m_Name
-      value: Coralplate_lowpoly (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2698609271367406056, guid: 4bb14a29fdbaadf4b9cc462e3fc625c7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4bb14a29fdbaadf4b9cc462e3fc625c7, type: 3}
 --- !u!4 &112773968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 482963623457917047, guid: ba01092c4f8d1564099f2de1e1c76aa4,
@@ -3175,11 +3155,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 758982154}
     m_Modifications:
-    - target: {fileID: 159794731062948365, guid: eb4223f8821a3b348954fa7337c2c663,
-        type: 3}
-      propertyPath: m_Name
-      value: RoundSeaweed0 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3777655523238379550, guid: eb4223f8821a3b348954fa7337c2c663,
         type: 3}
       propertyPath: m_RootOrder
@@ -3224,6 +3199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 55.348003
+      objectReference: {fileID: 0}
+    - target: {fileID: 159794731062948365, guid: eb4223f8821a3b348954fa7337c2c663,
+        type: 3}
+      propertyPath: m_Name
+      value: RoundSeaweed0 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb4223f8821a3b348954fa7337c2c663, type: 3}
@@ -6576,25 +6556,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 21dfe7cf52b28ce4286c7297c1de650a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cdf34e5fbf878443b2bf6c0af9c8e17, type: 3}
---- !u!1001 &881488686
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 212408535}
-    m_Modifications:
-    - target: {fileID: 1380418214705030139, guid: 4bb14a29fdbaadf4b9cc462e3fc625c7,
-        type: 3}
-      propertyPath: m_Name
-      value: Coralplate_lowpoly (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2698609271367406056, guid: 4bb14a29fdbaadf4b9cc462e3fc625c7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4bb14a29fdbaadf4b9cc462e3fc625c7, type: 3}
 --- !u!1001 &930684379
 PrefabInstance:
   m_ObjectHideFlags: 0
