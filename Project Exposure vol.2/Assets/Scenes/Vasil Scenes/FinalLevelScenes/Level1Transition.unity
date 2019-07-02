@@ -166,7 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1I
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2I
 --- !u!65 &5081052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -506,7 +507,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1H
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2H
 --- !u!65 &162450285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -721,9 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level2K
-  _unloadScenes:
-  - Level1T
-  - Level1U
+  _unloadScenes: []
 --- !u!65 &315981389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1139,7 +1139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1K
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2K
 --- !u!65 &856033669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1261,7 +1262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1G
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2G
 --- !u!65 &1076990637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1731,7 +1733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1F
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2F
 --- !u!65 &1315806228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2106,7 +2109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1E
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2E
 --- !u!65 &1538220441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2169,6 +2173,9 @@ MonoBehaviour:
   _unloadScenes:
   - Level1R
   - Level1S
+  - Level1T
+  - Level1U
+  - Level1V Last
 --- !u!65 &1538937776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2599,7 +2606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1J
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2J
 --- !u!65 &1730011815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3135,7 +3143,7 @@ MonoBehaviour:
   _loadScenes:
   - Level1D
   _unloadScenes:
-  - Level0D Last
+  - Level0D
 --- !u!65 &2010065925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3346,7 +3354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScenes:
   - Level1L
-  _unloadScenes: []
+  _unloadScenes:
+  - Level2L Last
 --- !u!65 &2101437727
 BoxCollider:
   m_ObjectHideFlags: 0

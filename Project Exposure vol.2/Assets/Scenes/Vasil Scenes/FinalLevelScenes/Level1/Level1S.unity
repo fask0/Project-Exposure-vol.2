@@ -1068,6 +1068,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4766036518647864733, guid: 30bacdae1de197041ac74106d1b1b8c7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bacdae1de197041ac74106d1b1b8c7, type: 3}
 --- !u!4 &127198617 stripped
@@ -1153,6 +1158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}
@@ -1608,6 +1618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467796957734692273, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d11e50d3001b884aabe8ca1d34f96fc, type: 3}
@@ -3150,6 +3165,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4766036518647864733, guid: 30bacdae1de197041ac74106d1b1b8c7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bacdae1de197041ac74106d1b1b8c7, type: 3}
 --- !u!4 &510037255 stripped
@@ -3698,6 +3718,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2467796957734692273, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d11e50d3001b884aabe8ca1d34f96fc, type: 3}
 --- !u!4 &622827336 stripped
@@ -3921,6 +3946,11 @@ PrefabInstance:
     - target: {fileID: 1469362716245628839, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467796957734692273, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
+        type: 3}
+      propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4233,6 +4263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467796957734692273, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d11e50d3001b884aabe8ca1d34f96fc, type: 3}
@@ -4977,6 +5012,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6363258015284122790, guid: f0154989e15651649b4f5cf63267b7fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0154989e15651649b4f5cf63267b7fc, type: 3}
 --- !u!4 &826007521 stripped
@@ -5338,6 +5378,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4766036518647864733, guid: 30bacdae1de197041ac74106d1b1b8c7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bacdae1de197041ac74106d1b1b8c7, type: 3}
 --- !u!4 &891913300 stripped
@@ -5429,6 +5474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}
@@ -6497,6 +6547,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}
 --- !u!4 &1150525091 stripped
@@ -6945,6 +7000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}
@@ -8325,6 +8385,11 @@ PrefabInstance:
     - target: {fileID: 6309011967819171720, guid: d5211ac9243aa044193f567b2285d7ed,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9748,6 +9813,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6363258015284122790, guid: f0154989e15651649b4f5cf63267b7fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0154989e15651649b4f5cf63267b7fc, type: 3}
 --- !u!4 &1621884560 stripped
@@ -9827,6 +9897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}
@@ -9976,6 +10051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766036518647864733, guid: 30bacdae1de197041ac74106d1b1b8c7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bacdae1de197041ac74106d1b1b8c7, type: 3}
@@ -10614,6 +10694,11 @@ PrefabInstance:
     - target: {fileID: 4034266921917518775, guid: c20239a80d5c0b44e93c1a16cd2b0262,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 119276932466893223, guid: c20239a80d5c0b44e93c1a16cd2b0262,
+        type: 3}
+      propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11773,6 +11858,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2467796957734692273, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d11e50d3001b884aabe8ca1d34f96fc, type: 3}
 --- !u!4 &1808386914 stripped
@@ -12002,6 +12092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}
@@ -12815,6 +12910,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2467796957734692273, guid: 5d11e50d3001b884aabe8ca1d34f96fc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d11e50d3001b884aabe8ca1d34f96fc, type: 3}
 --- !u!4 &1963186654 stripped
@@ -13050,6 +13150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766036518647864733, guid: 30bacdae1de197041ac74106d1b1b8c7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bacdae1de197041ac74106d1b1b8c7, type: 3}
@@ -13380,6 +13485,11 @@ PrefabInstance:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 119276932466893223, guid: c20239a80d5c0b44e93c1a16cd2b0262,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20239a80d5c0b44e93c1a16cd2b0262, type: 3}
 --- !u!4 &2077845396 stripped
@@ -13528,6 +13638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 119276932466893223, guid: c20239a80d5c0b44e93c1a16cd2b0262,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20239a80d5c0b44e93c1a16cd2b0262, type: 3}
@@ -13683,6 +13798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049616854080959902, guid: d5211ac9243aa044193f567b2285d7ed,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5211ac9243aa044193f567b2285d7ed, type: 3}

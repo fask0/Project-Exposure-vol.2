@@ -14,6 +14,7 @@ public class OutlineActivator : MonoBehaviour
     private bool _showOutline = true;
     private Renderer _renderer;
     private Outline _outline;
+    private bool _canShowAllCreatureOutlines = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,14 @@ public class OutlineActivator : MonoBehaviour
         _materials = _renderer.materials;
 
         SingleTons.SoundWaveManager.onFishScanEvent += ScanEvent;
+        SingleTons.CollectionsManager.onDolphinScanEvent += EnableOutlines;
         _outline.enabled = false;
     }
 
     private void OnDisable()
     {
         SingleTons.SoundWaveManager.onFishScanEvent -= ScanEvent;
+        SingleTons.CollectionsManager.onDolphinScanEvent -= EnableOutlines;
     }
 
     private void ScanEvent(GameObject pGameObject)
@@ -51,6 +54,7 @@ public class OutlineActivator : MonoBehaviour
 
         if (other.tag == "Player")
         {
+            if (!_canShowAllCreatureOutlines && gameObject.name != "Dolphin") return;
             SetOutlineWidth(_maxOutlineWidth);
 
             if (_outline != null)
@@ -87,5 +91,10 @@ public class OutlineActivator : MonoBehaviour
             else
                 _outline.enabled = false;
         }
+    }
+
+    public void EnableOutlines()
+    {
+        _canShowAllCreatureOutlines = true;
     }
 }

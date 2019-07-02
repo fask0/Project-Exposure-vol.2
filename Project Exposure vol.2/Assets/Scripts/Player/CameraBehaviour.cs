@@ -79,49 +79,49 @@ public class CameraBehaviour : MonoBehaviour
         }
         else
         {
-            if (_playerMovementBehaviour.GetIsFollowing())
+            //if (_playerMovementBehaviour.GetIsFollowing())
+            //{
+            //    transform.LookAt(_target.transform.position + _playerMovementBehaviour.gameObject.transform.up + _playerMovementBehaviour.gameObject.transform.forward * 0.35f);
+            //}
+            //else
+            //{
+            if (_isScanningArtifact)
             {
-                transform.LookAt(_target.transform.position + _playerMovementBehaviour.gameObject.transform.up + _playerMovementBehaviour.gameObject.transform.forward * 0.35f);
+                _dummyGO.transform.position = transform.position;
+                _dummyGO.transform.LookAt(_artifact.transform);
+                transform.rotation = Quaternion.Slerp(transform.rotation, _dummyGO.transform.rotation, Time.deltaTime);
+                _dummyRotation = transform.rotation;
             }
-            else
+
+            if (_joystickBehaviour.IsPressed())
             {
-                if (_isScanningArtifact)
-                {
-                    _dummyGO.transform.position = transform.position;
-                    _dummyGO.transform.LookAt(_artifact.transform);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, _dummyGO.transform.rotation, Time.deltaTime);
-                    _dummyRotation = transform.rotation;
-                }
+                _isScanningArtifact = false;
+                if (_joystickBehaviour.Vertical() != 0)
+                    _rotX += -_joystickBehaviour.Vertical() * _inputSensitivity * Time.deltaTime;
+                if (_joystickBehaviour.Horizontal() != 0)
+                    _rotY += _joystickBehaviour.Horizontal() * _inputSensitivity * Time.deltaTime * 1.5f;
 
-                if (_joystickBehaviour.IsPressed())
-                {
-                    _isScanningArtifact = false;
-                    if (_joystickBehaviour.Vertical() != 0)
-                        _rotX += -_joystickBehaviour.Vertical() * _inputSensitivity * Time.deltaTime;
-                    if (_joystickBehaviour.Horizontal() != 0)
-                        _rotY += _joystickBehaviour.Horizontal() * _inputSensitivity * Time.deltaTime * 1.5f;
+                _clamp = Vector2.Lerp(_clamp, new Vector2(_clampAngle * Mathf.Abs(_joystickBehaviour.Vertical()), 0), Time.deltaTime * 3);
+                _rotX = Mathf.Clamp(_rotX, -_clamp.x, _clamp.x);
 
-                    _clamp = Vector2.Lerp(_clamp, new Vector2(_clampAngle * Mathf.Abs(_joystickBehaviour.Vertical()), 0), Time.deltaTime * 3);
-                    _rotX = Mathf.Clamp(_rotX, -_clamp.x, _clamp.x);
+                Quaternion localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(_rotX, _rotY, 0), Time.deltaTime * 2);
+                transform.rotation = localRotation;
 
-                    Quaternion localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(_rotX, _rotY, 0), Time.deltaTime * 2);
-                    transform.rotation = localRotation;
-
-                    _dummyRotation = transform.rotation;
-                }
-
-                if (_joystickBehaviour.Vertical() == 0)
-                {
-                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(((_dummyRotation.eulerAngles.x > 180) ? _dummyRotation.eulerAngles.x - 360 : _dummyRotation.eulerAngles.x) * 0.66f, transform.eulerAngles.y, 0), Time.deltaTime);
-                    _rotX = transform.rotation.eulerAngles.x;
-                    _rotX = (_rotX > 180) ? _rotX - 360 : _rotX;
-                }
-
-                if (_joystickBehaviour.Horizontal() == 0)
-                {
-                    _rotY = transform.localRotation.eulerAngles.y;
-                }
+                _dummyRotation = transform.rotation;
             }
+
+            if (_joystickBehaviour.Vertical() == 0)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(((_dummyRotation.eulerAngles.x > 180) ? _dummyRotation.eulerAngles.x - 360 : _dummyRotation.eulerAngles.x) * 0.66f, transform.eulerAngles.y, 0), Time.deltaTime);
+                _rotX = transform.rotation.eulerAngles.x;
+                _rotX = (_rotX > 180) ? _rotX - 360 : _rotX;
+            }
+
+            if (_joystickBehaviour.Horizontal() == 0)
+            {
+                _rotY = transform.localRotation.eulerAngles.y;
+            }
+            //}
         }
     }
 
