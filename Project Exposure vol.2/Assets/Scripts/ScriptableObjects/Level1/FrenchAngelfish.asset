@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb4b35f0eaa42a488de14be2743a62c, type: 3}
   m_Name: FrenchAngelfish
   m_EditorClassIdentifier: 
-  Name: FrenchAnglefish
-  DescriptionFile: {fileID: 4900000, guid: 7ff04c6e4d036b14ab6ebc46a581ecd6, type: 3}
+  Name: FrenchAngelfish
+  DiscriptionName: Franse Keizersvis
+  DescriptionFile: {fileID: 4900000, guid: d3106fb647de558489271f64344df9cd, type: 3}
   AudioClip: {fileID: 8300000, guid: fced9a3c8ae079643945bd6cc9390aaa, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: 4732937762076777578, guid: 2082ad4a17464bf4492a31ac49a93cd4, type: 3}

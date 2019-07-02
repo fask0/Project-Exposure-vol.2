@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: RegalTang
   m_EditorClassIdentifier: 
   Name: RegalTang
-  DescriptionFile: {fileID: 4900000, guid: 7cf20e59a83cd3e4bb4ea3c051452052, type: 3}
+  DiscriptionName: Picasso doktersvis
+  DescriptionFile: {fileID: 4900000, guid: 35c6c1081b2eafb47a92382d91e1161b, type: 3}
   AudioClip: {fileID: 8300000, guid: 953e726d357dc334f8db9ae614ac9f91, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: 272620219224400015, guid: 8deda55c51001494fbc447948b31a900, type: 3}

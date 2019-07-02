@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 508761657485766099}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.17422491, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 20}
+  m_LocalScale: {x: 100, y: 60, z: 40}
   m_Children:
   - {fileID: 508761658605726705}
   m_Father: {fileID: 2631252041066559769}
@@ -1620,6 +1620,7 @@ GameObject:
   - component: {fileID: 8152552960293887481}
   - component: {fileID: 3985526686699598057}
   - component: {fileID: 1333792462}
+  - component: {fileID: 8403506609525384647}
   m_Layer: 0
   m_Name: Bofy
   m_TagString: Untagged
@@ -1770,6 +1771,22 @@ SkinnedMeshRenderer:
     m_Extent: {x: 0.877679, y: 0.6294259, z: 0.69740665}
   m_DirtyAABB: 0
 --- !u!114 &1333792462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830601364431541308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 1
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &8403506609525384647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2561,7 +2578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objToActivate: {fileID: 5183156378638877046}
-  _activateAfterSeconds: 10
 --- !u!1 &5590639989517778431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,6 +3469,7 @@ GameObject:
   - component: {fileID: 1228513201435385086}
   - component: {fileID: 678744664274854554}
   - component: {fileID: 1644553866}
+  - component: {fileID: 8872826011189689798}
   m_Layer: 0
   m_Name: Backpack
   m_TagString: Untagged
@@ -3544,6 +3561,22 @@ SkinnedMeshRenderer:
     m_Extent: {x: 0.25665912, y: 0.25969654, z: 0.14999843}
   m_DirtyAABB: 0
 --- !u!114 &1644553866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273679091211082192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 1
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &8872826011189689798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

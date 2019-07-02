@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mantaray
   m_EditorClassIdentifier: 
   Name: Mantaray
-  DescriptionFile: {fileID: 4900000, guid: 906d89b89d705294ea9f18d825570d00, type: 3}
+  DiscriptionName: Manta
+  DescriptionFile: {fileID: 4900000, guid: 9bdaafa17a92a8f49b1193c150848944, type: 3}
   AudioClip: {fileID: 8300000, guid: 46973f81f0d4635469fe9f97b1fbe22c, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: 1695314226372219732, guid: faeec9387f40c3742830ae7dff8e95f9, type: 3}

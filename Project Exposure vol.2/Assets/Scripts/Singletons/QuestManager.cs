@@ -30,9 +30,6 @@ public class QuestManager : MonoBehaviour
 
         SetTargetAudio(_currentTargetIndex);
         onQuestCompletionEvent += SingleTons.GameController.ShowResolutionScreen;
-        onQuestCompletionEvent += SingleTons.ScoreManager.SaveScoreToday;
-        onQuestCompletionEvent += SingleTons.ScoreManager.GetDaily;
-        onQuestCompletionEvent += SingleTons.ScoreManager.GetYearly;
     }
 
     public void SetTargetAudio(int pTargetIndex)

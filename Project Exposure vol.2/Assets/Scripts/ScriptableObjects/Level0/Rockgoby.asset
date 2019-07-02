@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rockgoby
   m_EditorClassIdentifier: 
   Name: Rockgoby
-  DescriptionFile: {fileID: 4900000, guid: 7094bb09ae24eda4e840eda18142ade3, type: 3}
+  DiscriptionName: Paganelgrondel
+  DescriptionFile: {fileID: 4900000, guid: dbdfbc2c232fd3749896dc6857c0e8f4, type: 3}
   AudioClip: {fileID: 8300000, guid: afe76ee2d61913c449e09761eb6896e8, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: -4533876120410555537, guid: 09dd2a322ebb0d641b2282c7cc83a16c, type: 3}

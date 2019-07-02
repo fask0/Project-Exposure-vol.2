@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stingray
   m_EditorClassIdentifier: 
   Name: Stingray
-  DescriptionFile: {fileID: 4900000, guid: 05f04d339959d7b4682724fb9641756d, type: 3}
+  DiscriptionName: Pijlstaartrog
+  DescriptionFile: {fileID: 4900000, guid: 53639f6f0a4b95e47b0fbc43489de36f, type: 3}
   AudioClip: {fileID: 8300000, guid: dfc1e44871d52784b956cf1aa70d3dfa, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: 5531436973462828509, guid: a17c107520c008240b6718114abed01d, type: 3}

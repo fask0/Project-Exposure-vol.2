@@ -124,10 +124,12 @@ public class CollectionsManager : MonoBehaviour
     /// <returns></returns>
     public bool IsCollected(string pGameObjectName)
     {
-        foreach (string key in collectedAudioSources.Keys)
+        foreach (KeyValuePair<string, AudioSource> entry in collectedAudioSources)
         {
-            if (key.ToLower() == pGameObjectName.ToLower())
+            if (entry.Key.ToLower() == pGameObjectName.ToLower())
+            {
                 return true;
+            }
         }
 
         return false;
@@ -177,6 +179,12 @@ public class CollectionsManager : MonoBehaviour
                         }
                         break;
                     }
+                }
+
+                for (int j = 0; j < _allAudioSources.Count; j++)
+                {
+                    if (_allAudioSources[j].name != pGameObject.name) continue;
+                    _allAudioSources[j].GetComponent<AudioSource>().volume = 0.35f;
                 }
                 break;
             }

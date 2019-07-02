@@ -539,10 +539,11 @@ public class SoundWaveManager : MonoBehaviour
     {
         if (_currentScan == null || _currentScan != pCurrentScan) return;
 
+        CallScanEvents();
+        HideProgress(pCurrentScan);
+
         _isPlayerScanningCreature = false;
         _isPlayerScanningTarget = false;
-
-        HideProgress(pCurrentScan);
     }
 
     public void AddSource(GameObject pGameObject)

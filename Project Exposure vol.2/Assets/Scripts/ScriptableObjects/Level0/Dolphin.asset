@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dolphin
   m_EditorClassIdentifier: 
   Name: Dolphin
-  DescriptionFile: {fileID: 4900000, guid: 272529fa356d7a24894bdf7bbc1e8b3d, type: 3}
+  DiscriptionName: Dolfijn
+  DescriptionFile: {fileID: 4900000, guid: 8c0bf662d838a624e85f71268d0f4e22, type: 3}
   AudioClip: {fileID: 8300000, guid: 5cc4cbace09d11f49b7d68bd68dab301, type: 3}
   Sprite: {fileID: 21300000, guid: 1e7c97a7401191b408e511198028fb98, type: 3}
   Mesh: {fileID: 4070303373405636055, guid: e1cabeac40ac64c4eb09c82698be7faf, type: 3}

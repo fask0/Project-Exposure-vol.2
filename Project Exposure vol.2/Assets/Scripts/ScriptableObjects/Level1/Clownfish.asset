@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Clownfish
   m_EditorClassIdentifier: 
   Name: Clownfish
-  DescriptionFile: {fileID: 4900000, guid: f7c4223b14090bf4ba272bcef85e40da, type: 3}
+  DiscriptionName: Driebandanemoonvis
+  DescriptionFile: {fileID: 4900000, guid: 299de4f0da780d447aa11c03512dc4e6, type: 3}
   AudioClip: {fileID: 8300000, guid: 2fa7e16aeab119745bc382856ee6bf02, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: 2297425034801156755, guid: 46aff3d16eae96045b99441851613930, type: 3}
