@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Tripplefin
   m_EditorClassIdentifier: 
   Name: Tripplefin
-  DescriptionFile: {fileID: 4900000, guid: a80a8c2b6171a3c45b55d9193b4cb5df, type: 3}
+  DiscriptionName: Forsterygion lapillum
+  DescriptionFile: {fileID: 4900000, guid: 44f5b7b3531ccf2468c0c40e85226f55, type: 3}
   AudioClip: {fileID: 8300000, guid: d452eb780dfaa6b4fa37661e919bfba9, type: 3}
   Sprite: {fileID: 21300000, guid: 285c4c7382f318d4f8605d5e0e0d83d2, type: 3}
   Mesh: {fileID: -8677485993036714586, guid: 75d9535c99e84f441bce4375088debe4, type: 3}

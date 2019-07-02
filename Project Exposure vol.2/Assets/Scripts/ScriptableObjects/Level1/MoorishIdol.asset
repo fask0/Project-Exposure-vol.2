@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MoorishIdol
   m_EditorClassIdentifier: 
   Name: MoorishIdol
-  DescriptionFile: {fileID: 4900000, guid: b6fd55355057b574badb90f2ad31f82a, type: 3}
+  DiscriptionName: Maskerwimpelvis
+  DescriptionFile: {fileID: 4900000, guid: f3dde4bd0dea5cd4f9f9afdc29cdd92d, type: 3}
   AudioClip: {fileID: 8300000, guid: d59104cdabb693b4d9c68729aa0c2581, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: 2297425034801156755, guid: f8462f5cc78f0bc47bdca1743ada1b60, type: 3}

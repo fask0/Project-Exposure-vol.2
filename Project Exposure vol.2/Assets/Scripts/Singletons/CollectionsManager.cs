@@ -97,6 +97,7 @@ public class CollectionsManager : MonoBehaviour
     {
         //Normalize the sound of all objects that have an AudioSource in the scene
         collectableAudioSources.Clear();
+        _allAudioSources.Clear();
         AudioSource[] gos = FindObjectsOfType<AudioSource>();
         for (int i = 0; i < gos.Length; i++)
         {
@@ -127,7 +128,9 @@ public class CollectionsManager : MonoBehaviour
         foreach (string key in collectedAudioSources.Keys)
         {
             if (key.ToLower() == pGameObjectName.ToLower())
+            {
                 return true;
+            }
         }
 
         return false;
@@ -177,6 +180,12 @@ public class CollectionsManager : MonoBehaviour
                         }
                         break;
                     }
+                }
+
+                for (int j = 0; j < _allAudioSources.Count; j++)
+                {
+                    if (_allAudioSources[j].name != pGameObject.name) continue;
+                    _allAudioSources[j].GetComponent<AudioSource>().volume = 0.35f;
                 }
                 break;
             }

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: BluefinTrevally
   m_EditorClassIdentifier: 
   Name: BluefinTrevally
-  DescriptionFile: {fileID: 4900000, guid: 00622554d84cb034f90e6503e352ab11, type: 3}
+  DiscriptionName: Caranx melampygus
+  DescriptionFile: {fileID: 4900000, guid: 61c01406c1b016744ba6b4d4441965df, type: 3}
   AudioClip: {fileID: 8300000, guid: fb9687de6cd9eb748ba55fc6ed8395df, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
-  Mesh: {fileID: -4545423930167495100, guid: d49820a433d5ab843822f213b5c8aeba, type: 3}
+  Mesh: {fileID: 2532197596911439093, guid: 302ce89c03f51d747bf481f0b8453d99, type: 3}
   Texture: {fileID: 2800000, guid: 6e506f4b2bcd3eb44aed2efd31d8af6a, type: 3}

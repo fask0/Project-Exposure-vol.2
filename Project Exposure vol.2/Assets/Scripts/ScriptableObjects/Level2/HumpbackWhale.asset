@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb4b35f0eaa42a488de14be2743a62c, type: 3}
   m_Name: HumpbackWhale
   m_EditorClassIdentifier: 
-  Name: SwordFish
-  DescriptionFile: {fileID: 4900000, guid: c91f2cc0842331b40901ea795ff0abcb, type: 3}
+  Name: HumpbackWhale
+  DiscriptionName: Bultrug
+  DescriptionFile: {fileID: 4900000, guid: 46f84bfb5f06a964386e4b6006d7aff7, type: 3}
   AudioClip: {fileID: 8300000, guid: 65267f0e757984b498147bcbe999648f, type: 3}
   Sprite: {fileID: 21300000, guid: 1e7c97a7401191b408e511198028fb98, type: 3}
-  Mesh: {fileID: 4447979320562087488, guid: e0009f70a1915184e8a8b328d51a6078, type: 3}
+  Mesh: {fileID: 4447979320562087488, guid: 012a062526a357d4ea220ebf8193cac6, type: 3}
   Texture: {fileID: 2800000, guid: fe4996501cdc41c4183e64eb61218cb1, type: 3}

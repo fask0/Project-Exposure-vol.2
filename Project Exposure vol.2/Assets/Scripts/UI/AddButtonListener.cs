@@ -16,7 +16,8 @@ public class AddButtonListener : MonoBehaviour
         ShowDailyHighscores,
         ShowYearlyHighscores,
         Pause,
-        Unpause
+        Unpause,
+        NextQuestion
     }
 
     [SerializeField] private ButtonState _buttonState;
@@ -64,6 +65,9 @@ public class AddButtonListener : MonoBehaviour
                 break;
             case ButtonState.Unpause:
                 button.onClick.AddListener(() => { SingleTons.GameController.UnpauseGame(); });
+                break;
+            case ButtonState.NextQuestion:
+                button.onClick.AddListener(() => { SingleTons.ScoreManager.NextQuestion(gameObject); });
                 break;
         }
     }

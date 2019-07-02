@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SwordFish
   m_EditorClassIdentifier: 
   Name: SwordFish
-  DescriptionFile: {fileID: 4900000, guid: e8b9e62ed7053824d87cde119060f954, type: 3}
+  DiscriptionName: Zwaardvis
+  DescriptionFile: {fileID: 4900000, guid: 4357786b34968504f9ee4a7aa2fa0bb4, type: 3}
   AudioClip: {fileID: 8300000, guid: 611a5db11c690884ca58f4f104dbcb8c, type: 3}
   Sprite: {fileID: 21300000, guid: 1e7c97a7401191b408e511198028fb98, type: 3}
   Mesh: {fileID: 4300000, guid: 0f94b9c0b8bd1a74fa45fe7d3494216f, type: 2}

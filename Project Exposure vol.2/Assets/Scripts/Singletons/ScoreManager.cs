@@ -401,4 +401,31 @@ public class ScoreManager : MonoBehaviour
     {
         _name = name;
     }
+
+    public void NextQuestion(GameObject pGameobject)
+    {
+        if (pGameobject.transform.parent.name == "Question0")
+        {
+            int rating = 0;
+
+            for (int i = 0; i < pGameobject.transform.parent.GetChild(1).GetChild(1).childCount; i++)
+                if (pGameobject.transform.parent.GetChild(1).GetChild(1).GetChild(i).GetComponent<Image>().enabled)
+                    rating = i + 1;
+
+            _opinionOnTechnology = (rating == 0) ? 5 : rating;
+        }
+        else if (pGameobject.transform.parent.name == "Question1")
+        {
+            int rating = 0;
+
+            for (int i = 0; i < pGameobject.transform.parent.GetChild(1).GetChild(1).childCount; i++)
+                if (pGameobject.transform.parent.GetChild(1).GetChild(1).GetChild(i).GetComponent<Image>().enabled)
+                    rating = i + 1;
+
+            _increaseInAwareness = (rating == 0) ? 5 : rating;
+            SaveScoreToday();
+            GetDaily();
+            GetYearly();
+        }
+    }
 }

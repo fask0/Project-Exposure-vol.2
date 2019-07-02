@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Turtle
   m_EditorClassIdentifier: 
   Name: Turtle
-  DescriptionFile: {fileID: 4900000, guid: 919e40500ed6faa4f926d86b60fb49be, type: 3}
+  DiscriptionName: Onechte Karetschildpad
+  DescriptionFile: {fileID: 4900000, guid: 9f6f0cd1750efc644a78f892c6e4587c, type: 3}
   AudioClip: {fileID: 8300000, guid: fb3fa980b9dfd8f4581daeadbf7d70ca, type: 3}
   Sprite: {fileID: 21300000, guid: 0a4bc3514818f064faa0cfa2b40e287a, type: 3}
   Mesh: {fileID: -1520701442918238690, guid: 0e845e97fe4e10b418be7288d4e600ba, type: 3}
